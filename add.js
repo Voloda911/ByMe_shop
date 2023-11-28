@@ -5,8 +5,8 @@ const newBtn = document.getElementById("s_new");
 const tabNew = document.getElementById("tab_new");
 const tabSell = document.getElementById("tab_sell");
 
-// newBtn.classList.add("active");
-// tabNew.classList.add("active");
+newBtn.classList.add("active");
+tabNew.classList.add("active");
 
 nawSell.forEach(function (item) {
   item.addEventListener("click", function () {

@@ -729,7 +729,9 @@ input {
     margin: 0;
     overflow: hidden;
   }
-
+  .img_block {
+    width: 90px;
+  }
   .photo a {
     display: block;
     width: 100%;
@@ -782,5 +784,8 @@ input {
   .social_network {
     display: block;
     width: 30px;
+  }
+  .wrap-4 {
+    max-width: 350px;
   }
 }
