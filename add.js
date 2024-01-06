@@ -37,12 +37,12 @@ window.addEventListener("scroll", function () {
 });
 
 // filter
-
+const colention = document.querySelector(".sections_colention");
 const categories = document.querySelector(".categories_toggle");
 
+// up down
 categories.addEventListener("click", () => {
   const fasFa = document.querySelector(".fas");
-  const colention = document.querySelector(".sections_colention");
 
   if (colention) {
     colention.classList.toggle("show_nav");
@@ -191,29 +191,64 @@ const goods = [
     category: "women",
   },
 ];
-const productsHTML = goods
-  .map(
-    (good) => `
-    <div class="produci-trumblin">
-      <a href="#">
-        <picture>
-          <source srcset="#" type="#" />
-          <source srcset="#" type="#" />
-          <img src=${good.img} alt="${good.name}" width="198" />
-        </picture>
-      </a>
-      <div class="product_body">
-        <div class="description ">
-          <a class="product_name" href="#">${good.name}</a>
-          <div class="prise-date">
-            <span class="cerrent_pruise">${good.price} USD</span>
-          </div>
-        </div>
+document.querySelectorAll(".sections_colention a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    console.log(event.target);
+    event.preventDefault();
+    const category = event.target.getAttribute("data-category");
+    filterElementsAndShow(category);
+  });
+});
+function filterElementsAndShow(category) {
+  console.log("me too");
+  const filterGoods = goods.filter((good) => good.category === category);
+  const productsHTML = filterGoods
+    .map(
+      (good) => `    <div class="produci-trumblin">
+  <a href="#">
+    <picture>
+      <source srcset="#" type="#" />
+      <source srcset="#" type="#" />
+      <img src=${good.img} alt="${good.name}" width="198" />
+    </picture>
+  </a>
+  <div class="product_body">
+    <div class="description ">
+      <a class="product_name" href="#">${good.name}</a>
+      <div class="prise-date">
+        <span class="cerrent_pruise">${good.price} USD</span>
       </div>
     </div>
+  </div>
+</div>
   `
-  )
-  .join("");
+    )
+    .join("");
+  document.querySelector(".filter_rendring").innerHTML = productsHTML;
+}
 
 const contentBlockLeft = document.querySelector(".content_block_left");
-contentBlockLeft.innerHTML = productsHTML;
+
+// const productsHTML = goods
+//   .map(
+//     (good) => `
+//     <div class="produci-trumblin">
+//       <a href="#">
+//         <picture>
+//           <source srcset="#" type="#" />
+//           <source srcset="#" type="#" />
+//           <img src=${good.img} alt="${good.name}" width="198" />
+//         </picture>
+//       </a>
+//       <div class="product_body">
+//         <div class="description ">
+//           <a class="product_name" href="#">${good.name}</a>
+//           <div class="prise-date">
+//             <span class="cerrent_pruise">${good.price} USD</span>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   `
+//   )
+//   .join("");
