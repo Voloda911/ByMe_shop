@@ -177,7 +177,7 @@ section {
 }
 .produci_min {
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
 .cerrent_pruise {
@@ -796,7 +796,6 @@ input {
 .main-new {
   display: flex;
   width: 100%;
-  height: 100vh;
   flex-direction: row;
   margin: 2em 4em;
 }
@@ -822,10 +821,13 @@ input {
   font-size: 13px;
 }
 .sections_colention {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 20px;
   margin: 30px 0;
+}
+.sections_colention.show_nav {
+  display: flex;
 }
 .sections_colention a {
   color: #000;
@@ -851,5 +853,13 @@ input {
   display: flex;
   justify-content: space-between;
 }
-.range-slider input::before {
+
+.content_block_left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.goods-item {
+  max-width: 25%;
+  flex: 1 1 25%;
 }
