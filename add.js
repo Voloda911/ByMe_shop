@@ -4,10 +4,8 @@ const nawSell = document.querySelectorAll(".text_tabs");
 const newBtn = document.getElementById("s_new");
 const tabNew = document.getElementById("tab_new");
 const tabSell = document.getElementById("tab_sell");
-
 // newBtn.classList.add("active");
 // tabNew.classList.add("active");
-
 nawSell.forEach(function (item) {
   item.addEventListener("click", function () {
     nawSell.forEach(function (item) {
@@ -23,7 +21,6 @@ nawSell.forEach(function (item) {
     document.querySelector(tabId).classList.add("active");
   });
 });
-
 window.addEventListener("scroll", function () {
   let scrollPos = window.scrollY;
 
@@ -36,7 +33,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// filter
 const goods = [
   {
     id: 1,
@@ -44,10 +40,13 @@ const goods = [
     name: "alibaba",
     price: "31.66",
     category: "women",
+    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
+    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
+    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
     id: 1,
-    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
+    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
@@ -193,6 +192,7 @@ const goods = [
     category: "men",
   },
 ];
+localStorage.setItem("products", JSON.stringify(goods));
 
 document.querySelectorAll(".sections_colention a").forEach((link) => {
   link.addEventListener("click", (event) => {
@@ -228,7 +228,6 @@ function filterElementsAndShow(category) {
     .join("");
   document.getElementById("products-container").innerHTML = productsHTML;
 }
-
 function renderAllProducts() {
   const productsHTML = goods
     .map(
@@ -255,11 +254,9 @@ function renderAllProducts() {
     .join("");
   document.getElementById("products-container").innerHTML = productsHTML;
 }
-
 renderAllProducts();
 
 const contentBlockLeft = document.querySelector(".content_block_left");
-
 const caterogy = document.querySelector(".caterogy");
 const colention = document.querySelector(".sections_colention");
 const fasFa = document.querySelector(".fas");

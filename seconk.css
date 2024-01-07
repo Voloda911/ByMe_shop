@@ -6,6 +6,9 @@ body {
   overflow-x: hidden;
   line-height: 1.5;
 }
+::first-letter {
+  text-transform: uppercase;
+}
 a {
   text-decoration: none;
 }
@@ -871,11 +874,17 @@ input {
 .imges_area img {
   width: 400px;
 }
+/* title_goods */
+.mane_product {
+  background-color: #fffcfc;
+}
 .product_semiler {
   width: 60%;
   height: 20vw;
 }
-.mini_imeges {
+.title_goods h3 {
+  font-size: 23px;
+  font-weight: 400;
 }
 .mini_imeges img {
   margin-top: 25px;
@@ -885,6 +894,7 @@ input {
   width: 100%;
   display: flex;
   justify-content: start;
+  gap: 15px;
 }
 .product_offers {
   width: 20%;
@@ -906,7 +916,7 @@ input {
   height: 40px;
   border: none;
   border-radius: 4px;
-  background-color: #cfcec7;
+  background-color: #f1f1ea;
 }
 .menu_product_ option {
   height: 50px;
@@ -926,4 +936,8 @@ input {
 }
 .menu_product_ button:hover {
   background-color: rgb(171, 162, 162);
+}
+.prise_good {
+  font-size: 22px;
+  margin: 15px 0;
 }
