@@ -788,12 +788,64 @@ input {
 /* filter */
 
 .main {
-  padding: 2em 6em;
+  padding: 2em 4em;
   display: flex;
+  gap: 25px;
+  width: 100%;
 }
-.left_section {
-  width: 35%;
+.section_nav_left {
+  width: 25%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
 }
 .content_block_left {
-  width: 65%;
+  width: 75%;
+}
+.nav_menu {
+  padding: 1em 1em;
+  width: 100%;
+}
+.sections_colention {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sections_colention.toggle_nav {
+  display: none;
+}
+.sections_colention a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.caterogy {
+  display: flex;
+  justify-content: space-between;
+}
+.caterogy h3 {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.filter p {
+  text-transform: capitalize;
+}
+.filter p:first-child {
+  margin: 25px 0 0 0;
+}
+.filter p:nth-child(2) {
+  margin: 0;
+}
+.range-slider input {
+  width: 100%;
+  height: 2px;
+  padding: 0 1px 0 0;
+}
+.range-slider p:last-child {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
 }

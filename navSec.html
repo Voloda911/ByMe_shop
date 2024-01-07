@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>by me</title>
     <link rel="stylesheet" href="seconk.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 
     <link rel="apple-touch-icon"  sizes="32x32" href="img/favicon_io.zip">
@@ -26,7 +27,9 @@
         <div class="header_fixer">
           <div class="wrap_4">
             <a id="currency" href="">Currency</a>
-            <img src="img/logo.png" alt="by me" width="100" />
+            <a href="index.html">
+                <img src="img/logo.png" alt="by me" width="100" />
+            </a>
             <div class="buttoms-icons">
               <a href="#" class="icon-header">
                 <img
@@ -99,8 +102,45 @@
     </header> 
     <main>
         <div class="main">
-            <div class="left_section"></div>
-            <div class="content_block_left">
+            <div class="section_nav_left">
+                <div class="nav_menu">
+                    <div class="caterogy">
+                        <h3>coterogy</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>               
+                        <div class="sections_colention">
+                            <a data-category="men" href="">men's</a>
+                            <a data-category="women's" href="">women's </a>
+                            <a data-category="shoes" href="">shoes </a>
+                            <a data-category="accessories" href="">accessories</a>
+                            <a data-category="home" href="">home</a>
+                            <a data-category="goods" href="">goods </a>
+                            <a data-category="collections" href="">collections </a>
+                            <a data-category="gifts" href="">gifts </a>
+                            <a data-category="certificates" href="">certificates </a>
+                          </div>
+                          <div class="filter">
+              <p>filter</p>
+               <p>price filter</p>
+               <div class="range-slider">
+             <input
+               type="range"
+               id="price-min"
+               min="150"
+               max="5499"
+               value="100"
+               oninput="updatePriceValue(this.value, 'price-min-value')"
+             />
+             <p>
+               <span value="" id="price-min-value">150</span>
+               <span id="price-max-value"> 5499</span>
+             </p>
+              </div>
+                </div>
+                        </div>
+                    </div>
+
+               <div class="content_block_left">
                 <div>
                   <!-- <div class="produci-trumblin">
                     <a
@@ -127,7 +167,6 @@
                   </div> -->
                 </div>
               </div>
-        </div>
     </main>
     <footer id="fooser">
         <div class="wrap-4">

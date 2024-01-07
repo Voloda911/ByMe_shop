@@ -74,3 +74,20 @@ const productsHTML = goods
 
 const contentBlockLeft = document.querySelector(".content_block_left");
 contentBlockLeft.innerHTML = productsHTML;
+
+const caterogy = document.querySelector(".caterogy");
+const colention = document.querySelector(".sections_colention");
+const fasFa = document.querySelector(".fas");
+
+caterogy.addEventListener("click", () => {
+  if (colention) {
+    colention.classList.toggle("toggle_nav");
+  }
+  if (fasFa.classList.contains("fa-chevron-down")) {
+    fasFa.classList.remove("fa-chevron-down");
+    fasFa.classList.add("fa-chevron-up");
+  } else {
+    fasFa.classList.remove("fa-chevron-up");
+    fasFa.classList.add("fa-chevron-down");
+  }
+});
