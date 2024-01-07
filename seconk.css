@@ -12,17 +12,6 @@ a {
 picture {
   overflow: hidden;
 }
-img {
-  transition: transform 0.3s;
-  cursor: pointer;
-
-  overflow: hidden;
-}
-
-img:hover {
-  transform: scale(1.1);
-  transform-origin: center center;
-}
 
 section {
   width: 100%;
