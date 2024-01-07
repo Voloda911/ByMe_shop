@@ -790,6 +790,9 @@ input {
 }
 .content_block_left {
   width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .nav_menu {
   padding: 1em 1em;
@@ -830,6 +833,7 @@ input {
 }
 .range-slider input {
   width: 100%;
+  color: #000;
   height: 2px;
   padding: 0 1px 0 0;
 }
