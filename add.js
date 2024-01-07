@@ -152,32 +152,42 @@ const goods = [
   },
 ];
 
-const productsHTML = goods
-  .map(
-    (good) => `
-    <div class="produci-trumblin">
-      <a href="#">
-        <picture>
-          <source srcset="#" type="#" />
-          <source srcset="#" type="#" />
-          <img src=${good.img} alt="${good.name}" width="198" />
-        </picture>
-      </a>
-      <div class="product_body">
-        <div class="description ">
-          <a class="product_name" href="#">${good.name}</a>
-          <div class="prise-date">
-            <span class="cerrent_pruise">${good.price} USD</span>
-          </div>
-        </div>
+document.querySelectorAll(".sections_colention a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    const category = event.target.getAttribute("data-category");
+    filterElementsAndShow(category);
+  });
+});
+
+function filterElementsAndShow(category) {
+  const filterGoods = goods.filter((good) => good.category === category);
+  const productsHTML = filterGoods
+    .map(
+      (good) => ` <div class="produci-trumblin">
+  <a href="#">
+    <picture>
+      <source srcset="#" type="#" />
+      <source srcset="#" type="#" />
+      <img src=${good.img} alt="${good.name}" width="198" />
+    </picture>
+  </a>
+  <div class="product_body">
+    <div class="description ">
+      <a class="product_name" href="#">${good.name}</a>
+      <div class="prise-date">
+        <span class="cerrent_pruise">${good.price} USD</span>
       </div>
     </div>
+  </div>
+</div>
   `
-  )
-  .join("");
+    )
+    .join("");
+  document.getElementById("products-container").innerHTML = productsHTML;
+}
 
 const contentBlockLeft = document.querySelector(".content_block_left");
-contentBlockLeft.innerHTML = productsHTML;
 
 const caterogy = document.querySelector(".caterogy");
 const colention = document.querySelector(".sections_colention");

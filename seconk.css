@@ -842,3 +842,8 @@ input {
   justify-content: space-between;
   margin: 0;
 }
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+}
