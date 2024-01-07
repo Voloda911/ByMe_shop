@@ -35,7 +35,7 @@ window.addEventListener("scroll", function () {
 
 const goods = [
   {
-    id: 1,
+    dataId: 1,
     img: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
     name: "alibaba",
     price: "31.66",
@@ -45,147 +45,147 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    id: 1,
+    dataId: 2,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
   },
   {
-    id: 1,
+    dataId: 3,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
   },
   {
-    id: 1,
+    dataId: 4,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
   },
   {
-    id: 1,
+    dataId: 5,
     img: "img.product/man/294fe6aeb4fb7a39d6a28bb211fb4191.webp",
     name: "men's shorts Beigo",
     price: "38.15",
     category: "men",
   },
   {
-    id: 1,
+    dataId: 6,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
   },
   {
-    id: 1,
+    dataId: 7,
     img: "img.product/man/42be7baef7fe9438de26738c2f57c4cb.webp",
     name: "men's T-shirt",
     price: "38.15",
     category: "men",
   },
   {
-    id: 1,
+    dataId: 8,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
   },
   {
-    id: 1,
+    dataId: 9,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
   },
   {
-    id: 1,
+    dataId: 10,
     img: "img.product/man/9c77380e70f6114970c91169f3b15a46.webp",
     name: "men's shorts white",
     price: "31.66",
     category: "men",
   },
   {
-    id: 1,
+    dataId: 11,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
   },
   {
-    id: 1,
+    dataId: 12,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
   },
   {
-    id: 1,
+    dataId: 13,
     img: "img.product/shoes/b39992d06bb5bb05e65bf90c76036978.webp",
     name: "cream chelsea bows",
     price: "31.66",
     category: "women",
   },
   {
-    id: 1,
+    dataId: 14,
     img: "img.product/shoes/908d3e436044239356b3eb2104cfab53.webp",
     name: "women's shoes ",
     price: "31.66",
     category: "shoes",
   },
   {
-    id: 1,
+    dataId: 15,
     img: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
     name: "women's shoes ",
     price: "31.66",
     category: "shoes",
   },
   {
-    id: 1,
+    dataId: 16,
     img: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
     name: "women's shoes ",
     price: "31.66",
     category: "shoes",
   },
   {
-    id: 1,
+    dataId: 17,
     img: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
     name: "women's shoes ",
     price: "31.66",
     category: "shoes",
   },
   {
-    id: 1,
+    dataId: 18,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
   },
   {
-    id: 1,
+    dataId: 19,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
   },
   {
-    id: 1,
+    dataId: 20,
     img: "img.product/man/bccd4459f224e784ecd7f58858d619d7.webp",
     name: "men's shorts white",
     price: "31.66",
     category: "men",
   },
   {
-    id: 1,
+    dataId: 21,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
   },
   {
-    id: 1,
+    dataId: 22,
     img: "img.product/man/c0737cc483c88cb7560d1c704b3ad92e.webp",
     name: "GULLIVER men's s",
     price: "36.90",
@@ -202,11 +202,20 @@ document.querySelectorAll(".sections_colention a").forEach((link) => {
   });
 });
 
+document.querySelectorAll(".produci-trumblin").forEach((item) => {
+  item.addEventListener("click", function () {
+    const produciId = this.getAttribute("data-id");
+    localStorage.setItem("selectedProductId", produciId);
+
+    window.location.href = "product.html";
+  });
+});
+
 function filterElementsAndShow(category) {
   const filterGoods = goods.filter((good) => good.category === category);
   const productsHTML = filterGoods
     .map(
-      (good) => ` <div class="produci-trumblin">
+      (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
   <a href="#">
     <picture>
       <source srcset="#" type="#" />
