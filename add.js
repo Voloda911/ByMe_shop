@@ -35,3 +35,42 @@ window.addEventListener("scroll", function () {
     main.classList.remove("margin_main");
   }
 });
+
+// filter
+const goods = [
+  {
+    id: 1,
+    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    name: "mesh flared longsleeves",
+    price: "31.66",
+    category: "women",
+  },
+  // Добавьте сюда другие объекты, если нужно
+];
+
+const productsHTML = goods
+  .map(
+    (good) => `
+    <div class="produci-trumblin">
+      <a href="#">
+        <picture>
+          <source srcset="#" type="#" />
+          <source srcset="#" type="#" />
+          <img src=${good.img} alt="${good.name}" width="198" />
+        </picture>
+      </a>
+      <div class="product_body">
+        <div class="description ">
+          <a class="product_name" href="#">${good.name}</a>
+          <div class="prise-date">
+            <span class="cerrent_pruise">${good.price} USD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `
+  )
+  .join("");
+
+const contentBlockLeft = document.querySelector(".content_block_left");
+contentBlockLeft.innerHTML = productsHTML;

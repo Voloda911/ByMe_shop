@@ -784,3 +784,16 @@ input {
     width: 30px;
   }
 }
+
+/* filter */
+
+.main {
+  padding: 2em 6em;
+  display: flex;
+}
+.left_section {
+  width: 35%;
+}
+.content_block_left {
+  width: 65%;
+}
