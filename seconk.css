@@ -855,22 +855,28 @@ input {
   width: 100%;
   padding: 2em 4em;
   display: flex;
-  flex-direction: column;
 }
 
 .product_mair {
   width: 40%;
-  display: flex;
   justify-content: center;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.imges_area img {
+  width: 400px;
 }
 .product_semiler {
   width: 60%;
+  height: 20vw;
 }
-
 .mini_imeges {
-  text-align: center;
 }
 .mini_imeges img {
-  margin-top: 15px;
-  width: 15%;
+  margin-top: 25px;
+  width: 24%;
 }
