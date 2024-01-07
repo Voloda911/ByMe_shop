@@ -127,7 +127,7 @@ const goods = [
     img: "img.product/shoes/b39992d06bb5bb05e65bf90c76036978.webp",
     name: "cream chelsea bows",
     price: "31.66",
-    category: "shoes",
+    category: "women",
   },
   {
     id: 1,

@@ -848,3 +848,29 @@ input {
   display: flex;
   flex-wrap: wrap;
 }
+
+/* page_product sesction */
+
+.page_product {
+  width: 100%;
+  padding: 2em 4em;
+  display: flex;
+  flex-direction: column;
+}
+
+.product_mair {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+.product_semiler {
+  width: 60%;
+}
+
+.mini_imeges {
+  text-align: center;
+}
+.mini_imeges img {
+  margin-top: 15px;
+  width: 15%;
+}
