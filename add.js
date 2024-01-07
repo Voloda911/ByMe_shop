@@ -68,10 +68,45 @@ const goods = [
   },
   {
     id: 1,
+    img: "img.product/man/294fe6aeb4fb7a39d6a28bb211fb4191.webp",
+    name: "men's shorts Beigo",
+    price: "38.15",
+    category: "men",
+  },
+  {
+    id: 1,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
+  },
+  {
+    id: 1,
+    img: "img.product/man/42be7baef7fe9438de26738c2f57c4cb.webp",
+    name: "men's T-shirt",
+    price: "38.15",
+    category: "men",
+  },
+  {
+    id: 1,
+    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    name: "mesh flared longsleeves",
+    price: "31.66",
+    category: "women",
+  },
+  {
+    id: 1,
+    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    name: "mesh flared longsleeves",
+    price: "31.66",
+    category: "women",
+  },
+  {
+    id: 1,
+    img: "img.product/man/9c77380e70f6114970c91169f3b15a46.webp",
+    name: "men's shorts white",
+    price: "31.66",
+    category: "men",
   },
   {
     id: 1,
@@ -96,10 +131,10 @@ const goods = [
   },
   {
     id: 1,
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
+    img: "img.product/man/bccd4459f224e784ecd7f58858d619d7.webp",
+    name: "men's shorts white",
     price: "31.66",
-    category: "women",
+    category: "men",
   },
   {
     id: 1,
@@ -110,45 +145,10 @@ const goods = [
   },
   {
     id: 1,
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
-    category: "women",
-  },
-  {
-    id: 1,
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
-    category: "women",
-  },
-  {
-    id: 1,
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
-    category: "women",
-  },
-  {
-    id: 1,
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
-    category: "women",
-  },
-  {
-    id: 1,
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
-    category: "women",
-  },
-  {
-    id: 1,
-    img: "img.product/new.photo/7af9c2b4c8c21c6bf14ef479a7685c74.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
-    category: "women",
+    img: "img.product/man/c0737cc483c88cb7560d1c704b3ad92e.webp",
+    name: "GULLIVER men's s",
+    price: "36.90",
+    category: "men",
   },
 ];
 
@@ -186,6 +186,35 @@ function filterElementsAndShow(category) {
     .join("");
   document.getElementById("products-container").innerHTML = productsHTML;
 }
+
+function renderAllProducts() {
+  const productsHTML = goods
+    .map(
+      (good) => `
+    <div class="produci-trumblin">
+      <a href="#">
+        <picture>
+          <source srcset="#" type="#" />
+          <source srcset="#" type="#" />
+          <img src=${good.img} alt="${good.name}" width="198" />
+        </picture>
+      </a>
+      <div class="product_body">
+        <div class="description ">
+          <a class="product_name" href="#">${good.name}</a>
+          <div class="prise-date">
+            <span class="cerrent_pruise">${good.price} USD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `
+    )
+    .join("");
+  document.getElementById("products-container").innerHTML = productsHTML;
+}
+
+renderAllProducts();
 
 const contentBlockLeft = document.querySelector(".content_block_left");
 
