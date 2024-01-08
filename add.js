@@ -282,3 +282,15 @@ caterogy.addEventListener("click", () => {
     fasFa.classList.add("fa-chevron-down");
   }
 });
+// product html
+
+document.addEventListener("DOMContentLoaded", () => {
+  const products = JSON.parse(localStorage.getItem("products"));
+  const selectedProductId = localStorage.getItem("selectedProductId");
+
+  const selectedProduct = products.find(
+    (product) => product.dataId == selectedProductId
+  );
+  if (selectedProduct) {
+  }
+});
