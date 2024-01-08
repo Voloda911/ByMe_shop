@@ -112,7 +112,7 @@ const goods = [
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
-    category: "women",
+    category: "home",
   },
   {
     dataId: 12,
@@ -192,7 +192,28 @@ const goods = [
     category: "men",
   },
 ];
+// product html of localStorage
+
 localStorage.setItem("products", JSON.stringify(goods));
+document.querySelectorAll(".produci-trumblin").forEach((item) => {
+  item.addEventListener("click", function () {
+    const produciId = this.getAttribute("data-id");
+    localStorage.setItem("selectedProductId", produciId);
+
+    window.location.href = `product.html?productId=${produciId}`;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const products = JSON.parse(localStorage.getItem("products"));
+  const selectedProductId = localStorage.getItem("selectedProductId");
+
+  const selectedProduct = products.find(
+    (product) => product.dataId == selectedProductId
+  );
+  if (selectedProduct) {
+  }
+});
 
 document.querySelectorAll(".sections_colention a").forEach((link) => {
   link.addEventListener("click", (event) => {
@@ -202,22 +223,12 @@ document.querySelectorAll(".sections_colention a").forEach((link) => {
   });
 });
 
-document.querySelectorAll(".produci-trumblin").forEach((item) => {
-  item.addEventListener("click", function () {
-    const produciId = this.getAttribute("data-id");
-    localStorage.setItem("selectedProductId", produciId);
-
-    window.location.href = "product.html";
-  });
-});
-
 function filterElementsAndShow(category) {
   const filterGoods = goods.filter((good) => good.category === category);
   const productsHTML = filterGoods
     .map(
       (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
-  <a href="#">
-    <picture>
+      <a href="product.html?productId=${good.dataId}">    <picture>
       <source srcset="#" type="#" />
       <source srcset="#" type="#" />
       <img src=${good.img} alt="${good.name}" width="198" />
@@ -241,8 +252,8 @@ function renderAllProducts() {
   const productsHTML = goods
     .map(
       (good) => `
-    <div class="produci-trumblin">
-      <a href="#">
+      <div data-id=${good.dataId} class="produci-trumblin">
+      <a href="product.html?productId=${good.dataId}"> 
         <picture>
           <source srcset="#" type="#" />
           <source srcset="#" type="#" />
@@ -280,17 +291,5 @@ caterogy.addEventListener("click", () => {
   } else {
     fasFa.classList.remove("fa-chevron-up");
     fasFa.classList.add("fa-chevron-down");
-  }
-});
-// product html
-
-document.addEventListener("DOMContentLoaded", () => {
-  const products = JSON.parse(localStorage.getItem("products"));
-  const selectedProductId = localStorage.getItem("selectedProductId");
-
-  const selectedProduct = products.find(
-    (product) => product.dataId == selectedProductId
-  );
-  if (selectedProduct) {
   }
 });
