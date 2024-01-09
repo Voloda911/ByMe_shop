@@ -295,14 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ).textContent = `${selectedProduct.price} USD`;
   }
 });
-try {
-  const products = JSON.parse(localStorage.getItem("products"));
-  if (products) {
-    console.log("yes");
-  }
-} catch (e) {
-  console.log("Ошибка при чтении или анализе данных из localStorage", e);
-}
+
 //другой код
 function filterElementsAndShow(category) {
   const filterGoods = goods.filter((good) => good.category === category);
