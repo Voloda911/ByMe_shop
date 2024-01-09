@@ -35,7 +35,7 @@ window.addEventListener("scroll", function () {
 
 const goods = [
   {
-    dataId: "1",
+    dataId: 1,
     img: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
     name: "alibaba",
     price: "31.66",
@@ -45,7 +45,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "2",
+    dataId: 2,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
@@ -55,7 +55,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "3",
+    dataId: 3,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
@@ -65,7 +65,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "4",
+    dataId: 4,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
@@ -75,7 +75,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "5",
+    dataId: 5,
     img: "img.product/man/294fe6aeb4fb7a39d6a28bb211fb4191.webp",
     name: "men's shorts Beigo",
     price: "38.15",
@@ -85,7 +85,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "6",
+    dataId: 6,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
@@ -95,7 +95,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "7",
+    dataId: 7,
     img: "img.product/man/42be7baef7fe9438de26738c2f57c4cb.webp",
     name: "men's T-shirt",
     price: "38.15",
@@ -105,7 +105,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "8",
+    dataId: 8,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
@@ -115,7 +115,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "9",
+    dataId: 9,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
@@ -125,7 +125,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "10",
+    dataId: 10,
     img: "img.product/man/9c77380e70f6114970c91169f3b15a46.webp",
     name: "men's shorts white",
     price: "31.66",
@@ -135,7 +135,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "11",
+    dataId: 11,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
@@ -145,7 +145,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "12",
+    dataId: 12,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
@@ -155,7 +155,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "13",
+    dataId: 13,
     img: "img.product/shoes/b39992d06bb5bb05e65bf90c76036978.webp",
     name: "cream chelsea bows",
     price: "31.66",
@@ -165,7 +165,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "14",
+    dataId: 14,
     img: "img.product/shoes/908d3e436044239356b3eb2104cfab53.webp",
     name: "women's shoes ",
     price: "31.66",
@@ -175,7 +175,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "15",
+    dataId: 15,
     img: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
     name: "women's shoes ",
     price: "31.66",
@@ -185,7 +185,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "16",
+    dataId: 16,
     img: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
     name: "women's shoes ",
     price: "31.66",
@@ -195,7 +195,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "17",
+    dataId: 17,
     img: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
     name: "women's shoes ",
     price: "31.66",
@@ -205,7 +205,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "18",
+    dataId: 18,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
@@ -215,7 +215,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "19",
+    dataId: 19,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
@@ -225,7 +225,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "20",
+    dataId: 20,
     img: "img.product/man/bccd4459f224e784ecd7f58858d619d7.webp",
     name: "men's shorts white",
     price: "31.66",
@@ -235,7 +235,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "21",
+    dataId: 21,
     img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
@@ -245,7 +245,7 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
-    dataId: "22",
+    dataId: 22,
     img: "img.product/man/c0737cc483c88cb7560d1c704b3ad92e.webp",
     name: "GULLIVER men's s",
     price: "36.90",
@@ -266,34 +266,54 @@ document.querySelectorAll(".produci-trumblin").forEach((item) => {
     window.location.href = `product.html?productId=${produciId}`;
   });
 });
-document.addEventListener("DOMContentLoaded", function () {
-  const selectedProductId = localStorage.getItem("selectedProductId");
-  const goods = JSON.parse(localStorage.getItem("products"));
-  const selectedProduct = goods.find(
-    (good) => good.dataId.toString() === selectedProductId
+
+document.addEventListener("DOMContentLoaded", () => {
+  const products = JSON.parse(localStorage.getItem("products"));
+  const selectedProductId = parseInt(
+    localStorage.getItem("selectedProductId"),
+    10
   );
-
+  const selectedProduct = products.find(
+    (product) => product.dataId == selectedProductId
+  );
   if (selectedProduct) {
-    const productImages = [
-      selectedProduct.img,
-      selectedProduct.Images1,
-      selectedProduct.Images2,
-      selectedProduct.Images3,
-    ];
-    document.querySelector(".imges_area img").src = selectedProduct.img;
-    document.querySelector(".imges_area img").alt = selectedProduct.name;
-    document.querySelector(".mini_imeges").innerHTML = `
-    <img src="${selectedProduct.Images1}" alt="${selectedProduct.name}">
-    <img src="${selectedProduct.Images2}" alt="${selectedProduct.name}">
-    <img src="${selectedProduct.Images3}" alt="${selectedProduct.name}">
-  `;
-
-    document.querySelector(".title_goods h3").textContent =
-      selectedProduct.name;
-    document.querySelector(
-      ".cerrent_pruise"
-    ).textContent = `${selectedProduct.price} USD`;
+    renderProductInfo(selectedProduct);
   }
+});
+function renderProductInfo(goods) {
+  const infoProductElement = document.getElementById("info_product");
+
+  infoProductElement.innerHTML = `
+    <div class="product_mair">
+        <div class="imges_area">
+            <img src="${goods.img}" alt="${goods.name}">
+        </div>
+        <div class="mini_imeges">
+        <img src="${goods.Images1}" alt="${goods.name}">
+        <img src="${goods.Images2}" alt="${goods.name}">
+        <img src="${goods.Images3}" alt="${goods.name}">
+    </div>
+    </div>
+    <div class="product_semiler">
+        <div class="title_goods">
+            <h3>${goods.name}</h3>
+            <div class="prise-date">
+                <span class="cerrent_pruise prise_good">${goods.price} USD</span>
+                <i class="fa-light fa-heart"></i>
+            </div>
+            <!-- Другие элементы продукта -->
+        </div>
+    </div>`;
+}
+function renderProductInfo(product) {
+  console.log("Rendering product:", product);
+}
+document.querySelectorAll(".sections_colention a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    const category = event.target.getAttribute("data-category");
+    filterElementsAndShow(category);
+  });
 });
 
 //другой код
