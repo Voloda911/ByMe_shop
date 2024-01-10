@@ -256,58 +256,50 @@ const goods = [
   },
 ];
 // product html of localStorage
+localStorage.setItem("elementsProduct", JSON.stringify(goods));
+const retrievedGoods = JSON.parse(localStorage.getItem("elementsProduct"));
+console.log(retrievedGoods);
 
-localStorage.setItem("products", JSON.stringify(goods));
-document.querySelectorAll(".produci-trumblin").forEach((item) => {
-  item.addEventListener("click", function () {
-    const produciId = this.getAttribute("data-id");
-    localStorage.setItem("selectedProductId", produciId);
+// Извлекаем данные
+const dataString = localStorage.getItem("elementsProduct");
 
-    window.location.href = `product.html?productId=${produciId}`;
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const products = JSON.parse(localStorage.getItem("products"));
-  const selectedProductId = parseInt(
-    localStorage.getItem("selectedProductId"),
-    10
-  );
-  const selectedProduct = products.find(
-    (product) => product.dataId == selectedProductId
-  );
-  if (selectedProduct) {
-    renderProductInfo(selectedProduct);
+// Проверяем, не пустые ли это данные
+if (dataString) {
+  try {
+    // Преобразуем строку обратно в объект/массив
+    const data = JSON.parse(dataString);
+    console.log(data);
+  } catch (e) {
+    console.error("Ошибка при разборе данных: ", e);
   }
-});
-function renderProductInfo(goods) {
-  const infoProductElement = document.getElementById("info_product");
+} else {
+  console.log("Данные не найдены в localStorage");
+}
 
-  infoProductElement.innerHTML = `
-    <div class="product_mair">
-        <div class="imges_area">
-            <img src="${goods.img}" alt="${goods.name}">
-        </div>
-        <div class="mini_imeges">
-        <img src="${goods.Images1}" alt="${goods.name}">
-        <img src="${goods.Images2}" alt="${goods.name}">
-        <img src="${goods.Images3}" alt="${goods.name}">
-    </div>
-    </div>
-    <div class="product_semiler">
-        <div class="title_goods">
-            <h3>${goods.name}</h3>
-            <div class="prise-date">
-                <span class="cerrent_pruise prise_good">${goods.price} USD</span>
-                <i class="fa-light fa-heart"></i>
-            </div>
-            <!-- Другие элементы продукта -->
-        </div>
-    </div>`;
-}
-function renderProductInfo(product) {
-  console.log("Rendering product:", product);
-}
+// function renderProductInfo(goods) {
+//   const infoProductElement = document.getElementById("info_product");
+
+//   infoProductElement.innerHTML = `
+//     <div class="product_mair">
+//         <div class="imges_area">
+//             <img src="${goods.img}" alt="${goods.name}">
+//         </div>
+//         <div class="mini_imeges">
+//         <img src="${goods.Images1}" alt="${goods.name}">
+//         <img src="${goods.Images2}" alt="${goods.name}">
+//         <img src="${goods.Images3}" alt="${goods.name}">
+//     </div>
+//     </div>
+//     <div class="product_semiler">
+//         <div class="title_goods">
+//             <h3>${goods.name}</h3>
+//             <div class="prise-date">
+//                 <span class="cerrent_pruise prise_good">${goods.price} USD</span>
+//                 <i class="fa-light fa-heart"></i>
+//             </div>
+//         </div>
+//     </div>`;
+// }
 document.querySelectorAll(".sections_colention a").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
@@ -343,48 +335,58 @@ function filterElementsAndShow(category) {
   document.getElementById("products-container").innerHTML = productsHTML;
 }
 function renderAllProducts() {
-  const productsHTML = goods
-    .map(
-      (good) => `
-      <div data-id=${good.dataId} class="produci-trumblin">
-      <a href="product.html?productId=${good.dataId}"> 
-        <picture>
-          <source srcset="#" type="#" />
-          <source srcset="#" type="#" />
-          <img src=${good.img} alt="${good.name}" width="198" />
-        </picture>
-      </a>
-      <div class="product_body">
-        <div class="description ">
-          <a class="product_name" href="#">${good.name}</a>
-          <div class="prise-date">
-            <span class="cerrent_pruise">${good.price} USD</span>
+  // Проверяем, существует ли элемент с ID 'products-container' на странице
+  const productsContainer = document.getElementById("products-container");
+
+  if (productsContainer) {
+    // Если элемент существует, выполняем рендеринг продуктов
+    const productsHTML = goods
+      .map(
+        (good) => `
+          <div data-id=${good.dataId} class="produci-trumblin">
+            <a href="product.html?productId=${good.dataId}"> 
+              <picture>
+                <source srcset="#" type="#" />
+                <source srcset="#" type="#" />
+                <img src=${good.img} alt="${good.name}" width="198" />
+              </picture>
+            </a>
+            <div class="product_body">
+              <div class="description ">
+                <a class="product_name" href="#">${good.name}</a>
+                <div class="prise-date">
+                  <span class="cerrent_pruise">${good.price} USD</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  `
-    )
-    .join("");
-  document.getElementById("products-container").innerHTML = productsHTML;
+        `
+      )
+      .join("");
+
+    productsContainer.innerHTML = productsHTML;
+  }
 }
+
 renderAllProducts();
 
 const contentBlockLeft = document.querySelector(".content_block_left");
-const caterogy = document.querySelector(".caterogy");
+const category = document.querySelector(".caterogy");
 const colention = document.querySelector(".sections_colention");
 const fasFa = document.querySelector(".fas");
 
-caterogy.addEventListener("click", () => {
+category.addEventListener("click", () => {
   if (colention) {
     colention.classList.toggle("toggle_nav");
   }
-  if (fasFa.classList.contains("fa-chevron-down")) {
-    fasFa.classList.remove("fa-chevron-down");
-    fasFa.classList.add("fa-chevron-up");
-  } else {
-    fasFa.classList.remove("fa-chevron-up");
-    fasFa.classList.add("fa-chevron-down");
+  if (fasFa) {
+    if (fasFa.classList.contains("fa-chevron-down")) {
+      fasFa.classList.remove("fa-chevron-down");
+      fasFa.classList.add("fa-chevron-up");
+    } else {
+      fasFa.classList.remove("fa-chevron-up");
+      fasFa.classList.add("fa-chevron-down");
+    }
   }
 });
 
