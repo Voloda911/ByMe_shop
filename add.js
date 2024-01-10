@@ -32,7 +32,6 @@ window.addEventListener("scroll", function () {
     main.classList.remove("margin_main");
   }
 });
-
 const goods = [
   {
     dataId: 1,
@@ -40,9 +39,9 @@ const goods = [
     name: "alibaba",
     price: "31.66",
     category: "women",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
   },
   {
     dataId: 2,
@@ -255,40 +254,6 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
 ];
-// product html of localStorage
-localStorage.setItem("elementsProduct", JSON.stringify(goods));
-const retrievedGoods = JSON.parse(localStorage.getItem("elementsProduct"));
-
-const rendingProducts = document.querySelectorAll(".produci-trumblin");
-rendingProducts.forEach((product) => {
-  product.addEventListener("click", function (event) {
-    console.log(event.target);
-  });
-});
-// function renderProductInfo(goods) {
-//   const infoProductElement = document.getElementById("info_product");
-
-//   infoProductElement.innerHTML = `
-//     <div class="product_mair">
-//         <div class="imges_area">
-//             <img src="${goods.img}" alt="${goods.name}">
-//         </div>
-//         <div class="mini_imeges">
-//         <img src="${goods.Images1}" alt="${goods.name}">
-//         <img src="${goods.Images2}" alt="${goods.name}">
-//         <img src="${goods.Images3}" alt="${goods.name}">
-//     </div>
-//     </div>
-//     <div class="product_semiler">
-//         <div class="title_goods">
-//             <h3>${goods.name}</h3>
-//             <div class="prise-date">
-//                 <span class="cerrent_pruise prise_good">${goods.price} USD</span>
-//                 <i class="fa-light fa-heart"></i>
-//             </div>
-//         </div>
-//     </div>`;
-// }
 document.querySelectorAll(".sections_colention a").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
@@ -296,14 +261,12 @@ document.querySelectorAll(".sections_colention a").forEach((link) => {
     filterElementsAndShow(category);
   });
 });
-
-//другой код
 function filterElementsAndShow(category) {
   const filterGoods = goods.filter((good) => good.category === category);
   const productsHTML = filterGoods
     .map(
       (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
-      <a href="product.html?productId=${good.dataId}
+      <a href="#
       ">    <picture>
       <source srcset="#" type="#" />
       <source srcset="#" type="#" />
@@ -324,17 +287,32 @@ function filterElementsAndShow(category) {
     .join("");
   document.getElementById("products-container").innerHTML = productsHTML;
 }
-function renderAllProducts() {
-  // Проверяем, существует ли элемент с ID 'products-container' на странице
-  const productsContainer = document.getElementById("products-container");
+document.addEventListener("DOMContentLoaded", () => {
+  renderAllProducts();
 
+  const rendingProducts = document.querySelectorAll(".produci-trumblin");
+  rendingProducts.forEach((product) => {
+    product.addEventListener("click", function (event) {
+      const productId = this.getAttribute("data-id");
+      window.location.href = `product.html?productId=${productId}`;
+    });
+  });
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get("productId");
+  if (productId) {
+    const productData = getProductData(productId);
+    // renderProductInfo(productData);
+  }
+});
+
+function renderAllProducts() {
+  const productsContainer = document.getElementById("products-container");
   if (productsContainer) {
-    // Если элемент существует, выполняем рендеринг продуктов
     const productsHTML = goods
       .map(
         (good) => `
           <div data-id=${good.dataId} class="produci-trumblin">
-            <a href="product.html?productId=${good.dataId}
+            <a href="#
             "> 
               <picture>
                 <source srcset="#" type="#" />
@@ -358,11 +336,48 @@ function renderAllProducts() {
     productsContainer.innerHTML = productsHTML;
   }
 }
-
 renderAllProducts();
+function getProductData(productId) {
+  return goods.find((item) => item.dataId.toString() === productId);
+}
+function renderProductInfo(goods) {
+  const infoProductElement = document.querySelector(".page_product");
+  infoProductElement.innerHTML = `
+   
+  <div class="product_mair">
+  <div class="imges_area">
+      <img src=${goods.img} alt="">
+  </div>
+  <div class="mini_imeges">
+      <img src=${goods.Images1} alt="">
+      <img src=${goods.Images2} alt="">
+      <img src=${goods.Images3} alt="">
+  </div>
+</div>
+<div class="product_semiler">
+<div class="title_goods">
+  <h3>${goods.name} </h3>
+  <div class="prise-date">
+      <span class="cerrent_pruise prise_good">${goods.price} USD</span>
+      <i class="fa-light fa-heart"></i>  
+       </div>
+  <div class="menu_product_">
+      <label for="mySelect">Choose a size</label>
+      <select id="mySelect" name="mySelect">
+          <i class="fas fa-chevron-down"></i>
+          <option value="option1">8</option>
+          <option value="option2">8.5</option>
+          <option value="option3">9</option>
+          <option value="option3">9.5</option>
+      </select>
+      <button>To basket</button>
+  </div>
+  <h3>augment the image</h3>
+</div>
+</div>`;
+}
 
 const category = document.querySelector(".caterogy");
-
 if (category) {
   category.addEventListener("click", () => {
     const colention = document.querySelector(".sections_colention");

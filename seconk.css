@@ -872,7 +872,7 @@ input {
   text-align: center;
 }
 .imges_area img {
-  width: 400px;
+  width: 350px;
 }
 /* title_goods */
 .mane_product {
@@ -887,8 +887,8 @@ input {
   font-weight: 400;
 }
 .mini_imeges img {
-  margin-top: 25px;
-  width: 24%;
+  margin-top: 20px;
+  width: 20%;
 }
 .chose_semeler {
   width: 100%;
@@ -897,11 +897,9 @@ input {
   gap: 15px;
 }
 .product_offers {
-  width: 20%;
+  display: flex;
 }
-.chose_semeler img {
-  width: 100%;
-}
+
 #mySelect {
   width: 250px;
 }
