@@ -258,24 +258,13 @@ const goods = [
 // product html of localStorage
 localStorage.setItem("elementsProduct", JSON.stringify(goods));
 const retrievedGoods = JSON.parse(localStorage.getItem("elementsProduct"));
-console.log(retrievedGoods);
 
-// Извлекаем данные
-const dataString = localStorage.getItem("elementsProduct");
-
-// Проверяем, не пустые ли это данные
-if (dataString) {
-  try {
-    // Преобразуем строку обратно в объект/массив
-    const data = JSON.parse(dataString);
-    console.log(data);
-  } catch (e) {
-    console.error("Ошибка при разборе данных: ", e);
-  }
-} else {
-  console.log("Данные не найдены в localStorage");
-}
-
+const rendingProducts = document.querySelectorAll(".produci-trumblin");
+rendingProducts.forEach((product) => {
+  product.addEventListener("click", function (event) {
+    console.log(event.target);
+  });
+});
 // function renderProductInfo(goods) {
 //   const infoProductElement = document.getElementById("info_product");
 
@@ -314,7 +303,8 @@ function filterElementsAndShow(category) {
   const productsHTML = filterGoods
     .map(
       (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
-      <a href="product.html?productId=${good.dataId}">    <picture>
+      <a href="product.html?productId=${good.dataId}
+      ">    <picture>
       <source srcset="#" type="#" />
       <source srcset="#" type="#" />
       <img src=${good.img} alt="${good.name}" width="198" />
@@ -344,7 +334,8 @@ function renderAllProducts() {
       .map(
         (good) => `
           <div data-id=${good.dataId} class="produci-trumblin">
-            <a href="product.html?productId=${good.dataId}"> 
+            <a href="product.html?productId=${good.dataId}
+            "> 
               <picture>
                 <source srcset="#" type="#" />
                 <source srcset="#" type="#" />
@@ -370,25 +361,28 @@ function renderAllProducts() {
 
 renderAllProducts();
 
-const contentBlockLeft = document.querySelector(".content_block_left");
 const category = document.querySelector(".caterogy");
-const colention = document.querySelector(".sections_colention");
-const fasFa = document.querySelector(".fas");
 
-category.addEventListener("click", () => {
-  if (colention) {
-    colention.classList.toggle("toggle_nav");
-  }
-  if (fasFa) {
-    if (fasFa.classList.contains("fa-chevron-down")) {
-      fasFa.classList.remove("fa-chevron-down");
-      fasFa.classList.add("fa-chevron-up");
-    } else {
-      fasFa.classList.remove("fa-chevron-up");
-      fasFa.classList.add("fa-chevron-down");
+if (category) {
+  category.addEventListener("click", () => {
+    const colention = document.querySelector(".sections_colention");
+    const fasFa = document.querySelector(".fas");
+
+    if (colention) {
+      colention.classList.toggle("toggle_nav");
     }
-  }
-});
+
+    if (fasFa) {
+      if (fasFa.classList.contains("fa-chevron-down")) {
+        fasFa.classList.remove("fa-chevron-down");
+        fasFa.classList.add("fa-chevron-up");
+      } else {
+        fasFa.classList.remove("fa-chevron-up");
+        fasFa.classList.add("fa-chevron-down");
+      }
+    }
+  });
+}
 
 // link product.HTML
 // function renderInfoProduct() {
