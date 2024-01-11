@@ -39,66 +39,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-const mairGoods = [
-  {
-    dataId: 1,
-    section: "kosovo",
-    img: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    name: "alibaba",
-    price: "31.66",
-    category: "women",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-  },
-  {
-    dataId: 2,
-    section: "kosovo",
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
-    category: "women",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
-  },
-  {
-    dataId: 3,
-    section: "dobrush",
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
-    category: "men",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
-  },
-  {
-    dataId: 4,
-    section: "dobrush",
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
-    category: "men",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
-  },
-];
-const dobrushProducts = mairGoods.filter(
-  (product) => product.section === "dobrush"
-);
-const kosovoProducts = mairGoods.filter(
-  (product) => product.section === "kosovo"
-);
-const dobrushContainer = document.querySelector(".dobrush_section");
-const kosovoContainer = document.querySelector(".kosovo_section");
-if (dobrushContainer) {
-  renderProductsInSection(dobrushProducts, dobrushContainer);
-}
-if (kosovoContainer) {
-  renderProductsInSection(kosovoProducts, kosovoContainer);
-}
 // other
 const goods = [
   {
@@ -348,7 +288,7 @@ function renderProductsInSection(products, container) {
 
   container.innerHTML = productsHTML;
 }
-
+// shows navlink by citegory
 document.querySelectorAll(".sections_colention a").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
@@ -493,24 +433,3 @@ if (category) {
     }
   });
 }
-
-// link product.HTML
-// function renderInfoProduct() {
-//   const infoProduct = document.getElementById("info_product");
-//   const productInfo = goods
-//     .map((item) => {
-//       return `  <div class="imges_area">
-//       <img src="img.product/shoes/908d3e436044239356b3eb2104cfab53.webp" alt="">
-//   </div>
-//   <div class="mini_imeges">
-//       <img src="img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp" alt="">
-//       <img src="img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp" alt="">
-//       <img src="img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp" alt="">
-//   </div>
-//              `;
-//     })
-//     .join("");
-
-//   document.querySelector(".product_mair").innerHTML = productInfo;
-// }
-// renderInfoProduct();
