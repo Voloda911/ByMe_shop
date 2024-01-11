@@ -4,8 +4,14 @@ const nawSell = document.querySelectorAll(".text_tabs");
 const newBtn = document.getElementById("s_new");
 const tabNew = document.getElementById("tab_new");
 const tabSell = document.getElementById("tab_sell");
-// newBtn.classList.add("active");
-// tabNew.classList.add("active");
+
+if (newBtn) {
+  newBtn.classList.add("active");
+}
+
+if (tabNew) {
+  tabNew.classList.add("active");
+}
 nawSell.forEach(function (item) {
   item.addEventListener("click", function () {
     nawSell.forEach(function (item) {
@@ -32,6 +38,68 @@ window.addEventListener("scroll", function () {
     main.classList.remove("margin_main");
   }
 });
+
+const mairGoods = [
+  {
+    dataId: 1,
+    section: "kosovo",
+    img: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    name: "alibaba",
+    price: "31.66",
+    category: "women",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 2,
+    section: "kosovo",
+    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    name: "mesh flared longsleeves",
+    price: "31.66",
+    category: "women",
+    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
+    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
+    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+  },
+  {
+    dataId: 3,
+    section: "dobrush",
+    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    name: "mesh flared longsleeves",
+    price: "31.66",
+    category: "men",
+    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
+    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
+    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+  },
+  {
+    dataId: 4,
+    section: "dobrush",
+    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    name: "mesh flared longsleeves",
+    price: "31.66",
+    category: "men",
+    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
+    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
+    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+  },
+];
+const dobrushProducts = mairGoods.filter(
+  (product) => product.section === "dobrush"
+);
+const kosovoProducts = mairGoods.filter(
+  (product) => product.section === "kosovo"
+);
+const dobrushContainer = document.querySelector(".dobrush_section");
+const kosovoContainer = document.querySelector(".kosovo_section");
+if (dobrushContainer) {
+  renderProductsInSection(dobrushProducts, dobrushContainer);
+}
+if (kosovoContainer) {
+  renderProductsInSection(kosovoProducts, kosovoContainer);
+}
+// other
 const goods = [
   {
     dataId: 1,
@@ -254,6 +322,33 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
 ];
+function renderProductsInSection(products, container) {
+  const productsHTML = products
+    .map(
+      (product) => `
+    <div class="dobrush-picture">
+      <a href="#">
+        <picture>
+          <source srcset="#" type="#" />
+          <source srcset="#" type="#" />
+          <img src="${product.img}" alt="${product.name}" width="275" />
+        </picture>
+        <div class="product_body product-dobrush">
+          <div class="description">
+            <a class="product_name" href="">${product.name}</a>
+            <div class="prise-date">
+              <span class="cerrent_pruise">${product.price} USD</span>
+            </div>
+          </div>
+        </div>
+    </div>
+  `
+    )
+    .join("");
+
+  container.innerHTML = productsHTML;
+}
+
 document.querySelectorAll(".sections_colention a").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
@@ -301,7 +396,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const productId = urlParams.get("productId");
   if (productId) {
     const productData = getProductData(productId);
-    // renderProductInfo(productData);
+    renderProductInfo(productData);
   }
 });
 

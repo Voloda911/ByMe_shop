@@ -896,8 +896,14 @@ input {
   justify-content: start;
   gap: 15px;
 }
+.offerses {
+  width: 100%;
+}
 .product_offers {
   display: flex;
+}
+.img_offers {
+  width: 50%;
 }
 
 #mySelect {
