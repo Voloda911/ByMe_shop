@@ -49,7 +49,7 @@ const goods = [
     category: "women",
     Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
   },
   {
     dataId: 2,
@@ -262,33 +262,6 @@ const goods = [
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
 ];
-function renderProductsInSection(products, container) {
-  const productsHTML = products
-    .map(
-      (product) => `
-    <div class="dobrush-picture">
-      <a href="#">
-        <picture>
-          <source srcset="#" type="#" />
-          <source srcset="#" type="#" />
-          <img src="${product.img}" alt="${product.name}" width="275" />
-        </picture>
-        <div class="product_body product-dobrush">
-          <div class="description">
-            <a class="product_name" href="">${product.name}</a>
-            <div class="prise-date">
-              <span class="cerrent_pruise">${product.price} USD</span>
-            </div>
-          </div>
-        </div>
-    </div>
-  `
-    )
-    .join("");
-
-  container.innerHTML = productsHTML;
-}
-
 document.querySelectorAll(".sections_colention a").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
@@ -325,7 +298,7 @@ function filterElementsAndShow(category) {
 document.addEventListener("DOMContentLoaded", () => {
   renderAllProducts();
 
-  const rendingProducts = document.querySelectorAll(".produci-trumblin");
+  const rendingProducts = document.querySelectorAll(".produci-trumblinn");
   rendingProducts.forEach((product) => {
     product.addEventListener("click", function (event) {
       const productId = this.getAttribute("data-id");
@@ -346,7 +319,7 @@ function renderAllProducts() {
     const productsHTML = goods
       .map(
         (good) => `
-          <div data-id=${good.dataId} class="produci-trumblin">
+          <div data-id=${good.dataId} class="produci-trumblinn">
             <a href="#
             "> 
               <picture>
@@ -438,22 +411,22 @@ const mairGoods = [
   {
     dataId: 1,
     section: "kosovo",
-    img: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
     name: "alibaba",
     price: "31.66",
     category: "women",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images1: "",
+    Images2: "",
     Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
   },
   {
     dataId: 2,
     section: "kosovo",
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
+    Images1: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
     Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
@@ -479,8 +452,95 @@ const mairGoods = [
     Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
+  {
+    dataId: 5,
+    section: "shirt",
+    img: "img.product/e4db02a20010c59064cb57f4e3b006a8.webp",
+    name: "embroidered shirt",
+    price: "15.10",
+    category: "women",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 7,
+    section: "menswear",
+    img: "img.product/39aff594d959af0a26e4bbb021251faf.webp",
+    name: "embroidered shirt",
+    price: "18.10",
+    category: "men",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 8,
+    section: "menswear",
+    img: "img.product/8658852a86ecf89288a64eab08c23119.webp",
+    name: "embroidered shirt",
+    price: "22.10",
+    category: "men",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 9,
+    section: "hestories",
+    img: "img.product/de3babb8ba574dcb6e0939f8838c2cfa.webp",
+    name: "embroidered shirt",
+    price: "22.10",
+    category: "women",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 10,
+    section: "hestories",
+    img: "img.product/b8efed7119900c189f22a0821d119bb1.webp",
+    name: "embroidered shirt",
+    price: "22.10",
+    category: "women",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 12,
+    section: "ornaments",
+    img: "img.product/7ba88b91c692c9613522123a5d3bbe35.webp",
+    name: "embroidered shirt",
+    price: "22.10",
+    category: "women",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 13,
+    section: "shevchenko",
+    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
+    name: "embroidered shirt",
+    price: "22.10",
+    category: "women",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 14,
+    section: "shevchenko",
+    img: "img.product/b8efed7119900c189f22a0821d119bb1.webp",
+    name: "embroidered shirt",
+    price: "22.10",
+    category: "women",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
 ];
-
 function addClickToProducts() {
   document.querySelectorAll(".dobrush-picture").forEach((productElement) => {
     productElement.addEventListener("click", function () {
@@ -489,7 +549,6 @@ function addClickToProducts() {
     });
   });
 }
-
 function renderProductsInSection(products, container) {
   const productsHTML = products
     .map(
@@ -513,7 +572,6 @@ function renderProductsInSection(products, container) {
   `
     )
     .join("");
-
   container.innerHTML = productsHTML;
   addClickToProducts();
 }
@@ -524,13 +582,47 @@ const dobrushProducts = mairGoods.filter(
 const kosovoProducts = mairGoods.filter(
   (product) => product.section === "kosovo"
 );
-
+const shirtProducts = mairGoods.filter(
+  (product) => product.section === "shirt"
+);
+const menswearProducts = mairGoods.filter(
+  (product) => product.section === "menswear"
+);
+const hestoriesProducts = mairGoods.filter(
+  (product) => product.section === "hestories"
+);
+const ornamentsProducts = mairGoods.filter(
+  (product) => product.section === "ornaments"
+);
+const shevchenkoProducts = mairGoods.filter(
+  (product) => product.section === "shevchenko"
+);
 const dobrushContainer = document.getElementById("dobrush_area");
 const kosovoContainer = document.getElementById("kosovo_area");
-
+const shirtContainer = document.getElementById("shirt");
+const menswearContainer = document.getElementById("menswear");
+const hestoriesContainer = document.getElementById("hestories");
+const ornamentsContainer = document.getElementById("ornaments");
+const shevchenkoContainer = document.getElementById("shevchenko");
 if (dobrushContainer) {
   renderProductsInSection(dobrushProducts, dobrushContainer);
 }
 if (kosovoContainer) {
   renderProductsInSection(kosovoProducts, kosovoContainer);
+}
+if (shirtContainer) {
+  renderProductsInSection(shirtProducts, shirtContainer);
+}
+if (menswearContainer) {
+  renderProductsInSection(menswearProducts, menswearContainer);
+}
+if (hestoriesContainer) {
+  renderProductsInSection(hestoriesProducts, hestoriesContainer);
+}
+if (ornamentsContainer) {
+  renderProductsInSection(ornamentsProducts, ornamentsContainer);
+}
+
+if (shevchenkoContainer) {
+  renderProductsInSection(shevchenkoProducts, shevchenkoContainer);
 }
