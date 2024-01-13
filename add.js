@@ -261,7 +261,149 @@ const goods = [
     Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
+
+  {
+    dataId: 23,
+    section: "kosovo",
+    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
+    name: "alibaba",
+    price: "31.66",
+    category: "women",
+    Images1: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
+    Images2: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 24,
+    section: "kosovo",
+    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
+    name: "mesh flared longsleeves",
+    price: "31.66",
+    category: "women",
+    Images1: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
+    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
+    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+  },
+  {
+    dataId: 25,
+    section: "dobrush",
+    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    name: "mesh flared longsleeves",
+    price: "31.66",
+    category: "men",
+    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
+    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
+    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+  },
+  {
+    dataId: 26,
+    section: "dobrush",
+    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    name: "mesh flared longsleeves",
+    price: "31.66",
+    category: "men",
+    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
+    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
+    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+  },
+  {
+    dataId: 27,
+    section: "shirt",
+    img: "img.product/e4db02a20010c59064cb57f4e3b006a8.webp",
+    name: "embroidered shirt",
+    price: "15.10",
+    category: "women",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 28,
+    section: "menswear",
+    img: "img.product/39aff594d959af0a26e4bbb021251faf.webp",
+    name: "embroidered shirt",
+    price: "18.10",
+    category: "men",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 29,
+    section: "menswear",
+    img: "img.product/8658852a86ecf89288a64eab08c23119.webp",
+    name: "embroidered shirt",
+    price: "22.10",
+    category: "men",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 30,
+    section: "hestories",
+    img: "img.product/de3babb8ba574dcb6e0939f8838c2cfa.webp",
+    name: "embroidered shirt",
+    price: "22.10",
+    category: "women",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 31,
+    section: "hestories",
+    img: "img.product/b8efed7119900c189f22a0821d119bb1.webp",
+    name: "embroidered shirt",
+    price: "22.10",
+    category: "women",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 32,
+    section: "ornaments",
+    img: "img.product/7ba88b91c692c9613522123a5d3bbe35.webp",
+    name: "embroidered shirt",
+    price: "22.10",
+    category: "women",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 33,
+    section: "shevchenko",
+    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
+    name: "embroidered shirt",
+    price: "22.10",
+    category: "women",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
+  {
+    dataId: 34,
+    section: "shevchenko",
+    img: "img.product/b8efed7119900c189f22a0821d119bb1.webp",
+    name: "embroidered shirt",
+    price: "22.10",
+    category: "women",
+    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+  },
 ];
+function addEventListenersToProducts() {
+  const products = document.querySelectorAll(".produci-trumblin");
+  products.forEach((product) => {
+    product.addEventListener("click", function () {
+      const productId = this.getAttribute("data-id");
+      window.location.href = `product.html?productId=${productId}`;
+    });
+  });
+}
 document.querySelectorAll(".sections_colention a").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
@@ -294,11 +436,11 @@ function filterElementsAndShow(category) {
     )
     .join("");
   document.getElementById("products-container").innerHTML = productsHTML;
+  addEventListenersToProducts();
 }
 document.addEventListener("DOMContentLoaded", () => {
   renderAllProducts();
-
-  const rendingProducts = document.querySelectorAll(".produci-trumblinn");
+  const rendingProducts = document.querySelectorAll(".produci-trumblin");
   rendingProducts.forEach((product) => {
     product.addEventListener("click", function (event) {
       const productId = this.getAttribute("data-id");
@@ -343,6 +485,7 @@ function renderAllProducts() {
 
     productsContainer.innerHTML = productsHTML;
   }
+  addEventListenersToProducts();
 }
 renderAllProducts();
 function getProductData(productId) {
@@ -407,140 +550,6 @@ if (category) {
   });
 }
 
-const mairGoods = [
-  {
-    dataId: 1,
-    section: "kosovo",
-    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
-    name: "alibaba",
-    price: "31.66",
-    category: "women",
-    Images1: "",
-    Images2: "",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-  },
-  {
-    dataId: 2,
-    section: "kosovo",
-    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
-    category: "women",
-    Images1: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
-  },
-  {
-    dataId: 3,
-    section: "dobrush",
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
-    category: "men",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
-  },
-  {
-    dataId: 4,
-    section: "dobrush",
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
-    category: "men",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
-  },
-  {
-    dataId: 5,
-    section: "shirt",
-    img: "img.product/e4db02a20010c59064cb57f4e3b006a8.webp",
-    name: "embroidered shirt",
-    price: "15.10",
-    category: "women",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-  },
-  {
-    dataId: 7,
-    section: "menswear",
-    img: "img.product/39aff594d959af0a26e4bbb021251faf.webp",
-    name: "embroidered shirt",
-    price: "18.10",
-    category: "men",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-  },
-  {
-    dataId: 8,
-    section: "menswear",
-    img: "img.product/8658852a86ecf89288a64eab08c23119.webp",
-    name: "embroidered shirt",
-    price: "22.10",
-    category: "men",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-  },
-  {
-    dataId: 9,
-    section: "hestories",
-    img: "img.product/de3babb8ba574dcb6e0939f8838c2cfa.webp",
-    name: "embroidered shirt",
-    price: "22.10",
-    category: "women",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-  },
-  {
-    dataId: 10,
-    section: "hestories",
-    img: "img.product/b8efed7119900c189f22a0821d119bb1.webp",
-    name: "embroidered shirt",
-    price: "22.10",
-    category: "women",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-  },
-  {
-    dataId: 12,
-    section: "ornaments",
-    img: "img.product/7ba88b91c692c9613522123a5d3bbe35.webp",
-    name: "embroidered shirt",
-    price: "22.10",
-    category: "women",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-  },
-  {
-    dataId: 13,
-    section: "shevchenko",
-    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
-    name: "embroidered shirt",
-    price: "22.10",
-    category: "women",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-  },
-  {
-    dataId: 14,
-    section: "shevchenko",
-    img: "img.product/b8efed7119900c189f22a0821d119bb1.webp",
-    name: "embroidered shirt",
-    price: "22.10",
-    category: "women",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-  },
-];
 function addClickToProducts() {
   document.querySelectorAll(".dobrush-picture").forEach((productElement) => {
     productElement.addEventListener("click", function () {
@@ -549,6 +558,20 @@ function addClickToProducts() {
     });
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get("productId");
+
+  if (productId) {
+    const productData = mairGoods.find(
+      (product) => product.dataId.toString() === productId
+    );
+    if (productData) {
+      renderProductInfo(productData);
+    }
+  }
+});
+
 function renderProductsInSection(products, container) {
   const productsHTML = products
     .map(
@@ -575,26 +598,21 @@ function renderProductsInSection(products, container) {
   container.innerHTML = productsHTML;
   addClickToProducts();
 }
-addClickToProducts();
-const dobrushProducts = mairGoods.filter(
+const dobrushProducts = goods.filter(
   (product) => product.section === "dobrush"
 );
-const kosovoProducts = mairGoods.filter(
-  (product) => product.section === "kosovo"
-);
-const shirtProducts = mairGoods.filter(
-  (product) => product.section === "shirt"
-);
-const menswearProducts = mairGoods.filter(
+const kosovoProducts = goods.filter((product) => product.section === "kosovo");
+const shirtProducts = goods.filter((product) => product.section === "shirt");
+const menswearProducts = goods.filter(
   (product) => product.section === "menswear"
 );
-const hestoriesProducts = mairGoods.filter(
+const hestoriesProducts = goods.filter(
   (product) => product.section === "hestories"
 );
-const ornamentsProducts = mairGoods.filter(
+const ornamentsProducts = goods.filter(
   (product) => product.section === "ornaments"
 );
-const shevchenkoProducts = mairGoods.filter(
+const shevchenkoProducts = goods.filter(
   (product) => product.section === "shevchenko"
 );
 const dobrushContainer = document.getElementById("dobrush_area");
