@@ -44,22 +44,22 @@ const goods = [
   {
     dataId: 1,
     img: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    name: "alibaba",
-    price: "31.66",
-    category: "women",
+    name: "women's black chelsea",
+    price: "81.00",
+    category: "shoes",
     Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
     Images2: "img.product/shoes/2eaae4daa757353de5d8303fdd183cc1 (1).jpg",
-    Images3: "",
+    Images3: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
   },
   {
     dataId: 2,
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
+    img: "img.product/new.photo/7af9c2b4c8c21c6bf14ef479a7685c74.webp",
+    name: "classic trousers Petite Gray",
+    price: "21.80",
     category: "women",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+    Images1: "img.product/new.photo/b7c1ca389e8c5986dc058ab2218b441b.jpg",
+    Images2: "img.product/new.photo/30caf75e9bbf815b683392fbe531d566.webp",
+    Images3: "img.product/new.photo/7af9c2b4c8c21c6bf14ef479a7685c74.webp",
   },
   {
     dataId: 3,
@@ -454,7 +454,6 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProductInfo(productData);
   }
 });
-
 function renderAllProducts() {
   const productsContainer = document.getElementById("products-container");
   if (productsContainer) {
@@ -527,6 +526,19 @@ function renderProductInfo(goods) {
 </div>
 </div>`;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const mainImg = document.querySelector(".imges_area img");
+  const smallImg = document.querySelectorAll(".mini_imeges img");
+
+  smallImg.forEach((image) => {
+    image.addEventListener("click", (event) => {
+      const smallImgSrs = event.target.src;
+      const mainImgSrc = event.target.src;
+      mainImgSrc.src;
+    });
+  });
+});
 
 const category = document.querySelector(".caterogy");
 if (category) {

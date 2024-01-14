@@ -901,7 +901,8 @@ input {
 }
 .mini_imeges img {
   margin-top: 20px;
-  width: 20%;
+  width: 140px;
+  height: auto;
 }
 .chose_semeler {
   width: 100%;
@@ -957,4 +958,6 @@ input {
 .prise_good {
   font-size: 22px;
   margin: 15px 0;
+}
+.produci-trumblin img {
 }
