@@ -524,39 +524,34 @@ function renderProductInfo(goods) {
       <button>To basket</button>
   </div>
   <h3>augment the image</h3>
-</div>`;
-  const relatedGoods = goods.filter(
-    (good) =>
-      good.category === selectedGoods.category &&
-      good.dataId !== selectedGoods.dataId
-  );
-  const relatedGoodsHtml = relatedGoods
+</div>
+</div>
+`;
+  addImageSwitchingEventListeners();
+}
+function renderOffersToProducts(goods) {
+  const renderAreaOffers = document.querySelector(".product_offers");
+
+  const relatedProductsHtml = goods
     .map(
-      (good) =>
-        `
-<div data-id=${good.dataId} class="produci-trumblin">
-<a href="#
-"> 
-  <picture>
-    <source srcset="#" type="#" />
-    <source srcset="#" type="#" />
-    <img src=${good.img} alt="${good.name}" width="198" />
-  </picture>
-</a>
-<div class="product_body">
-  <div class="description ">
-    <a class="product_name" href="#">${good.name}</a>
-    <div class="prise-date">
-      <span class="cerrent_pruise">${good.price} USD</span>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-`
+      (product) => `
+      <div data-id=${product.dataId} class="produci-trumblin">
+        <a href="#"> 
+          <img src=${product.img} alt="${product.name}" width="198" />
+        </a>
+        <div class="product_body">
+          <div class="description ">
+            <a class="product_name" href="#">${product.name}</a>
+            <div class="prise-date">
+              <span class="cerrent_pruise">${product.price} USD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
     )
     .join("");
-  addImageSwitchingEventListeners();
+  renderAreaOffers.innerHTML = relatedProductsHtml;
 }
 function addImageSwitchingEventListeners() {
   const mainImg = document.querySelector(".imges_area img");
