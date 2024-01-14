@@ -342,24 +342,24 @@ const goods = [
   {
     dataId: 30,
     section: "hestories",
-    img: "img.product/de3babb8ba574dcb6e0939f8838c2cfa.webp",
-    name: "embroidered shirt",
-    price: "22.10",
+    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
+    name: "mesh flared longsleeves",
+    price: "31.66",
     category: "women",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images1: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
+    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
+    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
     dataId: 31,
     section: "hestories",
-    img: "img.product/b8efed7119900c189f22a0821d119bb1.webp",
-    name: "embroidered shirt",
-    price: "22.10",
+    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
+    name: "mesh flared longsleeves",
+    price: "31.66",
     category: "women",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    Images1: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
+    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
+    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
     dataId: 32,
@@ -461,7 +461,7 @@ function renderAllProducts() {
     const productsHTML = goods
       .map(
         (good) => `
-          <div data-id=${good.dataId} class="produci-trumblinn">
+          <div data-id=${good.dataId} class="produci-trumblin">
             <a href="#
             "> 
               <picture>
@@ -484,8 +484,8 @@ function renderAllProducts() {
       .join("");
 
     productsContainer.innerHTML = productsHTML;
+    addEventListenersToProducts();
   }
-  addEventListenersToProducts();
 }
 renderAllProducts();
 function getProductData(productId) {
@@ -563,7 +563,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const productId = urlParams.get("productId");
 
   if (productId) {
-    const productData = mairGoods.find(
+    const productData = goods.find(
       (product) => product.dataId.toString() === productId
     );
     if (productData) {

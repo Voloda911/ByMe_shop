@@ -21,6 +21,15 @@ section {
   padding-top: 50px;
   background: white;
 }
+.produci_area {
+  display: flex;
+}
+.ornaments_sec {
+  width: 50%;
+}
+#ornaments_block {
+  padding: 2em 4em;
+}
 .margin_main {
   margin-top: 131px;
 }
@@ -680,6 +689,10 @@ input {
   }
   .img_block {
     padding: 0 0 0 200px;
+  }
+  .dobrush-picture {
+    margin-bottom: 100px;
+    z-index: 10;
   }
   /* rai-sec */
 }
