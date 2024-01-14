@@ -14,6 +14,7 @@ a {
 }
 picture {
   overflow: hidden;
+  width: 100%;
 }
 
 section {
@@ -184,6 +185,9 @@ section {
 }
 .product_body {
   padding-top: 13px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
 }
 .product_body a {
   text-transform: uppercase;
@@ -193,6 +197,9 @@ section {
   font-weight: 400;
   list-style: none;
   text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .product_name {
   width: 100%;
@@ -858,11 +865,18 @@ input {
   justify-content: space-between;
   margin: 0;
 }
-
 #products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+
+.produci-trumblin {
+  position: relative;
+  width: 200px;
 }
 
 /* page_product sesction */
@@ -885,7 +899,14 @@ input {
   text-align: center;
 }
 .imges_area img {
-  width: 350px;
+  width: 330px;
+  transition: all 0.2s;
+}
+.mini_imeges img {
+  margin-top: 20px;
+  width: 20%;
+  transition: all 0.2s;
+  height: auto;
 }
 /* title_goods */
 .mane_product {
@@ -898,11 +919,6 @@ input {
 .title_goods h3 {
   font-size: 23px;
   font-weight: 400;
-}
-.mini_imeges img {
-  margin-top: 20px;
-  width: 140px;
-  height: auto;
 }
 .chose_semeler {
   width: 100%;
@@ -958,6 +974,4 @@ input {
 .prise_good {
   font-size: 22px;
   margin: 15px 0;
-}
-.produci-trumblin img {
 }

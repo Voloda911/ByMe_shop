@@ -59,67 +59,67 @@ const goods = [
     category: "women",
     Images1: "img.product/new.photo/b7c1ca389e8c5986dc058ab2218b441b.jpg",
     Images2: "img.product/new.photo/30caf75e9bbf815b683392fbe531d566.webp",
-    Images3: "img.product/new.photo/7af9c2b4c8c21c6bf14ef479a7685c74.webp",
+    Images3: "img.product/new.photo/349e2e81a0f0e21c409c44c139839c70.jpg",
   },
   {
     dataId: 3,
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
-    category: "women",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+    img: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
+    name: "leather boots with fur",
+    price: "81.00",
+    category: "shoes",
+    Images1: "img.product/shoes/c04123479b4b34230bb94a7c0efd1f26.jpg",
+    Images2: "img.product/shoes/c5307c7a718e0144e37e4836b28a8cd0.jpg",
+    Images3: "img.product/shoes/d240117620619a9af2c4fc901efc777a.webp",
   },
   {
     dataId: 4,
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
+    img: "img.product/new.photo/936cf2b74a5cf487583d6023ccc97c05.webp",
+    name: "classic trousers Petitle Novy",
+    price: "22.00",
     category: "women",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+    Images1: "img.product/new.photo/5bf0e697f60092234857380cb9d70b5a.jpg",
+    Images2: "img.product/new.photo/3ca72eded3a0ddb8a764cd9ee3b18542.jpg",
+    Images3: "img.product/new.photo/6ef1cc33a38524ac8db106fda5d377fa.jpg",
   },
   {
     dataId: 5,
-    img: "img.product/man/294fe6aeb4fb7a39d6a28bb211fb4191.webp",
-    name: "men's shorts Beigo",
-    price: "38.15",
-    category: "men",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
+    img: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+    name: "women's boots with fur in the middle",
+    price: "77.50",
+    category: "shoes",
+    Images1: "img.product/shoes/908d3e436044239356b3eb2104cfab53.webp",
+    Images2: "img.product/shoes/87064353b2c996927146e9337d21618d.jpg",
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
   },
   {
     dataId: 6,
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
-    price: "31.66",
+    img: "img.product/new.photo/1bccde4cceedcdac270a7f0e142e5bfc.webp",
+    name: "grey women's skirt ",
+    price: "49.10",
     category: "women",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+    Images2: "img.product/new.photo/8d0d7799dde29a8bb3b31b5599ea957f.jpg",
+    Images1: "img.product/new.photo/454def9ee32d39c3ad733ecb59af2b72.jpg",
+    Images3: "img.product/new.photo/0640aa8db03991cad9cd49d0a9b0d040.webp",
   },
   {
     dataId: 7,
-    img: "img.product/man/42be7baef7fe9438de26738c2f57c4cb.webp",
-    name: "men's T-shirt",
-    price: "38.15",
+    img: "img.product/man/9c77380e70f6114970c91169f3b15a46.webp",
+    name: "men's shorts Beigo",
+    price: "31.15",
     category: "men",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+    Images1: "img.product/man/216c5d7a99f65e7fde3bc78bcc1e1526.jpg",
+    Images2: "img.product/man/05255b2f7675814fa0e4aa43e6eb3268.jpg",
+    Images3: "img.product/man/87f75596bb9437ee9c87f7b11127d9a1.jpg",
   },
   {
     dataId: 8,
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
+    img: "img.product/man/294fe6aeb4fb7a39d6a28bb211fb4191.webp",
+    name: "men's shorts black",
     price: "31.66",
     category: "women",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+    Images1: "img.product/man/3aba7a2070f46b6b41269da3c275b7f2.jpg",
+    Images2: "img.product/man/5c040d7850cc5bf4806de843d614388b.jpg",
+    Images3: "img.product/man/2c6b171ad3837937290ce8fa1ce68ca6.webp",
   },
   {
     dataId: 9,
@@ -143,13 +143,13 @@ const goods = [
   },
   {
     dataId: 11,
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    name: "mesh flared longsleeves",
+    img: "img.product/man/ff5b85f06c6fd88b4ddd74d9f9cc2db8.webp",
+    name: "men's shirt GOVERLA",
     price: "31.66",
-    category: "home",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+    category: "men",
+    Images2: "img.product/man/d7674e6dfd6ae3d863f071169490a44d.jpg",
+    Images1: "img.product/man/c2fbc2176185e18e39aca6cc55c8e551.jpg",
+    Images3: "img.product/man/030a215f23a50cf2c51bcd6abae52325.jpg",
   },
   {
     dataId: 12,
@@ -484,6 +484,7 @@ function renderAllProducts() {
 
     productsContainer.innerHTML = productsHTML;
     addEventListenersToProducts();
+    addEventListenersToProducts();
   }
 }
 renderAllProducts();
@@ -496,7 +497,7 @@ function renderProductInfo(goods) {
    
   <div class="product_mair">
   <div class="imges_area">
-      <img src=${goods.img} alt="">
+      <img class  class="mine_img" src=${goods.img} alt="">
   </div>
   <div class="mini_imeges">
       <img src=${goods.Images1} alt="">
@@ -523,22 +524,53 @@ function renderProductInfo(goods) {
       <button>To basket</button>
   </div>
   <h3>augment the image</h3>
-</div>
 </div>`;
+  const relatedGoods = goods.filter(
+    (good) =>
+      good.category === selectedGoods.category &&
+      good.dataId !== selectedGoods.dataId
+  );
+  const relatedGoodsHtml = relatedGoods
+    .map(
+      (good) =>
+        `
+<div data-id=${good.dataId} class="produci-trumblin">
+<a href="#
+"> 
+  <picture>
+    <source srcset="#" type="#" />
+    <source srcset="#" type="#" />
+    <img src=${good.img} alt="${good.name}" width="198" />
+  </picture>
+</a>
+<div class="product_body">
+  <div class="description ">
+    <a class="product_name" href="#">${good.name}</a>
+    <div class="prise-date">
+      <span class="cerrent_pruise">${good.price} USD</span>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+`
+    )
+    .join("");
+  addImageSwitchingEventListeners();
 }
-
-document.addEventListener("DOMContentLoaded", function () {
+function addImageSwitchingEventListeners() {
   const mainImg = document.querySelector(".imges_area img");
-  const smallImg = document.querySelectorAll(".mini_imeges img");
+  const smallImgs = document.querySelectorAll(".mini_imeges img");
 
-  smallImg.forEach((image) => {
+  smallImgs.forEach((image) => {
     image.addEventListener("click", (event) => {
-      const smallImgSrs = event.target.src;
-      const mainImgSrc = event.target.src;
-      mainImgSrc.src;
+      const smallImgSrc = event.target.src;
+      const mainImgSrc = mainImg.src;
+      mainImg.src = smallImgSrc;
+      event.target.src = mainImgSrc;
     });
   });
-});
+}
 
 const category = document.querySelector(".caterogy");
 if (category) {
