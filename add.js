@@ -43,13 +43,13 @@ window.addEventListener("scroll", function () {
 const goods = [
   {
     dataId: 1,
-    img: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    img: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
     name: "alibaba",
     price: "31.66",
     category: "women",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
+    Images2: "img.product/shoes/2eaae4daa757353de5d8303fdd183cc1 (1).jpg",
+    Images3: "",
   },
   {
     dataId: 2,
