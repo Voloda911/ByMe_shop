@@ -4,11 +4,29 @@ const nawSell = document.querySelectorAll(".text_tabs");
 const newBtn = document.getElementById("s_new");
 const tabNew = document.getElementById("tab_new");
 const tabSell = document.getElementById("tab_sell");
+const infoButtons = document.querySelectorAll(".menu_info_product button");
+
+infoButtons.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    infoButtons.forEach((button) => {
+      button.classList.remove("active");
+    });
+    event.target.classList.toggle("active");
+    const dataIdButton = event.target.getAttribute("data-id");
+    const content = document.querySelectorAll(".conten_info_");
+
+    content.forEach((section) => {
+      section.classList.remove("active");
+      if (section.id === dataIdButton) {
+        section.classList.toggle("active");
+      }
+    });
+  });
+});
 
 if (newBtn) {
   newBtn.classList.add("active");
 }
-
 if (tabNew) {
   tabNew.classList.add("active");
 }
@@ -50,6 +68,7 @@ const goods = [
     Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
     Images2: "img.product/shoes/2eaae4daa757353de5d8303fdd183cc1 (1).jpg",
     Images3: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
+    about: "Привет! Конечно, можем говорить по-русски. Чем я могу помочь?",
   },
   {
     dataId: 2,
@@ -146,7 +165,7 @@ const goods = [
     img: "img.product/man/ff5b85f06c6fd88b4ddd74d9f9cc2db8.webp",
     name: "men's shirt GOVERLA",
     price: "31.66",
-    category: "men",
+    category: "ironWings",
     Images2: "img.product/man/d7674e6dfd6ae3d863f071169490a44d.jpg",
     Images1: "img.product/man/c2fbc2176185e18e39aca6cc55c8e551.jpg",
     Images3: "img.product/man/030a215f23a50cf2c51bcd6abae52325.jpg",
@@ -411,6 +430,14 @@ document.querySelectorAll(".sections_colention a").forEach((link) => {
     filterElementsAndShow(category);
   });
 });
+function filterMenuAndShow(goods) {
+  const filterGoods = goods.filter((good) => good.category === category);
+  const menuBtn = document.querySelectorAll(".item-btm a");
+  menuBtn.addEventListener("click", function (event) {
+    if (filterGoods) {
+    }
+  });
+}
 function filterElementsAndShow(category) {
   const filterGoods = goods.filter((good) => good.category === category);
   const productsHTML = filterGoods
@@ -524,35 +551,46 @@ function renderProductInfo(goods) {
       <button>To basket</button>
   </div>
   <h3>augment the image</h3>
-</div>
+  <div class="product_offers"></div>
 </div>
 `;
+  //   const areaTawar = document.querySelector(".about_tawar");
+  //   areaTawar.innerHTML = `<div class="tawar_text">
+  // <div class="tawar">
+  //   <h3>${goods.about}</h3>
+  //   <h3>Lorem ipsum dolor sit amet.</h3>
+  //   <h3>${goods.about}</h3>
+  //   <h3>Lorem ipsum dolor sit amet.</h3>
+  //   <h3>${goods.about}</h3>
+  //   <h3>Lorem ipsum dolor sit amet.</h3>
+
+  // </div>
+  // </div>`;
   addImageSwitchingEventListeners();
 }
-function renderOffersToProducts(goods) {
-  const renderAreaOffers = document.querySelector(".product_offers");
-
-  const relatedProductsHtml = goods
-    .map(
-      (product) => `
-      <div data-id=${product.dataId} class="produci-trumblin">
-        <a href="#"> 
-          <img src=${product.img} alt="${product.name}" width="198" />
-        </a>
-        <div class="product_body">
-          <div class="description ">
-            <a class="product_name" href="#">${product.name}</a>
-            <div class="prise-date">
-              <span class="cerrent_pruise">${product.price} USD</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    `
-    )
-    .join("");
-  renderAreaOffers.innerHTML = relatedProductsHtml;
-}
+// function renderOffersToProducts(goods) {
+//   const renderAreaOffers = document.querySelector(".product_offers");
+//   const relatedProductsHtml = goods
+//     .map(
+//       (product) => `
+//       <div data-id=${goods.dataId} class="produci-trumblin">
+//         <a href="#">
+//           <img src=${goods.img} alt="${goods.name}" width="198" />
+//         </a>
+//         <div class="product_body">
+//           <div class="description ">
+//             <a class="product_name" href="#">${goods.name}</a>
+//             <div class="prise-date">
+//               <span class="cerrent_pruise">${goods.price} USD</span>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     `
+//     )
+//     .join("");
+//   renderAreaOffers.innerHTML = relatedProductsHtml;
+// }
 function addImageSwitchingEventListeners() {
   const mainImg = document.querySelector(".imges_area img");
   const smallImgs = document.querySelectorAll(".mini_imeges img");

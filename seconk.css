@@ -975,3 +975,50 @@ input {
   font-size: 22px;
   margin: 15px 0;
 }
+
+.about_tawar {
+  width: 100%;
+  display: flex;
+}
+.menu_info_product {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.menu_info_product button {
+  padding: 10px 160px;
+  border: none;
+  background: none;
+  background-color: #f1f1ea;
+  position: relative;
+}
+.menu_info_product button.active {
+  border: 1px dashed black;
+}
+.menu_info_product button::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #000;
+  top: 0;
+  left: 0;
+}
+.menu_info_product button.active::before {
+  width: 0;
+  height: 0;
+}
+.conten_info_ {
+  display: none;
+  width: 100%;
+  text-align: start;
+}
+.conten_info_.active {
+  display: block;
+}
+#sizes {
+  text-align: center;
+}
