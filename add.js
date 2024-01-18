@@ -260,6 +260,31 @@ const goods = [
     info9: "",
   },
   {
+    dataId: 23,
+    section: "kosovo",
+
+    img: "img.product/new.photo/3abe2d7ebe5721b87215f4e3f467b71e.webp",
+    name: "plaid Baige Big",
+    price: "85.99",
+    category: "home",
+    Images2: "img.product/new.photo/dd641fad6d1e8e0bdd1016c14baeb083.jpg",
+    Images3: "img.product/new.photo/5a6a47b547ff891bf2710a1c55a3a029.jpg",
+    Images1: "img.product/new.photo/056c6f224447f8718aa10d3a1683f73a.jpg",
+    about: "Large Hutsul lizhnyk    ",
+    info: "It is woven by the hands of weaver Ivanna. The wool is sheared and washed by her sister Vasylyna.",
+    info2:
+      "The process of making the lizhnyk, from sheep in the pastures to weaving, is authentic, and the ornaments reflect the craftswoman's modern view.",
+    info3: "The tag features a lamb made of tiles by Oleksa Bakhmatyuk.    ",
+    info4:
+      "A pelekhatyi lizhnyk is a traditional decoration of a Hutsul house.    ",
+    info5: "It contains the soul of generations.    ",
+    info6:
+      "Made of natural wool, the blanket will have a slight smell of sheep's wool at first.",
+    info7: "Composition: 100% wool.    ",
+    info8: "Size: 150x150 cm ",
+    info9: "",
+  },
+  {
     dataId: 20,
     img: "img.product/man/bccd4459f224e784ecd7f58858d619d7.webp",
     name: "men's shorts white",
@@ -324,8 +349,7 @@ const goods = [
   },
 
   {
-    dataId: 23,
-    section: "kosovo",
+    dataId: 11,
     img: "img.product/new.photo/e93223bca31ac524dd16943c9a3ee5b5.webp",
     name: "grey knit cordigan ",
     price: "22.00",
@@ -348,13 +372,13 @@ const goods = [
     dataId: 24,
     section: "kosovo",
 
-    Images1: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+    Images1: "img.product/new.photo/6876c1d42ddb76972f98188991d1d0e6.webp",
     name: "women's boots with fur in the middle",
     price: "77.50",
     category: "shoes",
-    Images1: "img.product/shoes/908d3e436044239356b3eb2104cfab53.webp",
-    img: "img.product/shoes/87064353b2c996927146e9337d21618d.jpg",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
+    Images2: "img.product/new.photo/89252c4b4c99b8b7a61702b3664e6129.jpg",
+    img: "img.product/new.photo/6876c1d42ddb76972f98188991d1d0e6.webp",
+    Images3: "img.product/new.photo/89252c4b4c99b8b7a61702b3664e6129.jpg",
     about: " Straight trousers, for a height of 158 - 165 cm",
     info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
     info2: "",
@@ -369,28 +393,29 @@ const goods = [
   {
     dataId: 25,
     section: "dobrush",
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    img: "img.product/new.photo/6a66fe28a707859eae9d62d14326d5a2.jpg",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "men",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
-    about: " Straight trousers, for a height of 158 - 165 cm",
-    info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
-    info2: "",
-    info3: "The trousers go well with tops and long sleeves.",
-    info4: "Composition: 22% viscose, 73% polyester, 5% elastane.    ",
-    info5: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
-    info6: "Model dimensions: 83/64/93 cm.    ",
-    info7: "Model's height: 170 cm (model wearing Long)    ",
-    info8: "Length at side seam: 102 cm.    ",
-    info9: "Size on the model: XS.",
+    Images1: "img.product/new.photo/aa68f02de2c9fcf3e1e9e8a4d6024f90.jpg",
+    Images2: "img.product/new.photo/b111d2512e68b21f69b78db8601a5094.webp",
+    Images3: "img.product/new.photo/beaee273c5bc5c7f01a842e1109abcf5.jpg",
+    about: "A voluminous checked shirt    ",
+    info: "A special item in the collection because it is warm and dedicated to Kosiv ceramics.",
+    info2:
+      "The shirt features an embroidered pattern of Kosiv ceramics. Pay attention to the details.",
+    info3: "Composition: 100% cotton.    ",
+    info4: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
+    info5: "Model dimensions: 86/68/95 cm.",
+    info6: "Model's height: 170 cm.",
+    info7: "Back length: 50 cm.    ",
+    info8: "Size on the model: XXS - XS. ",
+    info9: "",
   },
   {
     dataId: 26,
     section: "dobrush",
-    img: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
+    img: "img.product/new.photo/78bf1d2561ae818e06d4342aff8a303e.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "men",
@@ -657,6 +682,7 @@ function updatePriceValue(value, id) {
 }
 function renderAllProducts() {
   const productsContainer = document.getElementById("products-container");
+
   if (productsContainer) {
     const productsHTML = goods
       .map(
@@ -752,29 +778,7 @@ function renderProductInfo(goods) {
   </div>`;
   addImageSwitchingEventListeners();
 }
-// function renderOffersToProducts(goods) {
-//   const renderAreaOffers = document.querySelector(".product_offers");
-//   const relatedProductsHtml = goods
-//     .map(
-//       (product) => `
-//       <div data-id=${goods.dataId} class="produci-trumblin">
-//         <a href="#">
-//           <img src=${goods.img} alt="${goods.name}" width="198" />
-//         </a>
-//         <div class="product_body">
-//           <div class="description ">
-//             <a class="product_name" href="#">${goods.name}</a>
-//             <div class="prise-date">
-//               <span class="cerrent_pruise">${goods.price} USD</span>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     `
-//     )
-//     .join("");
-//   renderAreaOffers.innerHTML = relatedProductsHtml;
-// }
+v;
 function addImageSwitchingEventListeners() {
   const mainImg = document.querySelector(".imges_area img");
   const smallImgs = document.querySelectorAll(".mini_imeges img");
@@ -842,7 +846,7 @@ function renderProductsInSection(products, container) {
         <picture>
           <source srcset="#" type="#" />
           <source srcset="#" type="#" />
-          <img src="${product.img}" alt="${product.name}" width="275" />
+          <img src="${product.img}" alt="${product.name}" width="300" />
         </picture>
         <div class="product_body product-dobrush">
           <div class="description">
@@ -904,4 +908,27 @@ if (ornamentsContainer) {
 
 if (shevchenkoContainer) {
   renderProductsInSection(shevchenkoProducts, shevchenkoContainer);
+}
+function rendersladeToProducts(goods) {
+  const rendersliderProduct = document.querySelectorAll(".slider-product");
+  const relatedProductsHtml = goods
+    .map(
+      (product) => `
+      <div data-id=${goods.dataId} class="produci-trumblin">
+        <a href="#">
+          <img src=${goods.img} alt="${goods.name}" width="198" />
+        </a>
+        <div class="product_body">
+          <div class="description ">
+            <a class="product_name" href="#">${goods.name}</a>
+            <div class="prise-date">
+              <span class="cerrent_pruise">${goods.price} USD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
+    )
+    .join("");
+  rendersliderProduct.innerHTML = relatedProductsHtml;
 }
