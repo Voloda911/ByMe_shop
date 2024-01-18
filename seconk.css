@@ -158,12 +158,21 @@ section {
   color: #000;
   border-bottom: 2px solid black;
 }
+.section_tab {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 0fr));
+  margin: auto;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
 
 .product_sections {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(198px, 1fr));
-  gap: 20px; /* Расстояние между блоками */
-  justify-content: space-between; /* Равномерное распределение блоков по контейнеру */
+  gap: 20px;
+  justify-content: space-between;
 }
 .product_shift {
   display: none;
@@ -191,6 +200,7 @@ section {
 }
 .product_body a {
   text-transform: uppercase;
+  width: 60%;
   margin: 0;
   color: #000;
   text-decoration: none;
@@ -361,10 +371,9 @@ section {
   height: 100%;
   object-fit: cover;
 }
-
 .produci-trumblin picture {
   display: block;
-  width: 200px;
+  width: 280px;
   height: auto;
   overflow: hidden;
 }
@@ -372,6 +381,15 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+#products-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+.all_products {
+  width: 280px;
 }
 /* shirt */
 .svhirt {
@@ -887,14 +905,6 @@ input {
   justify-content: space-between;
   margin: 0;
 }
-#products-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 5px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
 
 /* page_product sesction */
 
@@ -1065,4 +1075,64 @@ input {
 }
 .content_tabs ul {
   margin-bottom: 40px;
+}
+/* winges */
+.winges_section {
+  width: 100%;
+  padding: 2em 4em;
+  margin: 1em;
+}
+.winges_section h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.winges_section img {
+  margin: 0 auto;
+  width: 100%;
+}
+.winges_v2 p {
+  column-count: 2;
+}
+.winges_v2 h2 {
+  text-align: center;
+
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+.winges_v2 img {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.text_v1 {
+  margin: 15px 0;
+}
+.winges_v3 p:last-child {
+  column-count: 2;
+}
+.winges_v4 img {
+  width: 400px;
+}
+.winges_v4 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.winges_v4 p {
+  text-transform: uppercase;
+}
+.winges_v4 a {
+  list-style: none;
+  text-decoration: none;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  background-color: #252525;
+  padding: 7px 35px;
+  text-align: center;
+  font-weight: 200;
 }

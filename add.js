@@ -70,6 +70,7 @@ window.addEventListener("scroll", function () {
 const goods = [
   {
     dataId: 1,
+    section: "new",
     img: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
     name: "women's black chelsea",
     price: "81.00",
@@ -104,6 +105,8 @@ const goods = [
   },
   {
     dataId: 3,
+    section: "new",
+
     img: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
     name: "leather boots with fur",
     price: "81.00",
@@ -117,6 +120,8 @@ const goods = [
   },
   {
     dataId: 4,
+    section: "new",
+
     img: "img.product/new.photo/936cf2b74a5cf487583d6023ccc97c05.webp",
     name: "classic trousers Petitle Novy",
     price: "22.00",
@@ -135,28 +140,11 @@ const goods = [
     info8: "Length at side seam: 102 cm.    ",
     info9: "Size on the model: XS.",
   },
-  {
-    dataId: 5,
-    img: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
-    name: "women's boots with fur in the middle",
-    price: "77.50",
-    category: "shoes",
-    Images1: "img.product/shoes/908d3e436044239356b3eb2104cfab53.webp",
-    Images2: "img.product/shoes/87064353b2c996927146e9337d21618d.jpg",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
-    about: " Straight trousers, for a height of 158 - 165 cm",
-    info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
-    info2: "",
-    info3: "The trousers go well with tops and long sleeves.",
-    info4: "Composition: 22% viscose, 73% polyester, 5% elastane.    ",
-    info5: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
-    info6: "Model dimensions: 83/64/93 cm.    ",
-    info7: "Model's height: 170 cm (model wearing Long)    ",
-    info8: "Length at side seam: 102 cm.    ",
-    info9: "Size on the model: XS.",
-  },
+
   {
     dataId: 6,
+    section: "new",
+
     img: "img.product/new.photo/1bccde4cceedcdac270a7f0e142e5bfc.webp",
     name: "grey women's skirt ",
     price: "49.10",
@@ -177,6 +165,8 @@ const goods = [
   },
   {
     dataId: 7,
+    section: "new",
+
     img: "img.product/man/9c77380e70f6114970c91169f3b15a46.webp",
     name: "men's shorts Beigo",
     price: "31.15",
@@ -197,6 +187,8 @@ const goods = [
   },
   {
     dataId: 8,
+    section: "new",
+
     img: "img.product/man/294fe6aeb4fb7a39d6a28bb211fb4191.webp",
     name: "men's shorts black",
     price: "31.66",
@@ -217,6 +209,8 @@ const goods = [
   },
   {
     dataId: 9,
+    section: "new",
+
     Images3: "img.product/new.photo/3f85fe997dea52072108e730187ead5c.webp",
     name: "black corset ",
     price: "31.66",
@@ -238,6 +232,8 @@ const goods = [
   },
   {
     dataId: 10,
+    section: "new",
+
     Images1: "img.product/new.photo/4088f0e7fcd8c8c76a9082df462f9b14.jpg",
     name: "plaid Baige Big",
     price: "85.99",
@@ -667,10 +663,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (productId) {
     const productData = getProductData(productId);
     renderProductInfo(productData);
+    renderToNewCollection(productData);
   }
 });
-let minPrice = 150;
-let maxPrice = 5499;
 
 function updatePriceValue(value, id) {
   if (id === "price-min-value") {
@@ -687,7 +682,7 @@ function renderAllProducts() {
     const productsHTML = goods
       .map(
         (good) => `
-          <div data-id=${good.dataId} class="produci-trumblin">
+          <div data-id=${good.dataId} class="produci-trumblin all_products">
             <a href="#
             "> 
               <picture>
@@ -710,7 +705,6 @@ function renderAllProducts() {
       .join("");
 
     productsContainer.innerHTML = productsHTML;
-    addEventListenersToProducts();
     addEventListenersToProducts();
   }
 }
@@ -769,16 +763,11 @@ function renderProductInfo(goods) {
   <p>${goods.info7}</p>
   <p>${goods.info8}</p>
   <p>${goods.info9}</p>
-
-
-
-  
 </div>
   </div>
   </div>`;
   addImageSwitchingEventListeners();
 }
-v;
 function addImageSwitchingEventListeners() {
   const mainImg = document.querySelector(".imges_area img");
   const smallImgs = document.querySelectorAll(".mini_imeges img");
@@ -909,26 +898,43 @@ if (ornamentsContainer) {
 if (shevchenkoContainer) {
   renderProductsInSection(shevchenkoProducts, shevchenkoContainer);
 }
-function rendersladeToProducts(goods) {
-  const rendersliderProduct = document.querySelectorAll(".slider-product");
-  const relatedProductsHtml = goods
-    .map(
-      (product) => `
-      <div data-id=${goods.dataId} class="produci-trumblin">
-        <a href="#">
-          <img src=${goods.img} alt="${goods.name}" width="198" />
-        </a>
-        <div class="product_body">
-          <div class="description ">
-            <a class="product_name" href="#">${goods.name}</a>
-            <div class="prise-date">
-              <span class="cerrent_pruise">${goods.price} USD</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    `
-    )
-    .join("");
-  rendersliderProduct.innerHTML = relatedProductsHtml;
+
+document.addEventListener("DOMContentLoaded", function () {
+  function renderToNewCollection(goods) {
+    const newTab = document.querySelector(".section_tab");
+    const filterGoods = goods.filter((good) => good.section === "new");
+    const renderHtml = filterGoods
+      .map((good) => {
+        return `<div id=${good.dataId} class="produci-trumblin">
+                  <a href="#">
+                      <picture>
+                          <source srcset="#" type="#" />
+                          <source srcset="#" type="#" />
+                          <img src=${good.img} alt="${good.name}" width="198" />
+                      </picture>
+                  </a>
+                  <div class="product_body">
+                      <div class="description">
+                          <a class="product_name" href="#">${good.name}</a>
+                          <div class="prise-date">
+                              <span class="cerrent_pruise">${good.price} USD</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>`;
+      })
+      .join("");
+
+    newTab.innerHTML = renderHtml;
+  }
+  renderToNewCollection(goods);
+  addClickToProductsNew();
+});
+function addClickToProductsNew() {
+  document.querySelectorAll(".produci-trumblin").forEach((productElement) => {
+    productElement.addEventListener("click", function () {
+      const productId = productElement.getAttribute("data-id");
+      window.location.href = `product.html?productId=${productId}`;
+    });
+  });
 }
