@@ -192,7 +192,7 @@ const goods = [
     img: "img.product/man/294fe6aeb4fb7a39d6a28bb211fb4191.webp",
     name: "men's shorts black",
     price: "31.66",
-    category: "women",
+    category: "men",
     Images1: "img.product/man/3aba7a2070f46b6b41269da3c275b7f2.jpg",
     Images2: "img.product/man/5c040d7850cc5bf4806de843d614388b.jpg",
     Images3: "img.product/man/2c6b171ad3837937290ce8fa1ce68ca6.webp",
@@ -392,7 +392,7 @@ const goods = [
     img: "img.product/new.photo/6a66fe28a707859eae9d62d14326d5a2.jpg",
     name: "mesh flared longsleeves",
     price: "31.66",
-    category: "men",
+    category: "women",
     Images1: "img.product/new.photo/aa68f02de2c9fcf3e1e9e8a4d6024f90.jpg",
     Images2: "img.product/new.photo/b111d2512e68b21f69b78db8601a5094.webp",
     Images3: "img.product/new.photo/beaee273c5bc5c7f01a842e1109abcf5.jpg",
@@ -414,7 +414,7 @@ const goods = [
     img: "img.product/new.photo/78bf1d2561ae818e06d4342aff8a303e.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
-    category: "men",
+    category: "women",
     Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
     Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
     Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
@@ -456,7 +456,7 @@ const goods = [
     img: "img.product/39aff594d959af0a26e4bbb021251faf.webp",
     name: "embroidered shirt",
     price: "18.10",
-    category: "men",
+    category: "shoes",
     Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
     Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
@@ -612,6 +612,7 @@ document.querySelectorAll(".sections_colention a").forEach((link) => {
     event.preventDefault();
     const category = event.target.getAttribute("data-category");
     filterElementsAndShow(category);
+    filterGoodsForWomen(category);
   });
 });
 function filterMenuAndShow(goods) {
@@ -901,7 +902,6 @@ if (shevchenkoContainer) {
 
 document.addEventListener("DOMContentLoaded", function () {
   function renderToNewCollection(goods) {
-    const newTab = document.querySelector(".section_tab");
     const filterGoods = goods.filter((good) => good.section === "new");
     const renderHtml = filterGoods
       .map((good) => {
@@ -924,17 +924,70 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>`;
       })
       .join("");
-
-    newTab.innerHTML = renderHtml;
+    document.querySelector(".section_tab").innerHTML = renderHtml;
+    addEventListenersToProducts();
   }
   renderToNewCollection(goods);
-  addClickToProductsNew();
 });
-function addClickToProductsNew() {
-  document.querySelectorAll(".produci-trumblin").forEach((productElement) => {
-    productElement.addEventListener("click", function () {
-      const productId = productElement.getAttribute("data-id");
-      window.location.href = `product.html?productId=${productId}`;
-    });
-  });
-}
+
+document.addEventListener("DOMContentLoaded", function () {
+  function filterGoodsForWomen(category) {
+    const filterGoods = goods.filter((good) => good.category === "women");
+    const productsHTML = filterGoods
+      .map(
+        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+      <a href="#
+      ">    <picture>
+      <source srcset="#" type="#" />
+      <source srcset="#" type="#" />
+      <img src=${good.img} alt="${good.name}" width="198" />
+    </picture>
+  </a>
+  <div class="product_body">
+    <div class="description ">
+      <a class="product_name" href="#">${good.name}</a>
+      <div class="prise-date">
+        <span class="cerrent_pruise">${good.price} USD</span>
+      </div>
+    </div>
+  </div>
+</div>
+  `
+      )
+      .join("");
+    document.getElementById("products-women").innerHTML = productsHTML;
+    addEventListenersToProducts();
+  }
+  filterGoodsForWomen(category);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  function filterGoodsForMen(category) {
+    const filterGoods = goods.filter((good) => good.category === "men");
+    const productsHTML = filterGoods
+      .map(
+        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+      <a href="#
+      ">    <picture>
+      <source srcset="#" type="#" />
+      <source srcset="#" type="#" />
+      <img src=${good.img} alt="${good.name}" width="198" />
+    </picture>
+  </a>
+  <div class="product_body">
+    <div class="description ">
+      <a class="product_name" href="#">${good.name}</a>
+      <div class="prise-date">
+        <span class="cerrent_pruise">${good.price} USD</span>
+      </div>
+    </div>
+  </div>
+</div>
+  `
+      )
+      .join("");
+    document.getElementById("products-men").innerHTML = productsHTML;
+    addEventListenersToProducts();
+  }
+  filterGoodsForMen(category);
+});
