@@ -106,10 +106,9 @@ const goods = [
   {
     dataId: 3,
     section: "new",
-
     img: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
     name: "leather boots with fur",
-    price: "81.00",
+    price: "68.50",
     category: "shoes",
     Images1: "img.product/shoes/c04123479b4b34230bb94a7c0efd1f26.jpg",
     Images2: "img.product/shoes/c5307c7a718e0144e37e4836b28a8cd0.jpg",
@@ -142,12 +141,13 @@ const goods = [
   },
 
   {
-    dataId: 6,
+    dataId: 5,
     section: "new",
 
     img: "img.product/new.photo/1bccde4cceedcdac270a7f0e142e5bfc.webp",
     name: "grey women's skirt ",
-    price: "49.10",
+    price: "38.50",
+
     category: "women",
     Images2: "img.product/new.photo/8d0d7799dde29a8bb3b31b5599ea957f.jpg",
     Images1: "img.product/new.photo/454def9ee32d39c3ad733ecb59af2b72.jpg",
@@ -164,12 +164,14 @@ const goods = [
     info9: "Size on the model: XS.",
   },
   {
-    dataId: 7,
+    dataId: 6,
     section: "new",
+    section: "menswear",
 
     img: "img.product/man/9c77380e70f6114970c91169f3b15a46.webp",
     name: "men's shorts Beigo",
-    price: "31.15",
+    price: "28.20",
+
     category: "men",
     Images1: "img.product/man/216c5d7a99f65e7fde3bc78bcc1e1526.jpg",
     Images2: "img.product/man/05255b2f7675814fa0e4aa43e6eb3268.jpg",
@@ -186,7 +188,7 @@ const goods = [
     info9: "Size on the model: XS.",
   },
   {
-    dataId: 8,
+    dataId: 7,
     section: "new",
 
     img: "img.product/man/294fe6aeb4fb7a39d6a28bb211fb4191.webp",
@@ -208,7 +210,7 @@ const goods = [
     info9: "Size on the model: XS.",
   },
   {
-    dataId: 9,
+    dataId: 8,
     section: "new",
 
     Images3: "img.product/new.photo/3f85fe997dea52072108e730187ead5c.webp",
@@ -231,7 +233,7 @@ const goods = [
     info9: "Size on the model: S.",
   },
   {
-    dataId: 10,
+    dataId: 9,
     section: "new",
 
     Images1: "img.product/new.photo/4088f0e7fcd8c8c76a9082df462f9b14.jpg",
@@ -256,8 +258,7 @@ const goods = [
     info9: "",
   },
   {
-    dataId: 23,
-    section: "kosovo",
+    dataId: 10,
 
     img: "img.product/new.photo/3abe2d7ebe5721b87215f4e3f467b71e.webp",
     name: "plaid Baige Big",
@@ -281,10 +282,13 @@ const goods = [
     info9: "",
   },
   {
-    dataId: 20,
+    dataId: 11,
     img: "img.product/man/bccd4459f224e784ecd7f58858d619d7.webp",
     name: "men's shorts white",
-    price: "31.66",
+    NewPrice: "31.66",
+    price: "22.10",
+    section: "menswear",
+
     category: "men",
     Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
     Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
@@ -301,7 +305,7 @@ const goods = [
     info9: "Size on the model: XS.",
   },
   {
-    dataId: 21,
+    dataId: 12,
     Images2: "img.product/new.photo/fc7d211ca81d0207c713cda029a112df.jpg",
     name: "mesh flared longsleeves",
     price: "63.10",
@@ -321,10 +325,12 @@ const goods = [
     info9: "Size on the model: XS.",
   },
   {
-    dataId: 22,
+    dataId: 13,
     img: "img.product/new.photo/a3acfacde11eee197a9611edfdbda961.webp",
     name: "plaid middle brown",
-    price: "50.25",
+    NewPrice: "50.25",
+    price: "48.10",
+
     category: "home",
     Images1: "img.product/new.photo/b655de42fc36acb237fb54de18d4bf19.jpg",
     Images2: "img.product/new.photo/a247a55d3b6971b146e512872e0348f8.webp",
@@ -345,7 +351,7 @@ const goods = [
   },
 
   {
-    dataId: 11,
+    dataId: 14,
     img: "img.product/new.photo/e93223bca31ac524dd16943c9a3ee5b5.webp",
     name: "grey knit cordigan ",
     price: "22.00",
@@ -364,30 +370,9 @@ const goods = [
     info8: "Length at side seam: 102 cm.    ",
     info9: "Size on the model: XS.",
   },
-  {
-    dataId: 24,
-    section: "kosovo",
 
-    Images1: "img.product/new.photo/6876c1d42ddb76972f98188991d1d0e6.webp",
-    name: "women's boots with fur in the middle",
-    price: "77.50",
-    category: "shoes",
-    Images2: "img.product/new.photo/89252c4b4c99b8b7a61702b3664e6129.jpg",
-    img: "img.product/new.photo/6876c1d42ddb76972f98188991d1d0e6.webp",
-    Images3: "img.product/new.photo/89252c4b4c99b8b7a61702b3664e6129.jpg",
-    about: " Straight trousers, for a height of 158 - 165 cm",
-    info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
-    info2: "",
-    info3: "The trousers go well with tops and long sleeves.",
-    info4: "Composition: 22% viscose, 73% polyester, 5% elastane.    ",
-    info5: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
-    info6: "Model dimensions: 83/64/93 cm.    ",
-    info7: "Model's height: 170 cm (model wearing Long)    ",
-    info8: "Length at side seam: 102 cm.    ",
-    info9: "Size on the model: XS.",
-  },
   {
-    dataId: 25,
+    dataId: 16,
     section: "dobrush",
     img: "img.product/new.photo/6a66fe28a707859eae9d62d14326d5a2.jpg",
     name: "mesh flared longsleeves",
@@ -409,7 +394,7 @@ const goods = [
     info9: "",
   },
   {
-    dataId: 26,
+    dataId: 17,
     section: "dobrush",
     img: "img.product/new.photo/78bf1d2561ae818e06d4342aff8a303e.webp",
     name: "mesh flared longsleeves",
@@ -430,7 +415,7 @@ const goods = [
     info9: "Size on the model: XS.",
   },
   {
-    dataId: 27,
+    dataId: 18,
     section: "shirt",
     img: "img.product/e4db02a20010c59064cb57f4e3b006a8.webp",
     name: "embroidered shirt",
@@ -451,8 +436,7 @@ const goods = [
     info9: "Size on the model: XS.",
   },
   {
-    dataId: 28,
-    section: "menswear",
+    dataId: 19,
     img: "img.product/39aff594d959af0a26e4bbb021251faf.webp",
     name: "embroidered shirt",
     price: "18.10",
@@ -472,8 +456,7 @@ const goods = [
     info9: "Size on the model: XS.",
   },
   {
-    dataId: 29,
-    section: "menswear",
+    dataId: 20,
     img: "img.product/8658852a86ecf89288a64eab08c23119.webp",
     name: "embroidered shirt",
     price: "22.10",
@@ -493,8 +476,7 @@ const goods = [
     info9: "Size on the model: XS.",
   },
   {
-    dataId: 30,
-    section: "hestories",
+    dataId: 21,
     img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
@@ -514,8 +496,7 @@ const goods = [
     info9: "Size on the model: XS.",
   },
   {
-    dataId: 31,
-    section: "hestories",
+    dataId: 22,
     img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
@@ -535,29 +516,29 @@ const goods = [
     info9: "Size on the model: XS.",
   },
   {
-    dataId: 32,
+    dataId: 23,
     section: "ornaments",
     img: "img.product/7ba88b91c692c9613522123a5d3bbe35.webp",
-    name: "embroidered shirt",
+    name: "a top with an alcove of cream",
     price: "22.10",
     category: "women",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    about: " Straight trousers, for a height of 158 - 165 cm",
-    info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
-    info2: "",
-    info3: "The trousers go well with tops and long sleeves.",
-    info4: "Composition: 22% viscose, 73% polyester, 5% elastane.    ",
-    info5: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
+    Images1: "img.product/new.photo/520cc88d017b385cf51f66052b8bb321.jpg",
+    Images2: "img.product/new.photo/99c319a93fea31e6879b63d1200a213f.jpg",
+    Images3: "img.product/7ba88b91c692c9613522123a5d3bbe35.webp",
+    about: " Tops are about the values that are always with you    ",
+    info: "They feature embroidery from Podillia carpets.    ",
+    info2: "lightness - for hot summer days.    ",
+    info3:
+      "It will become a cool base with a special meaning in your wardrobe.",
+    info4: "Composition: 30% linen, 70% cotton.    ",
+    info5: "Care: machine wash at t = 30°C, delicate spin and dry.    ",
     info6: "Model dimensions: 83/64/93 cm.    ",
-    info7: "Model's height: 170 cm (model wearing Long)    ",
+    info7: "Model's height: 170 cm  ",
     info8: "Length at side seam: 102 cm.    ",
-    info9: "Size on the model: XS.",
+    info9: "Size on the model: XXS - XS.",
   },
   {
-    dataId: 33,
-    section: "shevchenko",
+    dataId: 24,
     img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
     name: "embroidered shirt",
     price: "22.10",
@@ -577,8 +558,7 @@ const goods = [
     info9: "Size on the model: XS.",
   },
   {
-    dataId: 34,
-    section: "shevchenko",
+    dataId: 25,
     img: "img.product/b8efed7119900c189f22a0821d119bb1.webp",
     name: "embroidered shirt",
     price: "22.10",
@@ -586,6 +566,147 @@ const goods = [
     Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
     Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
     Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
+    about: " Straight trousers, for a height of 158 - 165 cm",
+    info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
+    info2: "",
+    info3: "The trousers go well with tops and long sleeves.",
+    info4: "Composition: 22% viscose, 73% polyester, 5% elastane.    ",
+    info5: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
+    info6: "Model dimensions: 83/64/93 cm.    ",
+    info7: "Model's height: 170 cm (model wearing Long)    ",
+    info8: "Length at side seam: 102 cm.    ",
+    info9: "Size on the model: XS.",
+  },
+  {
+    dataId: 26,
+    Images1: "img.product/new.photo/c4b2a6317333c69b872f497ad89e6a77.jpg",
+    name: "Blask Cream double-sided belt",
+    price: "12.80",
+    NewPrice: "17.25",
+    section: "shevchenko",
+
+    category: "accessories",
+    img: "img.product/new.photo/f6e24b3b1a819d865e44aba80488f2d5.jpg",
+    Images2: "img.product/new.photo/9734e0e97def695d9db3cc2c80e00a0c.webp",
+    Images3: "img.product/new.photo/793cab4718a94f4bb5726e33ac5bb23f.jpg",
+    about: "Reversible strap    ",
+    info: "Fall in love with versatility and practicality.    ",
+    info2: "",
+    info3:
+      "Easily change the strap to the other side and get a different colour.  To do this:",
+    info4:
+      "1. ﻿﻿﻿take a screwdriver, unscrew the screw.﻿﻿﻿turn the buckle over and tighten the screw.    ",
+    info5:
+      "You're done! Now your belt will match any outfit .Choose from 95 cm and 105 cm lengths    ",
+    info6: "",
+    info7: "",
+    info8: "",
+    info9: "",
+  },
+  {
+    dataId: 28,
+    Images2: "img.product/new.photo/e7bb4652a4f4296c42a4cbb6e4b57624.webp",
+    name: "embroidered shirt",
+    price: "22.10",
+    section: "shevchenko",
+
+    category: "Jewellery",
+    Images1: "img.product/new.photo/d3bf8640c8930ab787924448e4357179.jpg",
+    img: "img.product/new.photo/80be91a79ff20e839e0a445a7589ae01.webp",
+    Images3: "img.product/new.photo/4ad5242d4172f81e269990e5888461b2.jpg",
+    about: " Straight trousers, for a height of 158 - 165 cm",
+    info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
+    info2: "",
+    info3: "The trousers go well with tops and long sleeves.",
+    info4: "Composition: 22% viscose, 73% polyester, 5% elastane.    ",
+    info5: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
+    info6: "Model dimensions: 83/64/93 cm.    ",
+    info7: "Model's height: 170 cm (model wearing Long)    ",
+    info8: "Length at side seam: 102 cm.    ",
+    info9: "Size on the model: XS.",
+  },
+  {
+    dataId: 29,
+    Images2: "#",
+    name: "925 sterling silver heart necklaceч",
+    price: "112.10",
+    category: "Jewellery",
+    Images1: "img.product/new.photo/e38efec4a6ff4c433783a24320cd4f1b.jpg",
+    img: "img.product/new.photo/0a1d2ee6e1b7b523e187ca73b13e37ac.webp",
+    Images3: "#",
+    about: "Falling in love with Ukrainian ornaments is our new mission.    ",
+    info: "That's why the capsule collection of jewelry features a heart pattern, part of which looks like a cross-stitch pattern.    ",
+    info2: "Choose a necklace with an ornament.    ",
+    info3: "Fall in love with the Ukrainian.    ",
+    info4:
+      "The necklace is made of 925 sterling silver. The process of rhodium plating has been carried out. ",
+    info5: "",
+    info6: "",
+    info7: "",
+    info8: "",
+    info9: "",
+  },
+  {
+    dataId: 30,
+    Images2: "img.product/new.photo/7f7b1e93eb955ff2651ec7872cc9037a.webp",
+    name: "long earring ",
+    section: "",
+
+    price: "19.10",
+    NewPrice: "25.25",
+    category: "jewellery",
+    section: "hestories",
+    Images1: "#",
+    img: "img.product/new.photo/7f7b1e93eb955ff2651ec7872cc9037a.webp",
+    Images3: "#",
+    about: " [Let's dig up history?    ",
+    info: "Ukrainian history has been buried under the imposed Russian history for a long time.",
+    info2: "It's time to unearth it and know what we should cherish.    ",
+    info3:
+      "Beads with Donetsk cornflower will remind us to protect plants from the Red Book of Ukraine. ",
+    info4: "Each bead was created by a craftswoman from Kharkiv.    ",
+    info5: "Ingredients: natural river pearls, beads made of river shells.",
+    info6: "",
+    info7: "",
+    info8: "",
+    info9: "",
+  },
+  {
+    dataId: 31,
+    Images2: "#",
+    name: "cafe with beads",
+    price: "19.10",
+    NewPrice: "25.25",
+    section: "hestories",
+
+    category: "jewellery",
+    Images1: "img.product/new.photo/34fda6d7496d01e6d8be9f0d4c707148.webp",
+    img: "img.product/new.photo/34fda6d7496d01e6d8be9f0d4c707148.webp",
+    Images3: "img.product/new.photo/3551b2e494e353e5273fb3f3999c370c.jpg",
+    about: "( details )    ",
+    info: "Which create the content of the image. Pj    ",
+    info2: "Necklaces, earrings and cuffs have rust-free steel fittings.    ",
+    info3: "Choose your favorite jewelry that matches your mood and values.",
+    info4: " ",
+    info5: "",
+    info6: " ",
+    info7: "",
+    info8: "    ",
+    info9: "",
+  },
+  {
+    dataId: 32,
+    section: "kosovo",
+
+    Images1: "img.product/new.photo/6876c1d42ddb76972f98188991d1d0e6.webp",
+    name: "women's boots with fur in the middle",
+    price: "77.50",
+    NewPrice: "80.25",
+
+    category: "shoes",
+    Images2: "img.product/new.photo/89252c4b4c99b8b7a61702b3664e6129.jpg",
+    img: "img.product/new.photo/6876c1d42ddb76972f98188991d1d0e6.webp",
+    Images3: "img.product/new.photo/89252c4b4c99b8b7a61702b3664e6129.jpg",
     about: " Straight trousers, for a height of 158 - 165 cm",
     info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
     info2: "",
@@ -615,41 +736,6 @@ document.querySelectorAll(".sections_colention a").forEach((link) => {
     filterGoodsForWomen(category);
   });
 });
-function filterMenuAndShow(goods) {
-  const filterGoods = goods.filter((good) => good.category === category);
-  const menuBtn = document.querySelectorAll(".item-btm a");
-  menuBtn.addEventListener("click", function (event) {
-    if (filterGoods) {
-    }
-  });
-}
-function filterElementsAndShow(category) {
-  const filterGoods = goods.filter((good) => good.category === category);
-  const productsHTML = filterGoods
-    .map(
-      (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
-      <a href="#
-      ">    <picture>
-      <source srcset="#" type="#" />
-      <source srcset="#" type="#" />
-      <img src=${good.img} alt="${good.name}" width="198" />
-    </picture>
-  </a>
-  <div class="product_body">
-    <div class="description ">
-      <a class="product_name" href="#">${good.name}</a>
-      <div class="prise-date">
-        <span class="cerrent_pruise">${good.price} USD</span>
-      </div>
-    </div>
-  </div>
-</div>
-  `
-    )
-    .join("");
-  document.getElementById("products-container").innerHTML = productsHTML;
-  addEventListenersToProducts();
-}
 document.addEventListener("DOMContentLoaded", () => {
   renderAllProducts();
   const rendingProducts = document.querySelectorAll(".produci-trumblin");
@@ -697,6 +783,12 @@ function renderAllProducts() {
                 <a class="product_name" href="#">${good.name}</a>
                 <div class="prise-date">
                   <span class="cerrent_pruise">${good.price} USD</span>
+                  ${
+                    good.NewPrice
+                      ? `<span class="current_old in_all"> ${good.NewPrice} USD</span>`
+                      : ""
+                  }
+
                 </div>
               </div>
             </div>
@@ -732,6 +824,12 @@ function renderProductInfo(goods) {
   <h3>${goods.name} </h3>
   <div class="prise-date">
       <span class="cerrent_pruise prise_good">${goods.price} USD</span>
+      ${
+        goods.NewPrice
+          ? `<span class="current_old in_info"> ${goods.NewPrice} USD</span>`
+          : ""
+      }
+
       <i class="fa-light fa-heart"></i>  
        </div>
   <div class="menu_product_">
@@ -843,6 +941,13 @@ function renderProductsInSection(products, container) {
             <a class="product_name" href="">${product.name}</a>
             <div class="prise-date">
               <span class="cerrent_pruise">${product.price} USD</span>
+      ${
+        product.NewPrice
+          ? `<span class="current_old in_all"> ${product.NewPrice} USD</span>`
+          : ""
+      }
+
+
             </div>
           </div>
         </div>
@@ -901,35 +1006,80 @@ if (shevchenkoContainer) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  function renderToNewCollection(goods) {
+  function filterGoodsNew(category) {
     const filterGoods = goods.filter((good) => good.section === "new");
-    const renderHtml = filterGoods
-      .map((good) => {
-        return `<div id=${good.dataId} class="produci-trumblin">
-                  <a href="#">
-                      <picture>
-                          <source srcset="#" type="#" />
-                          <source srcset="#" type="#" />
-                          <img src=${good.img} alt="${good.name}" width="198" />
-                      </picture>
-                  </a>
-                  <div class="product_body">
-                      <div class="description">
-                          <a class="product_name" href="#">${good.name}</a>
-                          <div class="prise-date">
-                              <span class="cerrent_pruise">${good.price} USD</span>
-                          </div>
-                      </div>
-                  </div>
-              </div>`;
-      })
+    const productsHTML = filterGoods
+      .map(
+        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+      <a href="#
+      ">    <picture>
+      <source srcset="#" type="#" />
+      <source srcset="#" type="#" />
+      <img src=${good.img} alt="${good.name}" width="198" />
+    </picture>
+  </a>
+  <div class="product_body">
+    <div class="description ">
+      <a class="product_name" href="#">${good.name}</a>
+      <div class="prise-date">
+      <span class="cerrent_pruise">${good.price} USD</span>
+      ${
+        good.NewPrice
+          ? `<span class="current_old in_all"> ${good.NewPrice} USD</span>`
+          : ""
+      }
+
+      </div>
+    </div>
+  </div>
+</div>
+  `
+      )
       .join("");
-    document.querySelector(".section_tab").innerHTML = renderHtml;
+    document.querySelector(".section_tab").innerHTML = productsHTML;
     addEventListenersToProducts();
   }
-  renderToNewCollection(goods);
+  filterGoodsNew(category);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  function filterGoodsSell(category) {
+    const filterGoods = goods.filter((good) => good.NewPrice);
+    const productsHTML = filterGoods
+      .map(
+        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+      <a href="#
+      ">    <picture>
+      <source srcset="#" type="#" />
+      <source srcset="#" type="#" />
+      <img src=${good.img} alt="${good.name}" width="198" />
+    </picture>
+  </a>
+  <div class="product_body">
+    <div class="description ">
+      <a class="product_name" href="#">${good.name}</a>
+      <div class="prise-date">
+      <span class="cerrent_pruise">${good.price} USD</span>
+      ${
+        good.NewPrice
+          ? `<span class="current_old in_all"> ${good.NewPrice} USD</span>`
+          : ""
+      }
+
+      </div>
+    </div>
+  </div>
+</div>
+  `
+      )
+      .join("");
+    document.getElementById("sell").innerHTML = productsHTML;
+    addEventListenersToProducts();
+  }
+  filterGoodsSell(category);
+});
+
+// other
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsForWomen(category) {
     const filterGoods = goods.filter((good) => good.category === "women");
@@ -947,7 +1097,13 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="description ">
       <a class="product_name" href="#">${good.name}</a>
       <div class="prise-date">
-        <span class="cerrent_pruise">${good.price} USD</span>
+      <span class="cerrent_pruise">${good.price} USD</span>
+      ${
+        good.NewPrice
+          ? `<span class="current_old in_all"> ${good.NewPrice} USD</span>`
+          : ""
+      }
+
       </div>
     </div>
   </div>
@@ -978,7 +1134,13 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="description ">
       <a class="product_name" href="#">${good.name}</a>
       <div class="prise-date">
-        <span class="cerrent_pruise">${good.price} USD</span>
+      <span class="cerrent_pruise">${good.price} USD</span>
+      ${
+        good.NewPrice
+          ? `<span class="current_old in_all"> ${good.NewPrice} USD</span>`
+          : ""
+      }
+
       </div>
     </div>
   </div>
@@ -990,4 +1152,114 @@ document.addEventListener("DOMContentLoaded", function () {
     addEventListenersToProducts();
   }
   filterGoodsForMen(category);
+});
+document.addEventListener("DOMContentLoaded", function () {
+  function filterGoodsShoes(category) {
+    const filterGoods = goods.filter((good) => good.category === "shoes");
+    const productsHTML = filterGoods
+      .map(
+        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+      <a href="#
+      ">    <picture>
+      <source srcset="#" type="#" />
+      <source srcset="#" type="#" />
+      <img src=${good.img} alt="${good.name}" width="198" />
+    </picture>
+  </a>
+  <div class="product_body">
+    <div class="description ">
+      <a class="product_name" href="#">${good.name}</a>
+      <div class="prise-date">
+      <span class="cerrent_pruise">${good.price} USD</span>
+      ${
+        good.NewPrice
+          ? `<span class="current_old in_all"> ${good.NewPrice} USD</span>`
+          : ""
+      }
+
+      </div>
+    </div>
+  </div>
+</div>
+  `
+      )
+      .join("");
+    document.getElementById("products-shoes").innerHTML = productsHTML;
+    addEventListenersToProducts();
+  }
+  filterGoodsShoes(category);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  function filterGoodsAcsesuaris(category) {
+    const filterGoods = goods.filter((good) => good.category === "accessories");
+    const productsHTML = filterGoods
+      .map(
+        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+      <a href="#
+      ">    <picture>
+      <source srcset="#" type="#" />
+      <source srcset="#" type="#" />
+      <img src=${good.img} alt="${good.name}" width="198" />
+    </picture>
+  </a>
+  <div class="product_body">
+    <div class="description ">
+      <a class="product_name" href="#">${good.name}</a>
+      <div class="prise-date">
+      <span class="cerrent_pruise">${good.price} USD</span>
+      ${
+        good.NewPrice
+          ? `<span class="current_old in_all"> ${good.NewPrice} USD</span>`
+          : ""
+      }
+
+      </div>
+    </div>
+  </div>
+</div>
+  `
+      )
+      .join("");
+    document.getElementById("products-accessories").innerHTML = productsHTML;
+    addEventListenersToProducts();
+  }
+  filterGoodsAcsesuaris(category);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  function filterGoodsJewellery(category) {
+    const filterGoods = goods.filter((good) => good.category === "Jewellery");
+    const productsHTML = filterGoods
+      .map(
+        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+      <a href="#
+      ">    <picture>
+      <source srcset="#" type="#" />
+      <source srcset="#" type="#" />
+      <img src=${good.img} alt="${good.name}" width="198" />
+    </picture>
+  </a>
+  <div class="product_body">
+    <div class="description ">
+      <a class="product_name" href="#">${good.name}</a>
+      <div class="prise-date">
+      <span class="cerrent_pruise">${good.price} USD</span>
+      ${
+        good.NewPrice
+          ? `<span class="current_old in_all"> ${good.NewPrice} USD</span>`
+          : ""
+      }
+
+      </div>
+    </div>
+  </div>
+</div>
+  `
+      )
+      .join("");
+    document.getElementById("products-jewellery").innerHTML = productsHTML;
+    addEventListenersToProducts();
+  }
+  filterGoodsJewellery(category);
 });

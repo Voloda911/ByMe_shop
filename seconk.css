@@ -167,6 +167,15 @@ section {
   justify-content: center;
   align-items: center;
 }
+#sell {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 0fr));
+  margin: auto;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
 
 .product_sections {
   display: grid;
@@ -1162,7 +1171,10 @@ input {
   position: absolute;
 }
 #products-women,
-#products-men {
+#products-men,
+#products-shoes,
+#products-accessories,
+#products-jewellery {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -1179,4 +1191,16 @@ input {
 }
 .block_w1 {
   margin-top: 30px;
+}
+
+.in_info {
+  font-size: 22px;
+  margin: 15px 10px;
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+.in_all {
+  text-decoration: line-through;
+  opacity: 0.4;
+  margin-left: 10px;
 }
