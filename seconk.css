@@ -1174,7 +1174,10 @@ input {
 #products-men,
 #products-shoes,
 #products-accessories,
-#products-jewellery {
+#products-jewellery,
+#products-home,
+#products-certificat,
+#products-gifts {
   display: flex;
   flex-wrap: wrap;
   width: 100%;

@@ -263,7 +263,7 @@ const goods = [
     img: "img.product/new.photo/3abe2d7ebe5721b87215f4e3f467b71e.webp",
     name: "plaid Baige Big",
     price: "85.99",
-    category: "home",
+    category: "women",
     Images2: "img.product/new.photo/dd641fad6d1e8e0bdd1016c14baeb083.jpg",
     Images3: "img.product/new.photo/5a6a47b547ff891bf2710a1c55a3a029.jpg",
     Images1: "img.product/new.photo/056c6f224447f8718aa10d3a1683f73a.jpg",
@@ -437,23 +437,24 @@ const goods = [
   },
   {
     dataId: 19,
-    img: "img.product/39aff594d959af0a26e4bbb021251faf.webp",
-    name: "embroidered shirt",
-    price: "18.10",
-    category: "shoes",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    about: " Straight trousers, for a height of 158 - 165 cm",
-    info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
-    info2: "",
-    info3: "The trousers go well with tops and long sleeves.",
-    info4: "Composition: 22% viscose, 73% polyester, 5% elastane.    ",
-    info5: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
-    info6: "Model dimensions: 83/64/93 cm.    ",
-    info7: "Model's height: 170 cm (model wearing Long)    ",
-    info8: "Length at side seam: 102 cm.    ",
-    info9: "Size on the model: XS.",
+    img: "img.product/new.photo/cac26df3ae1d464f4c42479e2da13e46.webp",
+    name: "silver ring",
+    price: "38.10",
+    category: "jewellery",
+    Images1: "img.product/new.photo/cac26df3ae1d464f4c42479e2da13e46.webp",
+    Images2: "#",
+    Images3: "#",
+    about: "Falling in love with Ukrainian ornaments is our new mission.    ",
+    info: "That's why the capsule collection of jewelry features a heart pattern, part of which looks like a cross-stitch pattern.    ",
+    info2: "Choose a necklace with an ornament.    ",
+    info3: "Fall in love with the Ukrainian.    ",
+    info4:
+      "The necklace is made of 925 sterling silver. The process of rhodium plating has been carried out. ",
+    info5: "",
+    info6: "",
+    info7: "",
+    info8: "",
+    info9: "",
   },
   {
     dataId: 20,
@@ -610,7 +611,7 @@ const goods = [
     price: "22.10",
     section: "shevchenko",
 
-    category: "Jewellery",
+    category: "jewellery",
     Images1: "img.product/new.photo/d3bf8640c8930ab787924448e4357179.jpg",
     img: "img.product/new.photo/80be91a79ff20e839e0a445a7589ae01.webp",
     Images3: "img.product/new.photo/4ad5242d4172f81e269990e5888461b2.jpg",
@@ -630,7 +631,7 @@ const goods = [
     Images2: "#",
     name: "925 sterling silver heart necklaceч",
     price: "112.10",
-    category: "Jewellery",
+    category: "jewellery",
     Images1: "img.product/new.photo/e38efec4a6ff4c433783a24320cd4f1b.jpg",
     img: "img.product/new.photo/0a1d2ee6e1b7b523e187ca73b13e37ac.webp",
     Images3: "#",
@@ -671,6 +672,7 @@ const goods = [
     info8: "",
     info9: "",
   },
+
   {
     dataId: 31,
     Images2: "#",
@@ -703,7 +705,7 @@ const goods = [
     price: "77.50",
     NewPrice: "80.25",
 
-    category: "shoes",
+    category: "women",
     Images2: "img.product/new.photo/89252c4b4c99b8b7a61702b3664e6129.jpg",
     img: "img.product/new.photo/6876c1d42ddb76972f98188991d1d0e6.webp",
     Images3: "img.product/new.photo/89252c4b4c99b8b7a61702b3664e6129.jpg",
@@ -718,6 +720,52 @@ const goods = [
     info8: "Length at side seam: 102 cm.    ",
     info9: "Size on the model: XS.",
   },
+  {
+    dataId: 33,
+    Images2: "#",
+    name: "gift certificate for 50$",
+
+    price: "50",
+    category: "certificates",
+    Images1: "#",
+    img: "img.product/new.photo/36a7fbfd667f6aba94549ca8c51be3a7.webp",
+    Images3: "#",
+    about: "Certificate with a nominal value of 50 USD    ",
+    info: "Make your friends and family fall in love with Ukrainian.    ",
+    info2:
+      "Buy it as a gift. The regular customer discount is not valid when buying a network certificate.    ",
+    info3:
+      "The discount can be used when using the certificate by naming the mobile number for which the regular customer discount is valid.",
+    info4: "",
+    info5: "",
+    info6: "",
+    info7: "",
+    info8: "",
+    info9: "",
+  },
+  {
+    dataId: 34,
+    img: "img.product/new.photo/9a3da73403aaf06f463235d37ca2554f.webp",
+    name: "gift certificate for 100$",
+    price: "100",
+    category: "certificates",
+    section: "hestories",
+    Images1: "#",
+    Images2: "#",
+    Images3: "#",
+    about: " Certificate with a nominal value of 100 USD ",
+    info: "Make your friends and family fall in love with Ukrainian.    ",
+    info2:
+      "Buy it as a gift. The regular customer discount is not valid when buying a network certificate.    ",
+    info3:
+      "The discount can be used when using the certificate by naming the mobile number for which the regular customer discount is valid.",
+    info4: "",
+    info5: "",
+    info6: "",
+    info7: "",
+    info8: "",
+    info9: "",
+  },
 ];
 function addEventListenersToProducts() {
   const products = document.querySelectorAll(".produci-trumblin");
@@ -728,14 +776,7 @@ function addEventListenersToProducts() {
     });
   });
 }
-document.querySelectorAll(".sections_colention a").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    const category = event.target.getAttribute("data-category");
-    filterElementsAndShow(category);
-    filterGoodsForWomen(category);
-  });
-});
+
 document.addEventListener("DOMContentLoaded", () => {
   renderAllProducts();
   const rendingProducts = document.querySelectorAll(".produci-trumblin");
@@ -754,17 +795,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function updatePriceValue(value, id) {
-  if (id === "price-min-value") {
-    minPrice = value;
-  } else {
-    maxPrice = value;
-  }
-  renderAllProducts(minPrice, maxPrice);
-}
 function renderAllProducts() {
   const productsContainer = document.getElementById("products-container");
-
   if (productsContainer) {
     const productsHTML = goods
       .map(
@@ -802,6 +834,10 @@ function renderAllProducts() {
   }
 }
 renderAllProducts();
+
+function updatePriceValue(value, elementId) {
+  document.getElementById(elementId).textContent = value;
+}
 function getProductData(productId) {
   return goods.find((item) => item.dataId.toString() === productId);
 }
@@ -1007,6 +1043,12 @@ if (shevchenkoContainer) {
 
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsNew(category) {
+    const productsContainer = (document.querySelector(
+      ".section_tab"
+    ).innerHTML = productsHTML);
+    if (!productsContainer) {
+      return;
+    }
     const filterGoods = goods.filter((good) => good.section === "new");
     const productsHTML = filterGoods
       .map(
@@ -1036,12 +1078,10 @@ document.addEventListener("DOMContentLoaded", function () {
   `
       )
       .join("");
-    document.querySelector(".section_tab").innerHTML = productsHTML;
     addEventListenersToProducts();
   }
   filterGoodsNew(category);
 });
-
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsSell(category) {
     const filterGoods = goods.filter((good) => good.NewPrice);
@@ -1078,7 +1118,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   filterGoodsSell(category);
 });
-
 // other
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsForWomen(category) {
@@ -1153,8 +1192,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   filterGoodsForMen(category);
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsShoes(category) {
+    const container = document.getElementById("products-shoes");
+    if (container) {
+      container.innerHTML = "Новое содержимое";
+    }
     const filterGoods = goods.filter((good) => good.category === "shoes");
     const productsHTML = filterGoods
       .map(
@@ -1184,7 +1228,7 @@ document.addEventListener("DOMContentLoaded", function () {
   `
       )
       .join("");
-    document.getElementById("products-shoes").innerHTML = productsHTML;
+    container.innerHTML = productsHTML;
     addEventListenersToProducts();
   }
   filterGoodsShoes(category);
@@ -1262,4 +1306,122 @@ document.addEventListener("DOMContentLoaded", function () {
     addEventListenersToProducts();
   }
   filterGoodsJewellery(category);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  function filterGoodsHome(category) {
+    const filterGoods = goods.filter((good) => good.category === "home");
+    const productsHTML = filterGoods
+      .map(
+        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+      <a href="#
+      ">    <picture>
+      <source srcset="#" type="#" />
+      <source srcset="#" type="#" />
+      <img src=${good.img} alt="${good.name}" width="198" />
+    </picture>
+  </a>
+  <div class="product_body">
+    <div class="description ">
+      <a class="product_name" href="#">${good.name}</a>
+      <div class="prise-date">
+      <span class="cerrent_pruise">${good.price} USD</span>
+      ${
+        good.NewPrice
+          ? `<span class="current_old in_all"> ${good.NewPrice} USD</span>`
+          : ""
+      }
+
+      </div>
+    </div>
+  </div>
+</div>
+  `
+      )
+      .join("");
+    document.getElementById("products-home").innerHTML = productsHTML;
+    addEventListenersToProducts();
+  }
+  filterGoodsHome(category);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  function filterGoodsCertificat(category) {
+    const filterGoods = goods.filter(
+      (good) => good.category === "certificates"
+    );
+    const productsHTML = filterGoods
+      .map(
+        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+      <a href="#
+      ">    <picture>
+      <source srcset="#" type="#" />
+      <source srcset="#" type="#" />
+      <img src=${good.img} alt="${good.name}" width="198" />
+    </picture>
+  </a>
+  <div class="product_body">
+    <div class="description ">
+      <a class="product_name" href="#">${good.name}</a>
+      <div class="prise-date">
+      <span class="cerrent_pruise">${good.price} USD</span>
+      ${
+        good.NewPrice
+          ? `<span class="current_old in_all"> ${good.NewPrice} USD</span>`
+          : ""
+      }
+
+      </div>
+    </div>
+  </div>
+</div>
+  `
+      )
+      .join("");
+    document.getElementById("products-certificat").innerHTML = productsHTML;
+    addEventListenersToProducts();
+  }
+  filterGoodsCertificat(category);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  function filterGoodsGifts(category) {
+    const filterGoods = goods.filter(
+      (good) =>
+        good.category === "certificates" ||
+        good.category === "jewellery" ||
+        good.category === "home"
+    );
+    const productsHTML = filterGoods
+      .map(
+        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+      <a href="#
+      ">    <picture>
+      <source srcset="#" type="#" />
+      <source srcset="#" type="#" />
+      <img src=${good.img} alt="${good.name}" width="198" />
+    </picture>
+  </a>
+  <div class="product_body">
+    <div class="description ">
+      <a class="product_name" href="#">${good.name}</a>
+      <div class="prise-date">
+      <span class="cerrent_pruise">${good.price} USD</span>
+      ${
+        good.NewPrice
+          ? `<span class="current_old in_all"> ${good.NewPrice} USD</span>`
+          : ""
+      }
+
+      </div>
+    </div>
+  </div>
+</div>
+  `
+      )
+      .join("");
+    document.getElementById("products-gifts").innerHTML = productsHTML;
+    addEventListenersToProducts();
+  }
+  filterGoodsGifts(category);
 });
