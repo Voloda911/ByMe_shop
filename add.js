@@ -81,6 +81,14 @@ const goods = [
     about:
       "Black leather chelsea boots with a woollen lining inside, a great choice for mild winters. Suitable for temperatures down to -5 degrees, with warm socks down to -10 degrees. ",
     info: "Are you used to classic winter boots? Try Chelsea boots for women. The elastic bands on the side are a small but important detail that can express the look and add interest to the boots themselves. They also go well with completely different styles of clothes: try on chelsea boots with sweatpants and a knitted dress - you'll get different but equally coherent looks!",
+    info2: "",
+    info3: "",
+    info4: "  ",
+    info5: "",
+    info6: "",
+    info7: "",
+    info8: "",
+    info9: "",
   },
   {
     dataId: 2,
@@ -842,6 +850,35 @@ function getProductData(productId) {
   return goods.find((item) => item.dataId.toString() === productId);
 }
 function renderProductInfo(goods) {
+  let sizeOptionsHtml;
+  if (goods.category === "shoes") {
+    sizeOptionsHtml = `
+      <option value="option1">8</option>
+      <option value="option2">8.5</option>
+      <option value="option3">9</option>
+      <option value="option4">9.5</option>`;
+  }
+  if (goods.category === "jewellery" || "gifts") {
+    sizeOptionsHtml = `
+      <option value="option1">one size</option>
+    `;
+  }
+  if (goods.category === "home") {
+    sizeOptionsHtml = `
+      <option value="option1">300X300</option>
+    `;
+  } else {
+    sizeOptionsHtml = `
+      <option value="option1">S</option>
+      <option value="option2">M</option>
+      <option value="option3">L</option>
+      <option value="option4">XL</option>`;
+  }
+
+  const offerBlock = document.querySelector(".block_offer");
+  if (offerBlock) {
+    offerBlock.innerHTML = relatedProductsHtml;
+  }
   const infoProductElement = document.querySelector(".page_product");
   infoProductElement.innerHTML = `
    
@@ -871,18 +908,15 @@ function renderProductInfo(goods) {
   <div class="menu_product_">
       <label for="mySelect">Choose a size</label>
       <select id="mySelect" name="mySelect">
-          <i class="fas fa-chevron-down"></i>
-          <option value="option1">8</option>
-          <option value="option2">8.5</option>
-          <option value="option3">9</option>
-          <option value="option3">9.5</option>
-      </select>
+      ${sizeOptionsHtml}
+    </select>
       <button>To basket</button>
   </div>
   <h3>augment the image</h3>
   <div class="product_offers"></div>
-</div>
 
+  <div clacc ='block_offer'>  </div>
+</div>
 `;
   const description = document.getElementById("description");
   description.innerHTML = `<div class="tawar_text">
@@ -982,8 +1016,6 @@ function renderProductsInSection(products, container) {
           ? `<span class="current_old in_all"> ${product.NewPrice} USD</span>`
           : ""
       }
-
-
             </div>
           </div>
         </div>
@@ -1043,16 +1075,13 @@ if (shevchenkoContainer) {
 
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsNew(category) {
-    const productsContainer = (document.querySelector(
-      ".section_tab"
-    ).innerHTML = productsHTML);
-    if (!productsContainer) {
-      return;
-    }
-    const filterGoods = goods.filter((good) => good.section === "new");
-    const productsHTML = filterGoods
-      .map(
-        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+    const product = document.querySelector(".section_tab");
+
+    if (product) {
+      const filterGoods = goods.filter((good) => good.section === "new");
+      const productsHTML = filterGoods
+        .map(
+          (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
       <a href="#
       ">    <picture>
       <source srcset="#" type="#" />
@@ -1076,18 +1105,23 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
   `
-      )
-      .join("");
-    addEventListenersToProducts();
+        )
+        .join("");
+      addEventListenersToProducts();
+      product.innerHTML = productsHTML;
+    }
   }
+
   filterGoodsNew(category);
 });
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsSell(category) {
-    const filterGoods = goods.filter((good) => good.NewPrice);
-    const productsHTML = filterGoods
-      .map(
-        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+    const product = document.getElementById("products-sell");
+    if (product) {
+      const filterGoods = goods.filter((good) => good.NewPrice);
+      const productsHTML = filterGoods
+        .map(
+          (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
       <a href="#
       ">    <picture>
       <source srcset="#" type="#" />
@@ -1111,20 +1145,23 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
   `
-      )
-      .join("");
-    document.getElementById("sell").innerHTML = productsHTML;
-    addEventListenersToProducts();
+        )
+        .join("");
+      product.innerHTML = productsHTML;
+      addEventListenersToProducts();
+    }
   }
   filterGoodsSell(category);
 });
 // other
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsForWomen(category) {
-    const filterGoods = goods.filter((good) => good.category === "women");
-    const productsHTML = filterGoods
-      .map(
-        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+    const product = document.getElementById("products-women");
+    if (product) {
+      const filterGoods = goods.filter((good) => good.category === "women");
+      const productsHTML = filterGoods
+        .map(
+          (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
       <a href="#
       ">    <picture>
       <source srcset="#" type="#" />
@@ -1148,20 +1185,24 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
   `
-      )
-      .join("");
-    document.getElementById("products-women").innerHTML = productsHTML;
-    addEventListenersToProducts();
+        )
+        .join("");
+      product.innerHTML = productsHTML;
+      addEventListenersToProducts();
+    }
   }
+
   filterGoodsForWomen(category);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsForMen(category) {
-    const filterGoods = goods.filter((good) => good.category === "men");
-    const productsHTML = filterGoods
-      .map(
-        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+    const product = document.getElementById("products-men");
+    if (product) {
+      const filterGoods = goods.filter((good) => good.category === "men");
+      const productsHTML = filterGoods
+        .map(
+          (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
       <a href="#
       ">    <picture>
       <source srcset="#" type="#" />
@@ -1185,11 +1226,13 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
   `
-      )
-      .join("");
-    document.getElementById("products-men").innerHTML = productsHTML;
-    addEventListenersToProducts();
+        )
+        .join("");
+      product.innerHTML = productsHTML;
+      addEventListenersToProducts();
+    }
   }
+
   filterGoodsForMen(category);
 });
 
@@ -1198,11 +1241,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("products-shoes");
     if (container) {
       container.innerHTML = "Новое содержимое";
-    }
-    const filterGoods = goods.filter((good) => good.category === "shoes");
-    const productsHTML = filterGoods
-      .map(
-        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+      const filterGoods = goods.filter((good) => good.category === "shoes");
+      const productsHTML = filterGoods
+        .map(
+          (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
       <a href="#
       ">    <picture>
       <source srcset="#" type="#" />
@@ -1226,20 +1268,26 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
   `
-      )
-      .join("");
-    container.innerHTML = productsHTML;
-    addEventListenersToProducts();
+        )
+        .join("");
+      container.innerHTML = productsHTML;
+      addEventListenersToProducts();
+    }
   }
+
   filterGoodsShoes(category);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsAcsesuaris(category) {
-    const filterGoods = goods.filter((good) => good.category === "accessories");
-    const productsHTML = filterGoods
-      .map(
-        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+    const product = document.getElementById("products-accessories");
+    if (product) {
+      const filterGoods = goods.filter(
+        (good) => good.category === "accessories"
+      );
+      const productsHTML = filterGoods
+        .map(
+          (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
       <a href="#
       ">    <picture>
       <source srcset="#" type="#" />
@@ -1263,20 +1311,24 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
   `
-      )
-      .join("");
-    document.getElementById("products-accessories").innerHTML = productsHTML;
-    addEventListenersToProducts();
+        )
+        .join("");
+      product.innerHTML = productsHTML;
+      addEventListenersToProducts();
+    }
   }
+
   filterGoodsAcsesuaris(category);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsJewellery(category) {
-    const filterGoods = goods.filter((good) => good.category === "Jewellery");
-    const productsHTML = filterGoods
-      .map(
-        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+    const product = document.querySelector("products-jewellery");
+    if (product) {
+      const filterGoods = goods.filter((good) => good.category === "jewellery");
+      const productsHTML = filterGoods
+        .map(
+          (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
       <a href="#
       ">    <picture>
       <source srcset="#" type="#" />
@@ -1300,20 +1352,24 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
   `
-      )
-      .join("");
-    document.getElementById("products-jewellery").innerHTML = productsHTML;
-    addEventListenersToProducts();
+        )
+        .join("");
+      product.innerHTML = productsHTML;
+      addEventListenersToProducts();
+    }
   }
+
   filterGoodsJewellery(category);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsHome(category) {
-    const filterGoods = goods.filter((good) => good.category === "home");
-    const productsHTML = filterGoods
-      .map(
-        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+    const product = document.getElementById("products-home");
+    if (product) {
+      const filterGoods = goods.filter((good) => good.category === "home");
+      const productsHTML = filterGoods
+        .map(
+          (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
       <a href="#
       ">    <picture>
       <source srcset="#" type="#" />
@@ -1337,22 +1393,26 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
   `
-      )
-      .join("");
-    document.getElementById("products-home").innerHTML = productsHTML;
-    addEventListenersToProducts();
+        )
+        .join("");
+      product.innerHTML = productsHTML;
+      addEventListenersToProducts();
+    }
   }
   filterGoodsHome(category);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsCertificat(category) {
-    const filterGoods = goods.filter(
-      (good) => good.category === "certificates"
-    );
-    const productsHTML = filterGoods
-      .map(
-        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+    const product = document.getElementById("products-certificat");
+
+    if (product) {
+      const filterGoods = goods.filter(
+        (good) => good.category === "certificates"
+      );
+      const productsHTML = filterGoods
+        .map(
+          (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
       <a href="#
       ">    <picture>
       <source srcset="#" type="#" />
@@ -1370,16 +1430,17 @@ document.addEventListener("DOMContentLoaded", function () {
           ? `<span class="current_old in_all"> ${good.NewPrice} USD</span>`
           : ""
       }
-
       </div>
     </div>
   </div>
 </div>
   `
-      )
-      .join("");
-    document.getElementById("products-certificat").innerHTML = productsHTML;
-    addEventListenersToProducts();
+        )
+        .join("");
+
+      product.innerHTML = productsHTML;
+      addEventListenersToProducts();
+    }
   }
   filterGoodsCertificat(category);
 });
