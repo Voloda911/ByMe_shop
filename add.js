@@ -7,6 +7,30 @@ const tabSell = document.getElementById("tab_sell");
 const infoButtons = document.querySelectorAll(".menu_info_product button");
 const description = document.getElementById("description");
 const descriptionBtn = document.querySelector(".description_btn");
+const showReview = document.getElementById("show_review");
+const contentReview = document.querySelector(".review_blok");
+const mapReview = document.querySelector(".map_review");
+const reviewSend = document.getElementById("review_send");
+const secses = document.getElementById("secses");
+const done = document.querySelector(".done");
+
+showReview.addEventListener("click", function () {
+  contentReview.classList.add("show_");
+});
+
+document.addEventListener("click", function (event) {
+  if (!mapReview.contains(event.target) && event.target !== showReview) {
+    contentReview.classList.remove("show_");
+  }
+});
+
+reviewSend.addEventListener("click", function () {
+  secses.classList.add("show_secses");
+});
+
+done.addEventListener("click", function () {
+  contentReview.classList.remove("show_");
+});
 
 if (descriptionBtn) {
   descriptionBtn.classList.add("active");
@@ -799,7 +823,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (productId) {
     const productData = getProductData(productId);
     renderProductInfo(productData);
-    renderToNewCollection(productData);
   }
 });
 
@@ -881,7 +904,6 @@ function renderProductInfo(goods) {
   }
   const infoProductElement = document.querySelector(".page_product");
   infoProductElement.innerHTML = `
-   
   <div class="product_mair">
   <div class="imges_area">
       <img class  class="mine_img" src=${goods.img} alt="">
@@ -915,7 +937,7 @@ function renderProductInfo(goods) {
   <h3>augment the image</h3>
   <div class="product_offers"></div>
 
-  <div clacc ='block_offer'>  </div>
+  <div clacc ='block_offer'></div>
 </div>
 `;
   const description = document.getElementById("description");
@@ -1447,15 +1469,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsGifts(category) {
-    const filterGoods = goods.filter(
-      (good) =>
-        good.category === "certificates" ||
-        good.category === "jewellery" ||
-        good.category === "home"
-    );
-    const productsHTML = filterGoods
-      .map(
-        (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+    const product = document.getElementById("products-gifts");
+    if (product) {
+      const filterGoods = goods.filter(
+        (good) =>
+          good.category === "certificates" ||
+          good.category === "jewellery" ||
+          good.category === "home"
+      );
+      const productsHTML = filterGoods
+        .map(
+          (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
       <a href="#
       ">    <picture>
       <source srcset="#" type="#" />
@@ -1479,10 +1503,12 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
   `
-      )
-      .join("");
-    document.getElementById("products-gifts").innerHTML = productsHTML;
-    addEventListenersToProducts();
+        )
+        .join("");
+      product.innerHTML = productsHTML;
+      addEventListenersToProducts();
+    }
   }
+
   filterGoodsGifts(category);
 });
