@@ -13,32 +13,51 @@ const mapReview = document.querySelector(".map_review");
 const reviewSend = document.getElementById("review_send");
 const secses = document.getElementById("secses");
 const done = document.querySelector(".done");
+const reviewInput = document.getElementById("review_input");
+const full = document.getElementById("full");
+const emti = document.getElementById("empti");
+const reviewI = document.querySelector(".review_i");
 
-showReview.addEventListener("click", function () {
-  contentReview.classList.add("show_");
-});
+if (showReview && contentReview && mapReview) {
+  showReview.addEventListener("click", function () {
+    contentReview.classList.add("show_");
+  });
 
-document.addEventListener("click", function (event) {
-  if (!mapReview.contains(event.target) && event.target !== showReview) {
-    contentReview.classList.remove("show_");
-  }
-});
+  document.addEventListener("click", function (event) {
+    if (!mapReview.contains(event.target) && event.target !== showReview) {
+      contentReview.classList.remove("show_");
+    }
+  });
+}
 
-reviewSend.addEventListener("click", function () {
-  secses.classList.add("show_secses");
-});
-
-done.addEventListener("click", function () {
-  contentReview.classList.remove("show_");
-});
-
+if (reviewSend && reviewInput && secses && emti && full) {
+  reviewSend.addEventListener("click", function () {
+    if (reviewInput.value === "") {
+      emti.style.display = "block";
+      full.style.display = "none";
+    } else {
+      emti.style.display = "none";
+      full.style.display = "block";
+    }
+    secses.classList.add("show_secses");
+  });
+}
+if (done && reviewInput && secses) {
+  done.addEventListener("click", function () {
+    secses.classList.remove("show_secses");
+    if (reviewInput.value !== "") {
+      contentReview.classList.remove("show_");
+      reviewInput.value = "";
+      reviewI.value = "";
+    }
+  });
+}
 if (descriptionBtn) {
   descriptionBtn.classList.add("active");
 }
 if (description) {
   description.classList.add("active");
 }
-
 infoButtons.forEach((btn) => {
   btn.addEventListener("click", (event) => {
     infoButtons.forEach((button) => {
@@ -897,10 +916,10 @@ function renderProductInfo(goods) {
       <option value="option3">L</option>
       <option value="option4">XL</option>`;
   }
-
   const offerBlock = document.querySelector(".block_offer");
   if (offerBlock) {
-    offerBlock.innerHTML = relatedProductsHtml;
+    const renderOffers = goods.filter((item) => item);
+    offerBlock.innerHTML = ``;
   }
   const infoProductElement = document.querySelector(".page_product");
   infoProductElement.innerHTML = `
@@ -1345,7 +1364,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsJewellery(category) {
-    const product = document.querySelector("products-jewellery");
+    const product = document.getElementById("products-jewellery");
     if (product) {
       const filterGoods = goods.filter((good) => good.category === "jewellery");
       const productsHTML = filterGoods

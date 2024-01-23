@@ -1177,7 +1177,8 @@ input {
 #products-jewellery,
 #products-home,
 #products-certificat,
-#products-gifts {
+#products-gifts,
+#products-sell {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -1312,4 +1313,7 @@ input {
 
 .secses_block i {
   margin: 35px;
+}
+.block_offer {
+  display: flex;
 }
