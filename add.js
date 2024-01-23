@@ -32,7 +32,7 @@ if (showReview && contentReview && mapReview) {
 
 if (reviewSend && reviewInput && secses && emti && full) {
   reviewSend.addEventListener("click", function () {
-    if (reviewInput.value === "") {
+    if (reviewInput.value === "" || reviewI.value === "") {
       emti.style.display = "block";
       full.style.display = "none";
     } else {
@@ -108,7 +108,6 @@ window.addEventListener("scroll", function () {
     main.classList.remove("margin_main");
   }
 });
-
 // other
 const goods = [
   {
@@ -844,7 +843,6 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProductInfo(productData);
   }
 });
-
 function renderAllProducts() {
   const productsContainer = document.getElementById("products-container");
   if (productsContainer) {
@@ -891,6 +889,7 @@ function updatePriceValue(value, elementId) {
 function getProductData(productId) {
   return goods.find((item) => item.dataId.toString() === productId);
 }
+
 function renderProductInfo(goods) {
   let sizeOptionsHtml;
   if (goods.category === "shoes") {
@@ -918,8 +917,7 @@ function renderProductInfo(goods) {
   }
   const offerBlock = document.querySelector(".block_offer");
   if (offerBlock) {
-    const renderOffers = goods.filter((item) => item);
-    offerBlock.innerHTML = ``;
+    const filterCategory = goods.filter( item => item.category === )
   }
   const infoProductElement = document.querySelector(".page_product");
   infoProductElement.innerHTML = `
