@@ -310,7 +310,7 @@ const goods = [
   {
     dataId: 10,
 
-    img: "img.product/new.photo/3abe2d7ebe5721b87215f4e3f467b71e.webp",
+    img: "img.product/new.photo/72cdccf8075b1ec8b7d5c247eccab90b.webp",
     name: "plaid Baige Big",
     price: "85.99",
     category: "women",
@@ -402,7 +402,7 @@ const goods = [
 
   {
     dataId: 14,
-    img: "img.product/new.photo/e93223bca31ac524dd16943c9a3ee5b5.webp",
+    img: "img.product/new.photo/b2a7c731d074a45ba02b5b7dcef50735.webp",
     name: "grey knit cordigan ",
     price: "22.00",
     category: "women",
@@ -424,13 +424,13 @@ const goods = [
   {
     dataId: 16,
     section: "dobrush",
-    img: "img.product/new.photo/6a66fe28a707859eae9d62d14326d5a2.jpg",
+    Images3: "img.product/new.photo/6a66fe28a707859eae9d62d14326d5a2.jpg",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
     Images1: "img.product/new.photo/aa68f02de2c9fcf3e1e9e8a4d6024f90.jpg",
     Images2: "img.product/new.photo/b111d2512e68b21f69b78db8601a5094.webp",
-    Images3: "img.product/new.photo/beaee273c5bc5c7f01a842e1109abcf5.jpg",
+    img: "img.product/new.photo/4de528d72b99e7e34eae0be6c6b5ddb9.webp",
     about: "A voluminous checked shirt    ",
     info: "A special item in the collection because it is warm and dedicated to Kosiv ceramics.",
     info2:
@@ -446,7 +446,7 @@ const goods = [
   {
     dataId: 17,
     section: "dobrush",
-    img: "img.product/new.photo/78bf1d2561ae818e06d4342aff8a303e.webp",
+    img: "img.product/new.photo/3ab9ae7b5d619495758ec1a76eda2d5f.webp",
     name: "mesh flared longsleeves",
     price: "31.66",
     category: "women",
@@ -487,7 +487,7 @@ const goods = [
   },
   {
     dataId: 19,
-    img: "img.product/new.photo/cac26df3ae1d464f4c42479e2da13e46.webp",
+    img: "img.product/new.photo/eeef32093578698e4938692f69609146.webp",
     name: "silver ring",
     price: "38.10",
     category: "jewellery",
@@ -637,9 +637,9 @@ const goods = [
     section: "shevchenko",
 
     category: "accessories",
-    img: "img.product/new.photo/f6e24b3b1a819d865e44aba80488f2d5.jpg",
+    Images3: "img.product/new.photo/f6e24b3b1a819d865e44aba80488f2d5.jpg",
     Images2: "img.product/new.photo/9734e0e97def695d9db3cc2c80e00a0c.webp",
-    Images3: "img.product/new.photo/793cab4718a94f4bb5726e33ac5bb23f.jpg",
+    img: "img.product/new.photo/e8d2fb92a52ea5ce73751d853a75260b.webp",
     about: "Reversible strap    ",
     info: "Fall in love with versatility and practicality.    ",
     info2: "",
@@ -679,11 +679,11 @@ const goods = [
   {
     dataId: 29,
     Images2: "#",
-    name: "925 sterling silver heart necklaceч",
+    name: "925 sterling silver heart necklac",
     price: "112.10",
     category: "jewellery",
-    Images1: "img.product/new.photo/e38efec4a6ff4c433783a24320cd4f1b.jpg",
-    img: "img.product/new.photo/0a1d2ee6e1b7b523e187ca73b13e37ac.webp",
+    img: "img.product/new.photo/some.webp",
+    Images1: "img.product/new.photo/0a1d2ee6e1b7b523e187ca73b13e37ac.webp",
     Images3: "#",
     about: "Falling in love with Ukrainian ornaments is our new mission.    ",
     info: "That's why the capsule collection of jewelry features a heart pattern, part of which looks like a cross-stitch pattern.    ",
@@ -757,8 +757,8 @@ const goods = [
 
     category: "women",
     Images2: "img.product/new.photo/89252c4b4c99b8b7a61702b3664e6129.jpg",
-    img: "img.product/new.photo/6876c1d42ddb76972f98188991d1d0e6.webp",
-    Images3: "img.product/new.photo/89252c4b4c99b8b7a61702b3664e6129.jpg",
+    Images3: "img.product/new.photo/thin2.webp",
+    img: "img.product/new.photo/6c41c92948e11d297e8105fb87d976fe.webp",
     about: " Straight trousers, for a height of 158 - 165 cm",
     info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
     info2: "",
@@ -817,6 +817,42 @@ const goods = [
     info9: "",
   },
 ];
+function renderRelatedProducts(products) {
+  const container = document.getElementById("related_products");
+  if (!container) return;
+  const productsHtml = products
+    .map(
+      (product) => `
+      <div data-id=${product.dataId} class="produci-trumblin">
+      <a href="#
+      ">    <picture>
+      <source srcset="#" type="#" />
+      <source srcset="#" type="#" />
+      <img src=${product.img} alt="${product.name}" width="198" />
+    </picture>
+  </a>
+  <div class="product_body">
+    <div class="description ">
+      <a class="product_name" href="#">${product.name}</a>
+      <div class="prise-date">
+      <span class="cerrent_pruise">${product.price} USD</span>
+      ${
+        product.NewPrice
+          ? `<span class="current_old in_all"> ${product.NewPrice} USD</span>`
+          : ""
+      }
+
+      </div>
+    </div>
+  </div>
+</div>
+  `
+    )
+    .join("");
+  container.innerHTML = productsHtml;
+  addEventListenersToProducts();
+}
+
 function addEventListenersToProducts() {
   const products = document.querySelectorAll(".produci-trumblin");
   products.forEach((product) => {
@@ -890,7 +926,14 @@ function getProductData(productId) {
   return goods.find((item) => item.dataId.toString() === productId);
 }
 
-function renderProductInfo(goods) {
+document.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get("productId");
+  if (productId) {
+    renderAllProducts();
+  }
+});
+function renderProductInfo(product) {
   let sizeOptionsHtml;
   if (goods.category === "shoes") {
     sizeOptionsHtml = `
@@ -915,30 +958,26 @@ function renderProductInfo(goods) {
       <option value="option3">L</option>
       <option value="option4">XL</option>`;
   }
-  const offerBlock = document.querySelector(".block_offer");
-  if (offerBlock) {
-    const filterCategory = goods.filter( item => item.category === )
-  }
   const infoProductElement = document.querySelector(".page_product");
   infoProductElement.innerHTML = `
-  <div class="product_mair">
+  <div id="${product.dataId}" class="product_mair">
   <div class="imges_area">
-      <img class  class="mine_img" src=${goods.img} alt="">
+      <img class  class="mine_img" src=${product.img} alt="">
   </div>
   <div class="mini_imeges">
-      <img src=${goods.Images1} alt="">
-      <img src=${goods.Images2} alt="">
-      <img src=${goods.Images3} alt="">
+      <img src=${product.Images1} alt="">
+      <img src=${product.Images2} alt="">
+      <img src=${product.Images3} alt="">
   </div>
 </div>
 <div class="product_semiler">
 <div class="title_goods">
-  <h3>${goods.name} </h3>
+  <h3>${product.name} </h3>
   <div class="prise-date">
-      <span class="cerrent_pruise prise_good">${goods.price} USD</span>
+      <span class="cerrent_pruise prise_good">${product.price} USD</span>
       ${
-        goods.NewPrice
-          ? `<span class="current_old in_info"> ${goods.NewPrice} USD</span>`
+        product.NewPrice
+          ? `<span class="current_old in_info"> ${product.NewPrice} USD</span>`
           : ""
       }
 
@@ -953,29 +992,39 @@ function renderProductInfo(goods) {
   </div>
   <h3>augment the image</h3>
   <div class="product_offers"></div>
+  <div id="related_products"></div>
 
-  <div clacc ='block_offer'></div>
-</div>
+  <div id='block_offer'></div>
+  </div>
 `;
+
   const description = document.getElementById("description");
   description.innerHTML = `<div class="tawar_text">
   <div class="tawar">
   <div class="content_tabs">
-  <p>${goods.about}</p>
-  <p>${goods.info}</p>
-  <p>${goods.info2}</p>
-  <p>${goods.info3}</p>
-  <p>${goods.info4}</p>
-  <p>${goods.info5}</p>
-  <p>${goods.info6}</p>
-  <p>${goods.info7}</p>
-  <p>${goods.info8}</p>
+  <p>${product.about}</p>
+  <p>${product.info}</p>
+  <p>${product.info2}</p>
+  <p>${product.info3}</p>
+  <p>${product.info4}</p>
+  <p>${product.info5}</p>
+  <p>${product.info6}</p>
+  <p>${product.info7}</p>
+  <p>${product.info8}</p>
   <p>${goods.info9}</p>
 </div>
   </div>
   </div>`;
+  const category = product.category;
+  const relatedProducts = goods.filter(
+    (item) => item.category === category && item.dataId !== product.dataId
+  );
+
+  renderRelatedProducts(relatedProducts);
+
   addImageSwitchingEventListeners();
 }
+
 function addImageSwitchingEventListeners() {
   const mainImg = document.querySelector(".imges_area img");
   const smallImgs = document.querySelectorAll(".mini_imeges img");
@@ -1114,13 +1163,13 @@ if (shevchenkoContainer) {
 
 document.addEventListener("DOMContentLoaded", function () {
   function filterGoodsNew(category) {
-    const product = document.querySelector(".section_tab");
+    const product = document.getElementById("products-new");
 
     if (product) {
       const filterGoods = goods.filter((good) => good.section === "new");
       const productsHTML = filterGoods
         .map(
-          (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+          (good) => ` <div data-id=${good.dataId} class="new_product_viwe">
       <a href="#
       ">    <picture>
       <source srcset="#" type="#" />
@@ -1160,7 +1209,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const filterGoods = goods.filter((good) => good.NewPrice);
       const productsHTML = filterGoods
         .map(
-          (good) => ` <div data-id=${good.dataId} class="produci-trumblin">
+          (good) => ` <div data-id=${good.dataId} class="sell_product_viwe">
       <a href="#
       ">    <picture>
       <source srcset="#" type="#" />

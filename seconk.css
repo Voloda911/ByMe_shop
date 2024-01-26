@@ -160,10 +160,10 @@ section {
 }
 .section_tab {
   display: grid;
+  padding: 2em;
   grid-template-columns: repeat(auto-fit, minmax(270px, 0fr));
   margin: auto;
   width: 100%;
-  gap: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -209,7 +209,6 @@ section {
 }
 .product_body a {
   text-transform: uppercase;
-  width: 60%;
   margin: 0;
   color: #000;
   text-decoration: none;
@@ -382,11 +381,28 @@ section {
 }
 .produci-trumblin picture {
   display: block;
-  width: 220px;
   height: auto;
   overflow: hidden;
 }
 .produci-trumblin img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.new_product_viwe {
+  display: block;
+  overflow: hidden;
+}
+.new_product_viwe img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sell_product_viwe {
+  display: block;
+  overflow: hidden;
+}
+.sell_product_viwe img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -483,6 +499,9 @@ section {
   width: 2px;
   background: #cfcec7;
   transform: rotate(20deg) scaleY(1.5);
+}
+.produci-trumblin {
+  width: 200px;
 }
 /* center */
 .center_section {
@@ -882,6 +901,9 @@ input {
   font-size: 16px;
   text-transform: capitalize;
 }
+.sections_colention a:hover {
+  color: #000;
+}
 .caterogy {
   display: flex;
   justify-content: space-between;
@@ -1177,12 +1199,21 @@ input {
 #products-jewellery,
 #products-home,
 #products-certificat,
-#products-gifts,
-#products-sell {
+#products-gifts {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   gap: 20px;
+}
+#products-sell,
+#products-new {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 0fr));
+  margin: auto;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 /* block_w1 */
@@ -1314,6 +1345,23 @@ input {
 .secses_block i {
   margin: 35px;
 }
-.block_offer {
+.product-details h2 {
+  font-size: 16px;
+}
+.product-details img {
+  width: 150px;
+  height: auto;
+}
+/* offers */
+#related_products {
   display: flex;
+  width: 100%;
+  height: auto;
+  gap: 10px;
+}
+.related-product {
+  width: 100%;
+}
+.related-product img {
+  width: 130px;
 }
