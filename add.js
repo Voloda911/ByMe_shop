@@ -29,7 +29,6 @@ if (showReview && contentReview && mapReview) {
     }
   });
 }
-
 if (reviewSend && reviewInput && secses && emti && full) {
   reviewSend.addEventListener("click", function () {
     if (reviewInput.value === "" || reviewI.value === "") {
@@ -108,6 +107,9 @@ window.addEventListener("scroll", function () {
     main.classList.remove("margin_main");
   }
 });
+
+const findBlok = document.getElementById("find_blok");
+
 // other
 const goods = [
   {
@@ -799,7 +801,6 @@ const goods = [
     name: "gift certificate for 100$",
     price: "100",
     category: "certificates",
-    section: "hestories",
     Images1: "#",
     Images2: "#",
     Images3: "#",
@@ -854,11 +855,14 @@ function renderRelatedProducts(products) {
 }
 
 function addEventListenersToProducts() {
-  const products = document.querySelectorAll(".produci-trumblin");
-  products.forEach((product) => {
-    product.addEventListener("click", function () {
-      const productId = this.getAttribute("data-id");
-      window.location.href = `product.html?productId=${productId}`;
+  const clickableElements = document.querySelectorAll(
+    ".produci-trumblin, .open_element"
+  );
+
+  clickableElements.forEach((element) => {
+    element.addEventListener("click", function () {
+      const elementId = this.getAttribute("data-id");
+      window.location.href = `product.html?productId=${elementId}`;
     });
   });
 }
@@ -997,7 +1001,6 @@ function renderProductInfo(product) {
   <div id='block_offer'></div>
   </div>
 `;
-
   const description = document.getElementById("description");
   description.innerHTML = `<div class="tawar_text">
   <div class="tawar">
@@ -1019,12 +1022,9 @@ function renderProductInfo(product) {
   const relatedProducts = goods.filter(
     (item) => item.category === category && item.dataId !== product.dataId
   );
-
   renderRelatedProducts(relatedProducts);
-
   addImageSwitchingEventListeners();
 }
-
 function addImageSwitchingEventListeners() {
   const mainImg = document.querySelector(".imges_area img");
   const smallImgs = document.querySelectorAll(".mini_imeges img");
@@ -1169,7 +1169,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const filterGoods = goods.filter((good) => good.section === "new");
       const productsHTML = filterGoods
         .map(
-          (good) => ` <div data-id=${good.dataId} class="new_product_viwe">
+          (good) => ` <div data-id=${
+            good.dataId
+          } class="new_product_viwe open_element">
       <a href="#
       ">    <picture>
       <source srcset="#" type="#" />
@@ -1209,7 +1211,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const filterGoods = goods.filter((good) => good.NewPrice);
       const productsHTML = filterGoods
         .map(
-          (good) => ` <div data-id=${good.dataId} class="sell_product_viwe">
+          (good) => ` <div data-id=${
+            good.dataId
+          } class="sell_product_viwe open_element">
       <a href="#
       ">    <picture>
       <source srcset="#" type="#" />
@@ -1236,8 +1240,8 @@ document.addEventListener("DOMContentLoaded", function () {
         )
         .join("");
       product.innerHTML = productsHTML;
-      addEventListenersToProducts();
     }
+    addEventListenersToProducts();
   }
   filterGoodsSell(category);
 });
