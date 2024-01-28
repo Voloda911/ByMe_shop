@@ -108,7 +108,26 @@ window.addEventListener("scroll", function () {
   }
 });
 
-const findBlok = document.getElementById("find_blok");
+const findBtn = document.getElementById("find_btn");
+const menuFind = document.querySelector(".menu_find");
+const contentFind = document.querySelector(".content_find");
+
+if (findBtn && menuFind && contentFind) {
+  findBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    menuFind.classList.toggle("find_");
+  });
+
+  document.addEventListener("click", function (event) {
+    if (
+      !contentFind.contains(event.target) &&
+      event.target !== findBtn &&
+      menuFind.classList.contains("find_")
+    ) {
+      console.log("heeee");
+    }
+  });
+}
 
 // other
 const goods = [

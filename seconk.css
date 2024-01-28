@@ -46,11 +46,14 @@ section {
   top: 0;
   left: 0;
   z-index: 100;
-
+  display: none;
   position: fixed;
   width: 100%;
   height: 100vw;
   background-color: rgba(247, 243, 243, 0.9);
+}
+.menu_find.find_ {
+  display: block;
 }
 .content_find {
   display: flex;
@@ -62,20 +65,11 @@ section {
   padding: 10px 30px;
   height: 80px;
   margin-top: 80px;
-  border: none;
+
+  border-radius: 6px;
+  box-shadow: 5px 5px 5px 5px #e4e2e2;
 }
-.menu_find input:active {
-  border: none;
-}
-.menu_find input::after {
-  top: 0;
-  left: 0;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: #080808;
-}
+
 .find_icon {
   position: relative;
   left: -80px;
@@ -1401,4 +1395,92 @@ input {
 }
 .related-product img {
   width: 130px;
+}
+/* place Area */
+.bag_area {
+  margin: 1em 4em;
+}
+.place_area {
+  width: 100%;
+  padding: 1em 6em;
+  position: relative;
+}
+.place_info::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 100%;
+  opacity: 0.4;
+  left: 0;
+}
+.place_info {
+  width: 100%;
+  display: flex;
+}
+.place_area h2 {
+  width: 100%;
+}
+.place_area a {
+  margin: 0 5px;
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  font-weight: 400;
+}
+.place_area p {
+  margin: 0 5px;
+  opacity: 0.4;
+}
+/* find section*/
+
+.find_main {
+  display: flex;
+  width: 100%;
+  padding: 4em 6em;
+}
+.block_info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 100px;
+}
+.input_name {
+  width: 100%;
+}
+.input_info {
+  width: 100%;
+}
+.content_find {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.content_find p {
+  margin: 15px 0 0 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+.content_find h2 {
+  font-size: 20px;
+  margin: 25px 0;
+  position: relative;
+}
+.content_find h2::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 100%;
+  opacity: 0.4;
+  left: 0;
+}
+.content_find input {
+  height: 35px;
+}
+.find_left {
+  width: 30%;
 }
