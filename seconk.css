@@ -1398,14 +1398,14 @@ input {
 }
 /* place Area */
 .bag_area {
-  margin: 1em 4em;
+  margin: 4em 6em;
 }
 .place_area {
   width: 100%;
   padding: 1em 6em;
   position: relative;
 }
-.place_info::after {
+.place_info::before {
   content: "";
   height: 1px;
   width: 100%;
@@ -1417,10 +1417,12 @@ input {
 }
 .place_info {
   width: 100%;
+  position: relative;
   display: flex;
 }
 .place_area h2 {
   width: 100%;
+  font-weight: 400;
 }
 .place_area a {
   margin: 0 5px;
@@ -1429,6 +1431,9 @@ input {
   color: #000;
   text-align: center;
   font-weight: 400;
+}
+.place_area a:hover {
+  color: #000;
 }
 .place_area p {
   margin: 0 5px;
@@ -1439,7 +1444,7 @@ input {
 .find_main {
   display: flex;
   width: 100%;
-  padding: 4em 6em;
+  padding: 1em 6em 4em 6em;
 }
 .block_info {
   display: flex;
@@ -1458,7 +1463,12 @@ input {
   display: flex;
   flex-direction: column;
 }
-.content_find p {
+.input_name p {
+  margin: 15px 0 0 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+.input_info p {
   margin: 15px 0 0 0;
   font-size: 14px;
   opacity: 0.7;
@@ -1478,9 +1488,35 @@ input {
   opacity: 0.4;
   left: 0;
 }
-.content_find input {
+.input_info input {
   height: 35px;
 }
+.input_name input {
+  height: 35px;
+}
+.deliv_pay {
+  width: 100%;
+}
+.delt_section {
+  width: 100%;
+}
+.info_order {
+  align-items: center;
+
+  display: flex;
+  align-items: center; /* Для вертикального выравнивания */
+  width: 100%;
+}
+
+.delt_section input {
+  margin: 10px 5px;
+  width: auto;
+  height: auto;
+  font-size: 30px;
+}
+.custom-radio {
+}
+/*  */
 .find_left {
   width: 30%;
 }

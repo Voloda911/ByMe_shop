@@ -139,7 +139,7 @@ const goods = [
     price: "81.00",
     category: "shoes",
     Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/2eaae4daa757353de5d8303fdd183cc1 (1).jpg",
+    Images2: "#",
     Images3: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
     about:
       "Black leather chelsea boots with a woollen lining inside, a great choice for mild winters. Suitable for temperatures down to -5 degrees, with warm socks down to -10 degrees. ",
@@ -872,12 +872,10 @@ function renderRelatedProducts(products) {
   container.innerHTML = productsHtml;
   addEventListenersToProducts();
 }
-
 function addEventListenersToProducts() {
   const clickableElements = document.querySelectorAll(
     ".produci-trumblin, .open_element"
   );
-
   clickableElements.forEach((element) => {
     element.addEventListener("click", function () {
       const elementId = this.getAttribute("data-id");
@@ -885,7 +883,6 @@ function addEventListenersToProducts() {
     });
   });
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   renderAllProducts();
   const rendingProducts = document.querySelectorAll(".produci-trumblin");
@@ -1011,7 +1008,7 @@ function renderProductInfo(product) {
       <select id="mySelect" name="mySelect">
       ${sizeOptionsHtml}
     </select>
-      <button>To basket</button>
+      <button id="beg_add">To basket</button>
   </div>
   <h3>augment the image</h3>
   <div class="product_offers"></div>
@@ -1037,6 +1034,8 @@ function renderProductInfo(product) {
 </div>
   </div>
   </div>`;
+  //  toBeg
+  localStorage.setItem("specificProduct", JSON.stringify(product));
   const category = product.category;
   const relatedProducts = goods.filter(
     (item) => item.category === category && item.dataId !== product.dataId
@@ -1044,6 +1043,69 @@ function renderProductInfo(product) {
   renderRelatedProducts(relatedProducts);
   addImageSwitchingEventListeners();
 }
+document.addEventListener("DOMContentLoaded", (event) => {
+  const sevedProduct = JSON.parse(localStorage.getItem("specificProduct"));
+  if (sevedProduct) {
+    const begAdd = document.getElementById("beg_add");
+    const contentBag = document.getElementById("product_area");
+    begAdd.addEventListener("click  ", function () {
+      contentBag.innerHTML = `
+      <div id="${product.dataId}" class="product_mair">
+        <div class="imges_area">
+          <img class="mine_img" src=${product.img} alt="">
+        </div>
+        <div class="product_semiler">
+          <div class="title_goods">
+            <h3>${product.name}</h3>
+            <div class="prise-date">
+              <span class="cerrent_pruise prise_good">${
+                product.price
+              } USD</span>
+              ${
+                product.NewPrice
+                  ? `<span class="current_old in_info">${product.NewPrice} USD</span>`
+                  : ""
+              }
+            </div>
+          </div>
+        </div>`;
+    });
+  }
+});
+// document.addEventListener("DOMContentLoaded", function () {
+//   const UrlParametr = new URLSearchParams(window.location.search);
+//   const productParam = UrlParametr.get("product");
+//   if (productParam) {
+//     try {
+//       const product = JSON.parse(decodeURIComponent(productParam));
+//       const contentBag = document.getElementById("product_area");
+//       if (contentBag) {
+//         contentBag.innerHTML = `
+//                 <div id="${product.dataId}" class="product_mair">
+//                   <div class="imges_area">
+//                     <img class="mine_img" src=${product.img} alt="">
+//                   </div>
+//                   <div class="product_semiler">
+//                     <div class="title_goods">
+//                       <h3>${product.name}</h3>
+//                       <div class="prise-date">
+//                         <span class="cerrent_pruise prise_good">${
+//                           product.price
+//                         } USD</span>
+//                         ${
+//                           product.NewPrice
+//                             ? `<span class="current_old in_info">${product.NewPrice} USD</span>`
+//                             : ""
+//                         }
+//                       </div>
+//                     </div>
+//                   </div>`;
+//       }
+//     } catch (e) {
+//       console.error("Ошибка при обработке данных продукта:", e);
+//     }
+//   }
+// });
 function addImageSwitchingEventListeners() {
   const mainImg = document.querySelector(".imges_area img");
   const smallImgs = document.querySelectorAll(".mini_imeges img");
@@ -1057,7 +1119,6 @@ function addImageSwitchingEventListeners() {
     });
   });
 }
-
 const category = document.querySelector(".caterogy");
 if (category) {
   category.addEventListener("click", () => {
