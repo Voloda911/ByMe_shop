@@ -682,7 +682,7 @@ const goods = [
     price: "22.10",
     section: "shevchenko",
 
-    category: "jewellery",
+    category: "ccessories",
     Images1: "img.product/new.photo/d3bf8640c8930ab787924448e4357179.jpg",
     img: "img.product/new.photo/80be91a79ff20e839e0a445a7589ae01.webp",
     Images3: "img.product/new.photo/4ad5242d4172f81e269990e5888461b2.jpg",
@@ -955,29 +955,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 function renderProductInfo(product) {
   let sizeOptionsHtml;
-  if (goods.category === "shoes") {
+  if (product.category === "shoes") {
     sizeOptionsHtml = `
-      <option value="option1">8</option>
-      <option value="option2">8.5</option>
-      <option value="option3">9</option>
-      <option value="option4">9.5</option>`;
-  }
-  if (goods.category === "jewellery" || "gifts") {
-    sizeOptionsHtml = `
-      <option value="option1">one size</option>
-    `;
-  }
-  if (goods.category === "home") {
-    sizeOptionsHtml = `
-      <option value="option1">300X300</option>
-    `;
+      <option value="8">8</option>
+      <option value="8.5">8.5</option>
+      <option value="9">9</option>
+      <option value="9.5">9.5</option>`;
+  } else if (product.category === "jewellery" || product.category === "gifts") {
+    sizeOptionsHtml = `<option value="one size">one size</option>`;
+  } else if (product.category === "home") {
+    sizeOptionsHtml = `<option value="300X300">300X300</option>`;
   } else {
-    sizeOptionsHtml = `
-      <option value="option1">S</option>
-      <option value="option2">M</option>
-      <option value="option3">L</option>
-      <option value="option4">XL</option>`;
+    sizeOptionsHtml = `<option value="S">S</option>
+    <option value="M">M</option>
+    <option value="L">L</option>
+    <option value="XL">XL</option>`;
   }
+
   const infoProductElement = document.querySelector(".page_product");
   infoProductElement.innerHTML = `
   <div id="${product.dataId}" class="product_mair">
@@ -1035,7 +1029,20 @@ function renderProductInfo(product) {
   </div>
   </div>`;
   //  toBeg
-  localStorage.setItem("specificProduct", JSON.stringify(product));
+  const begAdd = document.getElementById("beg_add");
+  if (begAdd) {
+    begAdd.addEventListener("click", function () {
+      const selectElement = document.getElementById("mySelect");
+      const selectedOption = selectElement.options[selectElement.selectedIndex];
+      let size = selectedOption.textContent;
+      let products = JSON.parse(localStorage.getItem("specificProduct")) || [];
+
+      let productToAdd = { ...product, size: size };
+      products.push(productToAdd);
+      localStorage.setItem("specificProduct", JSON.stringify(products));
+    });
+  }
+
   const category = product.category;
   const relatedProducts = goods.filter(
     (item) => item.category === category && item.dataId !== product.dataId
@@ -1043,69 +1050,45 @@ function renderProductInfo(product) {
   renderRelatedProducts(relatedProducts);
   addImageSwitchingEventListeners();
 }
-document.addEventListener("DOMContentLoaded", (event) => {
-  const sevedProduct = JSON.parse(localStorage.getItem("specificProduct"));
-  if (sevedProduct) {
-    const begAdd = document.getElementById("beg_add");
-    const contentBag = document.getElementById("product_area");
-    begAdd.addEventListener("click  ", function () {
-      contentBag.innerHTML = `
-      <div id="${product.dataId}" class="product_mair">
-        <div class="imges_area">
-          <img class="mine_img" src=${product.img} alt="">
-        </div>
-        <div class="product_semiler">
-          <div class="title_goods">
-            <h3>${product.name}</h3>
-            <div class="prise-date">
-              <span class="cerrent_pruise prise_good">${
-                product.price
-              } USD</span>
-              ${
-                product.NewPrice
-                  ? `<span class="current_old in_info">${product.NewPrice} USD</span>`
-                  : ""
-              }
-            </div>
+document.addEventListener("DOMContentLoaded", () => {
+  const contentBag = document.getElementById("product_area");
+  const savedProducts =
+    JSON.parse(localStorage.getItem("specificProduct")) || [];
+  if (savedProducts.length > 0 && contentBag) {
+    let productsHTML = "";
+
+    savedProducts.forEach((product) => {
+      productsHTML += ` <div data-id=${
+        product.dataId
+      } class=" product_in_beg open_element ">
+      <div class="imges_area">
+        <img class="mine_img" src=${product.img} alt="">
+      </div>
+      <div class="product_semiler">
+        <div class="title_goods">
+          <h3>${product.name}</h3>
+          <div>Size: ${product.size ? product.size : "Not specified"}</div>
+    
+          <div class="prise-date">
+            <span class="cerrent_pruise prise_good">${product.price} USD</span>
+            ${
+              product.NewPrice
+                ? `<span class="current_old in_info">${product.NewPrice} USD</span>`
+                : ""
+            }
           </div>
-        </div>`;
+        </div>
+      </div>
+    </div>
+</div>
+  `;
     });
+
+    contentBag.innerHTML = productsHTML;
+    addEventListenersToProducts();
   }
 });
-// document.addEventListener("DOMContentLoaded", function () {
-//   const UrlParametr = new URLSearchParams(window.location.search);
-//   const productParam = UrlParametr.get("product");
-//   if (productParam) {
-//     try {
-//       const product = JSON.parse(decodeURIComponent(productParam));
-//       const contentBag = document.getElementById("product_area");
-//       if (contentBag) {
-//         contentBag.innerHTML = `
-//                 <div id="${product.dataId}" class="product_mair">
-//                   <div class="imges_area">
-//                     <img class="mine_img" src=${product.img} alt="">
-//                   </div>
-//                   <div class="product_semiler">
-//                     <div class="title_goods">
-//                       <h3>${product.name}</h3>
-//                       <div class="prise-date">
-//                         <span class="cerrent_pruise prise_good">${
-//                           product.price
-//                         } USD</span>
-//                         ${
-//                           product.NewPrice
-//                             ? `<span class="current_old in_info">${product.NewPrice} USD</span>`
-//                             : ""
-//                         }
-//                       </div>
-//                     </div>
-//                   </div>`;
-//       }
-//     } catch (e) {
-//       console.error("Ошибка при обработке данных продукта:", e);
-//     }
-//   }
-// });
+
 function addImageSwitchingEventListeners() {
   const mainImg = document.querySelector(".imges_area img");
   const smallImgs = document.querySelectorAll(".mini_imeges img");
