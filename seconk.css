@@ -1479,16 +1479,23 @@ input {
 }
 .content_find h2 {
   font-size: 20px;
-  margin: 25px 0;
   position: relative;
+  width: 100%;
 }
-.content_find h2::after {
+.content_find h2:nth-child(1) {
+  margin-bottom: 100px;
+}
+.content_find h2:nth-child(3) {
+  margin-bottom: 100px;
+  margin-top: 30px;
+}
+.content_find h2::before {
   content: "";
   height: 1px;
   width: 100%;
   background-color: #000;
   position: absolute;
-  top: 100%;
+  top: 400%;
   opacity: 0.4;
   left: 0;
 }
@@ -1508,7 +1515,7 @@ input {
   align-items: center;
 
   display: flex;
-  align-items: center; /* Для вертикального выравнивания */
+  align-items: center;
   width: 100%;
 }
 
@@ -1577,4 +1584,64 @@ input {
 }
 .product_beg .prise-date span {
   font-size: 16px;
+}
+
+/* delivery_content */
+.method {
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 40px 0;
+}
+.delivery_content {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+}
+.delivery_content input {
+  width: 250px;
+  height: 35px;
+  margin: 0 15px 0 0;
+}
+
+.mail_content {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+.mail_content input {
+  width: 100%;
+  height: 35px;
+  margin: 0 15px 0 0;
+}
+.column_mail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.delivery_content,
+.mail_content,
+.office_content p {
+  margin: 0;
+  opacity: 0.7;
+  font-size: 14px;
+  padding: 0;
+}
+.office_content {
+  width: 100%;
+  display: flex;
+  gap: 100px;
+}
+.office_content input {
+  height: 35px;
+  width: 100%;
+}
+/* method */
+.info_method input {
+  width: 14px;
+}
+
+.total {
+  margin: 25px 0;
 }

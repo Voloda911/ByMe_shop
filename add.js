@@ -17,7 +17,29 @@ const reviewInput = document.getElementById("review_input");
 const full = document.getElementById("full");
 const emti = document.getElementById("empti");
 const reviewI = document.querySelector(".review_i");
+const radios = document.querySelectorAll(".custom-radio");
 
+function hideAllForm() {
+  const deliveryForm = document.getElementById("delivery-form");
+  const mailForm = document.getElementById("mail-form");
+  const officeForm = document.getElementById("office-form");
+
+  if (deliveryForm) deliveryForm.style.display = "none";
+  if (mailForm) mailForm.style.display = "none";
+  if (officeForm) officeForm.style.display = "none";
+}
+
+function showForm(formId) {
+  hideAllForm();
+  document.getElementById(formId).style.display = "flex";
+}
+radios.forEach((radio) => {
+  radio.addEventListener("change", () => {
+    const formId = radio.id + "-form";
+    showForm(formId);
+  });
+});
+hideAllForm();
 if (showReview && contentReview && mapReview) {
   showReview.addEventListener("click", function () {
     contentReview.classList.add("show_");
@@ -184,6 +206,14 @@ const goods = [
     about:
       "Black leather chelsea boots with a woollen lining inside, a great choice for mild winters. Suitable for temperatures down to -5 degrees, with warm socks down to -10 degrees. ",
     info: "Are you used to classic winter boots? Try Chelsea boots for women. The elastic bands on the side are a small but important detail that can express the look and add interest to the boots themselves. They also go well with completely different styles of clothes: try on chelsea boots with sweatpants and a knitted dress - you'll get different but equally coherent looks!",
+    info2: "",
+    info3: "",
+    info4: "  ",
+    info5: "",
+    info6: "",
+    info7: "",
+    info8: "",
+    info9: "",
   },
   {
     dataId: 4,
@@ -857,7 +887,10 @@ function addEventListenersToProducts() {
     ".produci-trumblin, .open_element"
   );
   clickableElements.forEach((element) => {
-    element.addEventListener("click", function () {
+    element.addEventListener("click", function (event) {
+      if (event.target.closest(".closeIcon")) {
+        return;
+      }
       const elementId = this.getAttribute("data-id");
       window.location.href = `product.html?productId=${elementId}`;
     });
@@ -1004,7 +1037,7 @@ function renderProductInfo(product) {
   <p>${product.info6}</p>
   <p>${product.info7}</p>
   <p>${product.info8}</p>
-  <p>${goods.info9}</p>
+  <p>${product.info9}</p>
 </div>
   </div>
   </div>`;
@@ -1031,17 +1064,30 @@ function renderProductInfo(product) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const priceTotal = localStorage.getItem("price");
+  let products = JSON.parse(localStorage.getItem("specificProduct")) || [];
+  console.log(priceTotal);
   document.addEventListener("click", function (event) {
     if (event.target.classList.contains("closeIcon")) {
       event.preventDefault();
       event.stopPropagation();
       const productElement = event.target.closest(".product_in_beg");
-      const productId = productElement.getAttribute("data-id");
-      let products = JSON.parse(localStorage.getItem("specificProduct")) || [];
-      localStorage.removeItem(productId);
+      const productId = parseInt(productElement.getAttribute("data-id"), 10);
+
+      // Необходимо использовать уже определённую переменную products
+      const filteredProducts = products.filter(
+        (product) => product.dataId !== productId
+      );
+
+      localStorage.setItem("specificProduct", JSON.stringify(filteredProducts));
       productElement.remove();
     }
   });
+
+  const totalArea = document.getElementById("total_");
+  if (priceTotal && totalArea) {
+    totalArea.innerHTML = priceTotal;
+  }
 
   const contentBag = document.getElementById("product_area");
   const savedProducts =
@@ -1051,7 +1097,7 @@ document.addEventListener("DOMContentLoaded", () => {
     savedProducts.forEach((product) => {
       productsHTML += ` <div data-id=${
         product.dataId
-      } class="product_in_beg     open_element
+      } class="product_in_beg open_element
       ">
       <i class="fa-sharp fa-solid fa-xmark fa-2x closeIcon"></i>
       <div class="imges_area">
