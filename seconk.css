@@ -1538,13 +1538,20 @@ input {
   font-size: 18px;
 }
 #product_area {
+  cursor: pointer;
   width: 100%;
   height: auto;
   position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 35px;
+  gap: 50px;
+}
+#product_area i {
+  position: relative;
+  left: 0;
+  top: -20px;
+  font-size: 15px;
 }
 .product_in_beg::after {
   content: "";
@@ -1553,7 +1560,7 @@ input {
   height: 1px;
   background-color: #000;
   opacity: 0.3;
-  top: -15%;
+  top: -20%;
   left: -10px;
 }
 .product_in_beg:first-child::after {
@@ -1566,5 +1573,8 @@ input {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 3em 2.3em;
+  padding: 3em 2em;
+}
+.product_beg .prise-date span {
+  font-size: 16px;
 }

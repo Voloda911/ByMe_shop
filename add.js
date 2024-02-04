@@ -86,11 +86,8 @@ nawSell.forEach(function (item) {
     nawSell.forEach(function (item) {
       item.classList.remove("active");
     });
-
     item.classList.add("active");
-
     let tabId = item.getAttribute("data-tab");
-
     tabNew.classList.remove("active");
     tabSell.classList.remove("active");
     document.querySelector(tabId).classList.add("active");
@@ -261,23 +258,24 @@ const goods = [
   {
     dataId: 7,
     section: "new",
+    img: "    img.product/man/bccd4459f224e784ecd7f58858d619d7.webp    ",
 
-    img: "img.product/man/294fe6aeb4fb7a39d6a28bb211fb4191.webp",
     name: "men's shorts black",
     price: "31.66",
     category: "men",
     Images1: "img.product/man/3aba7a2070f46b6b41269da3c275b7f2.jpg",
     Images2: "img.product/man/5c040d7850cc5bf4806de843d614388b.jpg",
     Images3: "img.product/man/2c6b171ad3837937290ce8fa1ce68ca6.webp",
-    about: " Straight trousers, for a height of 158 - 165 cm",
-    info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
-    info2: "",
-    info3: "The trousers go well with tops and long sleeves.",
-    info4: "Composition: 22% viscose, 73% polyester, 5% elastane.    ",
+    about: " Shorts designed for active and meaningful days    ",
+    info: "On the back pocket you will find an embroidery 206 - the height of Hoverla.    ",
+    info2:
+      "Wear these shorts to remember to climb Hoverla for the first time or again.     ",
+    info3: "Ingredients: 70% cotton, 30% elastane   ",
+    info4: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
     info5: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
-    info6: "Model dimensions: 83/64/93 cm.    ",
-    info7: "Model's height: 170 cm (model wearing Long)    ",
-    info8: "Length at side seam: 102 cm.    ",
+    info6: "Model's height: 182 cm.    ",
+    info7: "Side seam length: 50 cm.    ",
+    info8: "Size on the model: S.",
     info9: "Size on the model: XS.",
   },
   {
@@ -354,25 +352,26 @@ const goods = [
   },
   {
     dataId: 11,
-    img: "img.product/man/bccd4459f224e784ecd7f58858d619d7.webp",
+    img: "img.product/man/294fe6aeb4fb7a39d6a28bb211fb4191.webp",
     name: "men's shorts white",
     NewPrice: "31.66",
     price: "22.10",
     section: "menswear",
 
     category: "men",
-    Images1: "img.product/shoes/18ebde5378a72c31dd0f8f5e7409c445.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
-    about: " Straight trousers, for a height of 158 - 165 cm",
-    info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
-    info2: "",
-    info3: "The trousers go well with tops and long sleeves.",
-    info4: "Composition: 22% viscose, 73% polyester, 5% elastane.    ",
+    Images1: "img.product/man/b24ed5f3007bdb004400ec5bedfbdbd4.jpg",
+    Images2: "img.product/man/2a606ec3878adb2ca46b138f80f3af70.jpg",
+    Images3: "img.product/man/141fad3cf9f662606ba3deaa00f9acf3.jpg",
+    about: " Shorts designed for active and meaningful days    ",
+    info: "On the back pocket you will find an embroidery 206 - the height of Hoverla.    ",
+    info2:
+      "Wear these shorts to remember to climb Hoverla for the first time or again.     ",
+    info3: "Ingredients: 70% cotton, 30% elastane   ",
+    info4: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
     info5: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
-    info6: "Model dimensions: 83/64/93 cm.    ",
-    info7: "Model's height: 170 cm (model wearing Long)    ",
-    info8: "Length at side seam: 102 cm.    ",
+    info6: "Model's height: 182 cm.    ",
+    info7: "Side seam length: 50 cm.    ",
+    info8: "Size on the model: S.",
     info9: "Size on the model: XS.",
   },
   {
@@ -527,26 +526,7 @@ const goods = [
     info8: "",
     info9: "",
   },
-  {
-    dataId: 20,
-    img: "img.product/8658852a86ecf89288a64eab08c23119.webp",
-    name: "embroidered shirt",
-    price: "22.10",
-    category: "men",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    about: " Straight trousers, for a height of 158 - 165 cm",
-    info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
-    info2: "",
-    info3: "The trousers go well with tops and long sleeves.",
-    info4: "Composition: 22% viscose, 73% polyester, 5% elastane.    ",
-    info5: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
-    info6: "Model dimensions: 83/64/93 cm.    ",
-    info7: "Model's height: 170 cm (model wearing Long)    ",
-    info8: "Length at side seam: 102 cm.    ",
-    info9: "Size on the model: XS.",
-  },
+
   {
     dataId: 21,
     img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
@@ -1042,7 +1022,6 @@ function renderProductInfo(product) {
       localStorage.setItem("specificProduct", JSON.stringify(products));
     });
   }
-
   const category = product.category;
   const relatedProducts = goods.filter(
     (item) => item.category === category && item.dataId !== product.dataId
@@ -1050,17 +1029,31 @@ function renderProductInfo(product) {
   renderRelatedProducts(relatedProducts);
   addImageSwitchingEventListeners();
 }
+
 document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("closeIcon")) {
+      event.preventDefault();
+      event.stopPropagation();
+      const productElement = event.target.closest(".product_in_beg");
+      const productId = productElement.getAttribute("data-id");
+      let products = JSON.parse(localStorage.getItem("specificProduct")) || [];
+      localStorage.removeItem(productId);
+      productElement.remove();
+    }
+  });
+
   const contentBag = document.getElementById("product_area");
   const savedProducts =
     JSON.parse(localStorage.getItem("specificProduct")) || [];
   if (savedProducts.length > 0 && contentBag) {
     let productsHTML = "";
-
     savedProducts.forEach((product) => {
       productsHTML += ` <div data-id=${
         product.dataId
-      } class=" product_in_beg open_element ">
+      } class="product_in_beg     open_element
+      ">
+      <i class="fa-sharp fa-solid fa-xmark fa-2x closeIcon"></i>
       <div class="imges_area">
         <img class="mine_img" src=${product.img} alt="">
       </div>
@@ -1083,12 +1076,9 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
   `;
     });
-
     contentBag.innerHTML = productsHTML;
-    addEventListenersToProducts();
   }
 });
-
 function addImageSwitchingEventListeners() {
   const mainImg = document.querySelector(".imges_area img");
   const smallImgs = document.querySelectorAll(".mini_imeges img");
