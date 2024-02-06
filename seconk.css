@@ -414,7 +414,6 @@ section {
   object-fit: cover;
 }
 .produci-trumblin picture {
-  display: block;
   height: auto;
   overflow: hidden;
 }
@@ -1453,6 +1452,15 @@ input {
   width: 100%;
   gap: 100px;
 }
+.fully {
+  color: red;
+  text-transform: capitalize;
+  font-size: 12px;
+  display: none;
+}
+.fully.show_ {
+  display: block;
+}
 .input_name {
   width: 100%;
 }
@@ -1574,7 +1582,6 @@ input {
   opacity: 0;
 }
 .product_beg {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1582,10 +1589,12 @@ input {
   width: 100%;
   padding: 3em 2em;
 }
+.product_beg.hasProducts {
+  border: 1px solid black;
+}
 .product_beg .prise-date span {
   font-size: 16px;
 }
-
 /* delivery_content */
 .method {
   font-size: 14px;
@@ -1638,10 +1647,48 @@ input {
   width: 100%;
 }
 /* method */
+.payment_sectioon {
+  width: 100%;
+  display: flex;
+  gap: 150px;
+}
+.payment_sectioon fieldset {
+  width: 50%;
+}
+.commentary_area {
+  width: 100%;
+  position: relative;
+}
+.commentary {
+  width: 90%;
+  height: 300px;
+  padding: 15px 10px 10px 10px;
+
+  text-align: justify;
+}
+.info_method {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
 .info_method input {
   width: 14px;
+  margin: 0 10px 0 0;
 }
 
 .total {
   margin: 25px 0;
+}
+.make_order {
+  width: 100%;
+  margin: 25px 0;
+  padding: 15px 40px;
+  color: #f1f1f1;
+  border: none;
+  font-weight: 400;
+  background-color: rgb(70, 68, 68);
+  transition: all 0.4s;
+}
+.make_order:hover {
+  background-color: rgb(171, 162, 162);
 }

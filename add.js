@@ -18,7 +18,25 @@ const full = document.getElementById("full");
 const emti = document.getElementById("empti");
 const reviewI = document.querySelector(".review_i");
 const radios = document.querySelectorAll(".custom-radio");
+const makeOrder = document.querySelector(".make_order");
 
+if (makeOrder) {
+  makeOrder.addEventListener("click", function (event) {
+    const blockInfoInputs = document.querySelectorAll(".block_info input");
+    const firstEmptyInput = Array.from(blockInfoInputs).find(
+      (input) => input.value === ""
+    );
+
+    blockInfoInputs.forEach((input, index) => {
+      const span = document.querySelectorAll(".block_info span")[index];
+      if (input.value === "") {
+        span.classList.add("show_");
+      } else {
+        span.classList.remove("show_");
+      }
+    });
+  });
+}
 function hideAllForm() {
   const deliveryForm = document.getElementById("delivery-form");
   const mailForm = document.getElementById("mail-form");
@@ -1049,10 +1067,15 @@ function renderProductInfo(product) {
       const selectedOption = selectElement.options[selectElement.selectedIndex];
       let size = selectedOption.textContent;
       let products = JSON.parse(localStorage.getItem("specificProduct")) || [];
-
       let productToAdd = { ...product, size: size };
-      products.push(productToAdd);
-      localStorage.setItem("specificProduct", JSON.stringify(products));
+      const isProductExists = products.some(
+        (product) =>
+          product.dataId === productToAdd.dataId && product.size === size
+      );
+      if (!isProductExists) {
+        products.push(productToAdd);
+        localStorage.setItem("specificProduct", JSON.stringify(products));
+      }
     });
   }
   const category = product.category;
@@ -1062,19 +1085,27 @@ function renderProductInfo(product) {
   renderRelatedProducts(relatedProducts);
   addImageSwitchingEventListeners();
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const priceTotal = localStorage.getItem("price");
+function updateTotalPrice() {
   let products = JSON.parse(localStorage.getItem("specificProduct")) || [];
-  console.log(priceTotal);
+  let totalPrice = products.reduce(
+    (total, product) => total + parseFloat(product.price),
+    0
+  );
+
+  const totalArea = document.getElementById("total_");
+  if (totalArea) {
+    totalArea.innerHTML = totalPrice.toFixed(2);
+  }
+}
+document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", function (event) {
+    let products = JSON.parse(localStorage.getItem("specificProduct")) || [];
     if (event.target.classList.contains("closeIcon")) {
       event.preventDefault();
       event.stopPropagation();
       const productElement = event.target.closest(".product_in_beg");
       const productId = parseInt(productElement.getAttribute("data-id"), 10);
 
-      // Необходимо использовать уже определённую переменную products
       const filteredProducts = products.filter(
         (product) => product.dataId !== productId
       );
@@ -1083,16 +1114,13 @@ document.addEventListener("DOMContentLoaded", () => {
       productElement.remove();
     }
   });
-
-  const totalArea = document.getElementById("total_");
-  if (priceTotal && totalArea) {
-    totalArea.innerHTML = priceTotal;
-  }
-
+  updateTotalPrice();
   const contentBag = document.getElementById("product_area");
+  const productBeg = document.querySelector(".product_beg");
   const savedProducts =
     JSON.parse(localStorage.getItem("specificProduct")) || [];
   if (savedProducts.length > 0 && contentBag) {
+    productBeg.classList.add("hasProducts");
     let productsHTML = "";
     savedProducts.forEach((product) => {
       productsHTML += ` <div data-id=${
