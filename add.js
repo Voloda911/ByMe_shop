@@ -114,7 +114,6 @@ infoButtons.forEach((btn) => {
     });
   });
 });
-
 if (newBtn) {
   newBtn.classList.add("active");
 }
@@ -145,24 +144,31 @@ window.addEventListener("scroll", function () {
   }
 });
 
-const findBtn = document.getElementById("find_btn");
 const menuFind = document.querySelector(".menu_find");
 const contentFind = document.querySelector(".content_find");
+const findBtn = document.getElementById("find_btn");
+const findProduct = document.getElementById("find_product");
+const closeLup = document.getElementById("close_lup");
+if (findProduct) {
+  findProduct.addEventListener("keypress", function (event) {
+    if (event.key === "Enter" && findProduct.value.trim() !== "") {
+      event.preventDefault();
+      const searchText = encodeURIComponent(findProduct.value.trim());
+      window.location.href = `find.html?search=${searchText}`;
+    }
+  });
+}
 
-if (findBtn && menuFind && contentFind) {
+if (findBtn && menuFind) {
   findBtn.addEventListener("click", function (event) {
     event.preventDefault();
     menuFind.classList.toggle("find_");
   });
+}
 
-  document.addEventListener("click", function (event) {
-    if (
-      !contentFind.contains(event.target) &&
-      event.target !== findBtn &&
-      menuFind.classList.contains("find_")
-    ) {
-      console.log("heeee");
-    }
+if (closeLup) {
+  closeLup.addEventListener("click", () => {
+    menuFind.classList.remove("find_");
   });
 }
 
@@ -865,10 +871,69 @@ const goods = [
     info9: "",
   },
 ];
+document.addEventListener("DOMContentLoaded", () => {
+  function filterToFind() {
+    const inputFind = document.getElementById("find_product");
+    const productsContainer = document.getElementById("products-container");
+
+    inputFind.addEventListener("input", function () {
+      const searchText = inputFind.value.toLowerCase();
+      const filteredProducts = goods.filter((product) =>
+        product.name.toLowerCase().includes(searchText)
+      );
+      renderFilteredProducts(filteredProducts);
+    });
+  }
+  filterToFind();
+});
+function renderFilteredProducts(filteredProducts) {
+  const productsContainer = document.getElementById("products-container");
+  let productsHTML = "";
+
+  filteredProducts.forEach((product) => {
+    productsHTML += `<div data-id=${
+      product.dataId
+    } class="produci-trumblin all_products">
+    <a href="#
+    "> 
+      <picture>
+        <source srcset="#" type="#" />
+        <source srcset="#" type="#" />
+        <img src=${product.img} alt="${product.name}" width="198" />
+      </picture>
+    </a>
+    <div class="product_body">
+      <div class="description ">
+        <a class="product_name" href="#">${product.name}</a>
+        <div class="prise-date">
+          <span class="cerrent_pruise">${product.price} USD</span>
+          ${
+            product.NewPrice
+              ? `<span class="current_old in_all"> ${product.NewPrice} USD</span>`
+              : ""
+          }
+
+        </div>
+      </div>
+    </div>
+  </div>`;
+  });
+  productsContainer.innerHTML = productsHTML;
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
 function renderRelatedProducts(products) {
   const container = document.getElementById("related_products");
   if (!container) return;
-  const productsHtml = products
+  let productsCopy = [...products];
+  shuffleArray(productsCopy);
+  const selectedProducts = productsCopy.slice(0, 4);
+  const productsHtml = selectedProducts
     .map(
       (product) => `
       <div data-id=${product.dataId} class="produci-trumblin">

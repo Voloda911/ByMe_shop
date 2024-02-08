@@ -59,6 +59,12 @@ section {
   display: flex;
   justify-content: center;
 }
+.content_find a {
+  position: relative;
+  left: 900px;
+
+  bottom: 55px;
+}
 .menu_find input {
   position: relative;
   width: 1000px;
@@ -414,6 +420,7 @@ section {
   object-fit: cover;
 }
 .produci-trumblin picture {
+  display: block;
   height: auto;
   overflow: hidden;
 }
@@ -907,6 +914,70 @@ input {
 .section_nav_left {
   width: 25%;
 }
+.find_items {
+  width: 75%;
+  padding: 0 4em;
+}
+.input-container {
+  position: relative;
+  width: 70%;
+  margin: 4em auto;
+}
+
+#find_product {
+  width: 100%;
+  border: 2px solid #ccc;
+  padding: 10px;
+  padding-right: 40px;
+  box-sizing: border-box; /* Чтобы ширина input включала в себя padding */
+}
+
+.lupa_header {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+#close_lup {
+  position: relative;
+  top: -20px;
+  left: -35px;
+  font-size: 25px;
+  opacity: 0.5;
+  font-weight: 600;
+}
+.lupa_header img {
+  display: block;
+  width: 4%;
+  height: auto;
+}
+#find_product {
+  width: 95%;
+  border: none;
+  border-bottom: 1px solid black;
+}
+#find_product:focus {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.lupa {
+  position: relative;
+  top: -35px;
+  left: 820px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+
+.lupa img {
+  display: block;
+  width: 3%;
+  height: auto;
+}
+
 .content_block_left {
   width: 75%;
   display: flex;
@@ -1233,6 +1304,7 @@ input {
   flex-wrap: wrap;
   width: 100%;
   gap: 20px;
+  margin-bottom: 50px;
 }
 #products-sell,
 #products-new {
@@ -1468,7 +1540,7 @@ input {
   width: 100%;
 }
 .content_find {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
