@@ -149,29 +149,80 @@ const contentFind = document.querySelector(".content_find");
 const findBtn = document.getElementById("find_btn");
 const findProduct = document.getElementById("find_product");
 const closeLup = document.getElementById("close_lup");
-if (findProduct) {
-  findProduct.addEventListener("keypress", function (event) {
-    if (event.key === "Enter" && findProduct.value.trim() !== "") {
-      event.preventDefault();
-      const searchText = encodeURIComponent(findProduct.value.trim());
-      window.location.href = `find.html?search=${searchText}`;
+
+function handleInput() {
+  const findProduct = document.getElementById("find_product");
+  if (findProduct) {
+    findProduct.addEventListener("keypress", function (event) {
+      if (event.key === "Enter" && findProduct.value.trim() !== "") {
+        event.preventDefault();
+        const searchText = encodeURIComponent(findProduct.value.trim());
+        window.location.href = `find.html?search=${searchText}`;
+
+        redirectToSearch(searchText);
+      }
+    });
+  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+  // Когда пользователь попадает на страницу `find.html`, вам нужно извлечь значение параметра `search` из URL,
+  //  чтобы знать, что именно пользователь пытался найти. Это делается с помощью JavaScript и Web API `URLSearchParams`.
+  const params = new URLSearchParams(window.location.search);
+  // Функция params.get('search') возвращает значение параметра search из URL, которое в нашем примере будет "кофемашина".
+  const searchText = params.get("search");
+  // Шаг 3: Декодирование и использование поискового запроса
+  const decodedSearchText = decodeURIComponent(searchText);
+  const filteredProducts = goods.filter((product) => {
+    product.name.toLowerCase().includes(decodedSearchText.toLowerCase());
+    // Шаг 4: Отображение результатов
+    const productsContainer = document.getElementById("products-container");
+    let productsHTML = "";
+    if (filteredProducts.length > 0) {
+      filteredProducts.forEach((product) => {
+        productsHTML += `<div data-id=${
+          product.dataId
+        } class="produci-trumblin all_products">
+      <a href="#
+      "> 
+        <picture>
+          <source srcset="#" type="#" />
+          <source srcset="#" type="#" />
+          <img src=${product.img} alt="${product.name}" width="198" />
+        </picture>
+      </a>
+      <div class="product_body">
+        <div class="description ">
+          <a class="product_name" href="#">${product.name}</a>
+          <div class="prise-date">
+            <span class="cerrent_pruise">${product.price} USD</span>
+            ${
+              product.NewPrice
+                ? `<span class="current_old in_all"> ${product.NewPrice} USD</span>`
+                : ""
+            }
+  
+          </div>
+        </div>
+      </div>
+    </div>`;
+      });
+    } else {
+      productsHTML = "<p>По вашему запросу ничего не найдено.</p>";
     }
   });
-}
-
+});
+handleInput();
 if (findBtn && menuFind) {
   findBtn.addEventListener("click", function (event) {
     event.preventDefault();
     menuFind.classList.toggle("find_");
   });
 }
-
 if (closeLup) {
   closeLup.addEventListener("click", () => {
     menuFind.classList.remove("find_");
   });
 }
-
 // other
 const goods = [
   {
@@ -890,10 +941,11 @@ function renderFilteredProducts(filteredProducts) {
   const productsContainer = document.getElementById("products-container");
   let productsHTML = "";
 
-  filteredProducts.forEach((product) => {
-    productsHTML += `<div data-id=${
-      product.dataId
-    } class="produci-trumblin all_products">
+  if (productsContainer) {
+    filteredProducts.forEach((product) => {
+      productsHTML += `<div data-id=${
+        product.dataId
+      } class="produci-trumblin all_products">
     <a href="#
     "> 
       <picture>
@@ -917,10 +969,11 @@ function renderFilteredProducts(filteredProducts) {
       </div>
     </div>
   </div>`;
-  });
-  productsContainer.innerHTML = productsHTML;
-}
+    });
 
+    productsContainer.innerHTML = productsHTML;
+  }
+}
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
