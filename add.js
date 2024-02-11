@@ -896,34 +896,6 @@ const goods = [
     info9: "",
   },
 ];
-document.addEventListener("DOMContentLoaded", () => {
-  function filterToFind() {
-    const inputFind = document.getElementById("find_product");
-    const requestH = document.querySelector(".request");
-
-    const savedValue = localStorage.getItem("RequestH");
-    if (savedValue !== null) {
-      const findValue = JSON.parse(savedValue);
-      if (inputFind) {
-        inputFind.value = findValue;
-      }
-    }
-
-    if (inputFind) {
-      inputFind.addEventListener("input", function () {
-        const searchText = inputFind.value.toLowerCase();
-        localStorage.setItem("RequestH", JSON.stringify(searchText));
-        const filteredProducts = goods.filter((product) =>
-          product.name.toLowerCase().includes(searchText)
-        );
-        renderFilteredProducts(filteredProducts);
-      });
-    }
-  }
-
-  filterToFind();
-});
-
 function renderFilteredProducts(filteredProducts) {
   const productsContainer = document.getElementById("products-container");
   let productsHTML = "";
@@ -967,7 +939,6 @@ function shuffleArray(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
-
 function renderRelatedProducts(products) {
   const container = document.getElementById("related_products");
 
