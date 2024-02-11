@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>by me</title>
     <link rel="stylesheet" href="seconk.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="32x32" href="img/favicon_io.zip" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="180x180"
+      href="img/favicon_io.zip"
+    />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io.zip" />
+    <link rel="manifest" href="img/favicon_io.zip" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -23,16 +34,41 @@
           <div class="wrap_4">
             <a id="currency" href="">Currency</a>
             <a href="index.html">
-                <img src="img/logo.png" alt="by me" width="100" />
+              <img src="img/logo.png" alt="by me" width="100" />
             </a>
             <div class="buttoms-icons">
-              <a href="#" class="icon-header">
+              <a id="find_btn" href="" class="icon-header">
                 <img
+                  id="find_lupa"
                   src="img/search_FILL0_wght100_GRAD0_opsz24.svg"
                   alt=""
                   width="35"
                 />
               </a>
+              <div class="menu_find">
+                <div class="content_find">
+                  <div class="input-container">
+                    <input
+                      id="find_product"
+                      type="text"
+                      placeholder="What you're looking for?"
+                    />
+                    <i
+                      id="close_lup"
+                      class="fa-sharp fa-solid fa-xmark fa-3x"
+                    ></i>
+                    <a href="#" class="lupa_header">
+                      <img
+                        id="lupa_togo"
+                        src="img/search_FILL0_wght100_GRAD0_opsz24.svg"
+                        alt=""
+                        width="24"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
               <a href="http://127.0.0.1:5500/secPage.html" class="icon-header">
                 <img
                   src="img/favorite_FILL0_wght100_GRAD0_opsz24.svg"
@@ -47,25 +83,73 @@
                   width="35"
                 />
               </a>
-              <a href="http://127.0.0.1:5500/secPage.html class="icon-header">
+              <a href="http://127.0.0.1:5500/secPage.html" class="icon-header">
                 <img
                   src="img/shopping_bag_FILL0_wght100_GRAD0_opsz24.svg"
                   alt=""
                   width="35"
                 />
               </a>
+              <a class="burger_icon"
+                ><i class="fa-solid fa-bars"></i>
+                <div class="burger_block">
+                  <div class="burgeu_area">
+                    <div class="header-buttom">
+                      <div class="item-btm">
+                        <a class="heder-menu" href="navSec.html">new</a>
+                      </div>
+                      <div class="item-btm">
+                        <a
+                          data-id="ironWings"
+                          class="heder-menu"
+                          href="winges.html"
+                          >iron wings</a
+                        >
+                      </div>
+                      <div class="item-btm">
+                        <a class="heder-menu" href="women.html">women's</a>
+                      </div>
+                      <div class="item-btm">
+                        <a class="heder-menu" href="men.html">men</a>
+                      </div>
+                      <div class="item-btm">
+                        <a class="heder-menu" href="shoes.html">shoes </a>
+                      </div>
+                      <div class="item-btm">
+                        <a class="heder-menu" href="Accsesuares.html"
+                          >accessories</a
+                        >
+                      </div>
+                      <div class="item-btm">
+                        <a class="heder-menu" href="jewellery.html"
+                          >jewellery
+                        </a>
+                      </div>
+
+                      <div class="item-btm">
+                        <a class="heder-menu" href="home.html">home</a>
+                      </div>
+                      <div class="item-btm">
+                        <a class="heder-menu" href="sell.html">sell </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
 
         <!-- header second sec -->
-        <div class="wrap_4">
+        <div class="wrap_4 burger">
           <div class="header-buttom">
             <div class="item-btm">
               <a class="heder-menu" href="navSec.html">new</a>
             </div>
             <div class="item-btm">
-              <a data-id="ironWings" class="heder-menu" href="winges.html">iron wings</a>
+              <a data-id="ironWings" class="heder-menu" href="winges.html"
+                >iron wings</a
+              >
             </div>
             <div class="item-btm">
               <a class="heder-menu" href="women.html">women's</a>
@@ -82,156 +166,153 @@
             <div class="item-btm">
               <a class="heder-menu" href="jewellery.html">jewellery </a>
             </div>
-   
+
             <div class="item-btm">
               <a class="heder-menu" href="home.html">home</a>
             </div>
             <div class="item-btm">
-              <a class="heder-menu" href="sell.html">sell</a>
+              <a class="heder-menu" href="sell.html">sell </a>
             </div>
           </div>
         </div>
       </div>
-    </header> 
- <main>
-    <div class="main">
+    </header>
+
+    <main>
+      <div class="main">
         <div class="section_nav_left">
-            <div class="nav_menu">
-                <div class="caterogy">
-                    <h3>coterogy</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>               
-                <div class="sections_colention">
-                  <a data-category="men" href="men.html">men's</a>
-                  <a data-category="women" href="women.html">women's </a>
-                  <a data-category="shoes" href="shoes.html">shoes </a>
-                  <a data-category="accessories" href="Accsesuares.html">accessories</a>
-                  <a data-category="home" href="home.html">home</a>
-                  <a data-category="goods" href="certificates.html">certificates </a>
-                  <a data-category="gifts" href="gift.html">gifts </a>
-                    <a class="heder-menu" href="sell.html">sell</a>
-                  </div>
-                </div>
-                      <div class="filter">
-          <p>filter</p>
-           <p>price filter</p>
-           <div class="range-slider">
-         <input
-           type="range"
-           id="price-min"
-           min="150"
-           max="5499"
-           value="100"
-           oninput="updatePriceValue(this.value, 'price-min-value')"
-         />
-         <p>
-           <span value="" id="price-min-value">150</span>
-           <span id="price-max-value"> 5499</span>
-         </p>
+          <div class="nav_menu">
+            <div class="caterogy">
+              <h3>coterogy</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="sections_colention">
+              <a data-category="men" href="men.html">men's</a>
+              <a data-category="women" href="women.html">women's </a>
+              <a data-category="shoes" href="shoes.html">shoes </a>
+              <a data-category="accessories" href="Accsesuares.html"
+                >accessories</a
+              >
+              <a data-category="home" href="home.html">home</a>
+              <a data-category="goods" href="certificates.html"
+                >certificates
+              </a>
+              <a data-category="gifts" href="gift.html">gifts </a>
+              <a class="heder-menu" href="sell.html">sell</a>
+            </div>
           </div>
+          <div class="filter">
+            <p>filter</p>
+            <p>price filter</p>
+            <div class="range-slider">
+              <input
+                type="range"
+                id="price-min"
+                min="150"
+                max="5499"
+                value="100"
+                oninput="updatePriceValue(this.value, 'price-min-value')"
+              />
+              <p>
+                <span value="" id="price-min-value">150</span>
+                <span id="price-max-value"> 5499</span>
+              </p>
             </div>
-                    </div>
-                    <div class="find_items">
-                      <input id="find_product" type="text" placeholder="What you're looking for?">
-                      <a id="find_btn" href="" class="lupa">
-                        <img
-                          src="img/search_FILL0_wght100_GRAD0_opsz24.svg"
-                          alt=""
-                          width="35"
-                        />
-                      </a>
-                      <p class="answer"></p>
-                      <h1 class="request"></h1>
-                      <div id="products-container"></div>
-                    </div>
-                </div>
- </main>
-     <footer id="fooser">
-        <div class="wrap-4">
-          <div class="fooser_body">
-            <div class="left_section">
-              <div class="img_block">
-                <img src="img/logo.png" alt="#" width="40%">
-              </div>
-              <div class="social_network">
-                <a href="">
-                  
-                  <img src="img/instagram.png" alt="" width="55%">
-                </a>
-                <span class="separator"></span>
-                <a href="">
-                  <img src="img/facebook (1).png" alt="" width="55%">
-                </a>
+          </div>
+        </div>
+        <div class="find_items">
+          <input
+            id="find_product"
+            type="text"
+            placeholder="What you're looking for?"
+          />
+          <a id="find_btn" href="" class="lupa">
+            <img
+              src="img/search_FILL0_wght100_GRAD0_opsz24.svg"
+              alt=""
+              width="35"
+            />
+          </a>
+          <p class="answer"></p>
+          <h3 class="request"></h3>
+          <div id="products-container"></div>
+        </div>
+      </div>
+    </main>
+    <footer id="fooser">
+      <div class="wrap-4">
+        <div class="fooser_body">
+          <div class="left_section">
+            <div class="img_block">
+              <img src="img/logo.png" alt="#" width="40%" />
+            </div>
+            <div class="social_network">
+              <a href="">
+                <img src="img/instagram.png" alt="" width="55%" />
+              </a>
+              <span class="separator"></span>
+              <a href="">
+                <img src="img/facebook (1).png" alt="" width="55%" />
+              </a>
+            </div>
+          </div>
+          <div class="center_section">
+            <div class="ferst_col">
+              <div class="title fooser_title">categories</div>
+
+              <div class="fooser_items">
+                <a class="btn_v3" href="">new</a>
+                <a class="btn_v3" href="">dobrush</a>
+                <a class="btn_v3" href="">women</a>
+                <a class="btn_v3" href="">man</a>
+                <a class="btn_v3" href="">shoes</a>
+                <a class="btn_v3" href="">digital resiat</a>
+                <a class="btn_v3" href="">jewellery</a>
+                <a class="btn_v3" href="">dovbush</a>
+                <a class="btn_v3" href="">accessories</a>
+                <a class="btn_v3" href="">home</a>
               </div>
             </div>
-            <div class="center_section">
-              <div class="ferst_col">
-                <div class="title fooser_title">categories</div>
-
-                <div class="fooser_items">
-
-                  <a class="btn_v3" href="">new</a>
-                  <a class="btn_v3" href="">dobrush</a>
-                  <a class="btn_v3" href="">women</a>
-                  <a class="btn_v3" href="">man</a>
-                  <a class="btn_v3" href="">shoes</a>
-                  <a class="btn_v3" href="">digital resiat</a>
-                  <a class="btn_v3" href="">jewellery</a>
-                  <a class="btn_v3" href="">dovbush</a>
-                  <a class="btn_v3" href="">accessories</a>
-                  <a class="btn_v3" href="">home</a>
-                </div>
-
-
-
-              </div>
-              <div class="second_col">
-                <div class="title fooser_title">information</div>
-                <div class="fooser_items">
-
+            <div class="second_col">
+              <div class="title fooser_title">information</div>
+              <div class="fooser_items">
                 <a class="btn_v3" href="">about us</a>
-                <a class="btn_v3" href="">delivery/payment
-                </a>
+                <a class="btn_v3" href="">delivery/payment </a>
                 <a class="btn_v3" href="">shorum</a>
                 <a class="btn_v3" href="">volunteering</a>
                 <a class="btn_v3" href="">sponsors</a>
                 <a class="btn_v3" href="">lookBook</a>
                 <a class="btn_v3" href="">blog</a>
-                <a class="btn_v3" href="">discount system
-                </a>
-                <a class="btn_v3" href="">public offer agreement
-                </a>
-                <a class="btn_v3" href="">privacy policy
-                </a>
-                </div>
+                <a class="btn_v3" href="">discount system </a>
+                <a class="btn_v3" href="">public offer agreement </a>
+                <a class="btn_v3" href="">privacy policy </a>
               </div>
             </div>
-            <div class="right_section">
-             <div class="title fooser_title">contacts </div>
+          </div>
+          <div class="right_section">
+            <div class="title fooser_title">contacts</div>
 
-
-               <div class="contacts_info">
-                 <div class="contacts_items">Kiev, st. Hrestchiatik, 46</div>
-                 <a class="btn_v3" href="">1 208-202-8305</a>
-                 <a class="btn_v3" href=""> <span class="fooser_cont"> info@byme.us</span>
-                </a>
-                <div class="contacts_items">Online every day from 10am-8pm</div>
-                <div class="contacts_items">Volodymyr Siuryk</div>
-                
-
-
-             </div>
+            <div class="contacts_info">
+              <div class="contacts_items">Kiev, st. Hrestchiatik, 46</div>
+              <a class="btn_v3" href="">1 208-202-8305</a>
+              <a class="btn_v3" href="">
+                <span class="fooser_cont"> info@byme.us</span>
+              </a>
+              <div class="contacts_items">Online every day from 10am-8pm</div>
+              <div class="contacts_items">Volodymyr Siuryk</div>
             </div>
           </div>
-          
         </div>
-        <div class="copuring_blog wrap-4">
-          <a target="_blank" class="copyright" href="https://golden-web.digital/">Deal whis Golden Web Digital</a>
-          <div class="visa_mast">
-            <img src="img/546df94dd8620c35de745573f65a4333.webp" alt="">
-          </div>
+      </div>
+      <div class="copuring_blog wrap-4">
+        <a target="_blank" class="copyright" href="https://golden-web.digital/"
+          >Deal whis Golden Web Digital</a
+        >
+        <div class="visa_mast">
+          <img src="img/546df94dd8620c35de745573f65a4333.webp" alt="" />
         </div>
-      </footer>
-     </body>
-    <script src="add.js"></script>
-  </html>
+      </div>
+    </footer>
+  </body>
+  <script src="add.js"></script>
+</html>

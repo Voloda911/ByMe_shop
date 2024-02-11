@@ -19,6 +19,12 @@ const emti = document.getElementById("empti");
 const reviewI = document.querySelector(".review_i");
 const radios = document.querySelectorAll(".custom-radio");
 const makeOrder = document.querySelector(".make_order");
+const burgerIcon = document.querySelector(".burger_icon");
+
+burgerIcon.addEventListener("click", function () {
+  const burgeuArea = document.querySelector(".burgeu_area");
+  burgeuArea.classList.toggle("show_");
+});
 
 if (makeOrder) {
   makeOrder.addEventListener("click", function (event) {
@@ -147,70 +153,38 @@ window.addEventListener("scroll", function () {
 const menuFind = document.querySelector(".menu_find");
 const contentFind = document.querySelector(".content_find");
 const findBtn = document.getElementById("find_btn");
-const findProduct = document.getElementById("find_product");
 const closeLup = document.getElementById("close_lup");
 
 function handleInput() {
   const findProduct = document.getElementById("find_product");
+  const lupaTogo = document.getElementById("lupa_togo");
+  const requestH1 = document.querySelector(".request");
+
+  findProduct;
   if (findProduct) {
     findProduct.addEventListener("keypress", function (event) {
       if (event.key === "Enter" && findProduct.value.trim() !== "") {
         event.preventDefault();
         const searchText = encodeURIComponent(findProduct.value.trim());
         window.location.href = `find.html?search=${searchText}`;
-
-        redirectToSearch(searchText);
+      }
+    });
+  }
+  if (lupaTogo) {
+    lupaTogo.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (lupaTogo) {
+        redirectToSearch();
       }
     });
   }
 }
-document.addEventListener("DOMContentLoaded", function () {
-  // Когда пользователь попадает на страницу `find.html`, вам нужно извлечь значение параметра `search` из URL,
-  //  чтобы знать, что именно пользователь пытался найти. Это делается с помощью JavaScript и Web API `URLSearchParams`.
-  const params = new URLSearchParams(window.location.search);
-  // Функция params.get('search') возвращает значение параметра search из URL, которое в нашем примере будет "кофемашина".
-  const searchText = params.get("search");
-  // Шаг 3: Декодирование и использование поискового запроса
-  const decodedSearchText = decodeURIComponent(searchText);
-  const filteredProducts = goods.filter((product) => {
-    product.name.toLowerCase().includes(decodedSearchText.toLowerCase());
-    // Шаг 4: Отображение результатов
-    const productsContainer = document.getElementById("products-container");
-    let productsHTML = "";
-    if (filteredProducts.length > 0) {
-      filteredProducts.forEach((product) => {
-        productsHTML += `<div data-id=${
-          product.dataId
-        } class="produci-trumblin all_products">
-      <a href="#
-      "> 
-        <picture>
-          <source srcset="#" type="#" />
-          <source srcset="#" type="#" />
-          <img src=${product.img} alt="${product.name}" width="198" />
-        </picture>
-      </a>
-      <div class="product_body">
-        <div class="description ">
-          <a class="product_name" href="#">${product.name}</a>
-          <div class="prise-date">
-            <span class="cerrent_pruise">${product.price} USD</span>
-            ${
-              product.NewPrice
-                ? `<span class="current_old in_all"> ${product.NewPrice} USD</span>`
-                : ""
-            }
-  
-          </div>
-        </div>
-      </div>
-    </div>`;
-      });
-    } else {
-      productsHTML = "<p>По вашему запросу ничего не найдено.</p>";
-    }
-  });
-});
+function redirectToSearch(searchText) {
+  const encodedSearchText = encodeURIComponent(searchText);
+  window.location.href = `find.html?search=${encodedSearchText}`;
+}
+document.addEventListener("DOMContentLoaded", handleInput);
+
 handleInput();
 if (findBtn && menuFind) {
   findBtn.addEventListener("click", function (event) {
@@ -925,18 +899,31 @@ const goods = [
 document.addEventListener("DOMContentLoaded", () => {
   function filterToFind() {
     const inputFind = document.getElementById("find_product");
-    const productsContainer = document.getElementById("products-container");
+    const requestH = document.querySelector(".request");
 
-    inputFind.addEventListener("input", function () {
-      const searchText = inputFind.value.toLowerCase();
-      const filteredProducts = goods.filter((product) =>
-        product.name.toLowerCase().includes(searchText)
-      );
-      renderFilteredProducts(filteredProducts);
-    });
+    const savedValue = localStorage.getItem("RequestH");
+    if (savedValue !== null) {
+      const findValue = JSON.parse(savedValue);
+      if (inputFind) {
+        inputFind.value = findValue;
+      }
+    }
+
+    if (inputFind) {
+      inputFind.addEventListener("input", function () {
+        const searchText = inputFind.value.toLowerCase();
+        localStorage.setItem("RequestH", JSON.stringify(searchText));
+        const filteredProducts = goods.filter((product) =>
+          product.name.toLowerCase().includes(searchText)
+        );
+        renderFilteredProducts(filteredProducts);
+      });
+    }
   }
+
   filterToFind();
 });
+
 function renderFilteredProducts(filteredProducts) {
   const productsContainer = document.getElementById("products-container");
   let productsHTML = "";
@@ -980,11 +967,14 @@ function shuffleArray(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
+
 function renderRelatedProducts(products) {
   const container = document.getElementById("related_products");
+
   if (!container) return;
   let productsCopy = [...products];
   shuffleArray(productsCopy);
+
   const selectedProducts = productsCopy.slice(0, 4);
   const productsHtml = selectedProducts
     .map(
@@ -1827,3 +1817,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   filterGoodsGifts(category);
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Когда пользователь попадает на страницу `find.html`, вам нужно извлечь значение параметра `search` из URL,
+//   //  чтобы знать, что именно пользователь пытался найти. Это делается с помощью JavaScript и Web API `URLSearchParams`.
+//   const params = new URLSearchParams(window.location.search);
+//   // Функция params.get('search') возвращает значение параметра search из URL, которое в нашем примере будет "кофемашина".
+//   const searchText = params.get("search");
+//   // Шаг 3: Декодирование и использование поискового запроса
+//   const decodedSearchText = decodeURIComponent(searchText);
+//   const filteredProducts = goods.filter((product) => {
+//     product.name.toLowerCase().includes(decodedSearchText.toLowerCase());
+//     // Шаг 4: Отображение результатов
+//     const productsContainer = document.getElementById("products-container");
+//     let productsHTML = "";
+//     if (filteredProducts.length > 0) {
+//       filteredProducts.forEach((product) => {
+//         // code
+//       });
+//     } else {
+//       productsHTML = "<p>По вашему запросу ничего не найдено.</p>";
+//     }
+//   });
+// });
