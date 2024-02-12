@@ -311,6 +311,26 @@ const goods = [
     info9: "Size on the model: XS.",
   },
   {
+    dataId: 30,
+    img: "img.product/new.photo/7c4a6200907e2b357e5cb65af87318c3.webp",
+    name: "baseball cap",
+    price: "31.66",
+    category: "accessories",
+    Images1: "img.product/new.photo/48fade1da4c73ade4a0bcdea7d86a1be.jpg",
+    Images2: "img.product/new.photo/41b698ed3dcae75e90b8e790d01f1c47.webp",
+    Images3: "img.product/new.photo/81d9b5e1a32a24a95055c1fc9ebffcf4.jpg",
+    about: "",
+    info: "",
+    info2: "",
+    info3: "",
+    info4: " ",
+    info5: " ",
+    info6: "",
+    info7: "",
+    info8: " ",
+    info9: "",
+  },
+  {
     dataId: 6,
     section: "new",
     section: "menswear",
@@ -563,31 +583,13 @@ const goods = [
     info8: "Length at side seam: 102 cm.    ",
     info9: "Size on the model: XS.",
   },
-  {
-    dataId: 18,
-    section: "shirt",
-    img: "img.product/e4db02a20010c59064cb57f4e3b006a8.webp",
-    name: "embroidered shirt",
-    price: "15.10",
-    category: "women",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    about: " Straight trousers, for a height of 158 - 165 cm",
-    info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
-    info2: "",
-    info3: "The trousers go well with tops and long sleeves.",
-    info4: "Composition: 22% viscose, 73% polyester, 5% elastane.    ",
-    info5: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
-    info6: "Model dimensions: 83/64/93 cm.    ",
-    info7: "Model's height: 170 cm (model wearing Long)    ",
-    info8: "Length at side seam: 102 cm.    ",
-    info9: "Size on the model: XS.",
-  },
+
   {
     dataId: 19,
     img: "img.product/new.photo/eeef32093578698e4938692f69609146.webp",
     name: "silver ring",
+    section: "shirt",
+
     price: "38.10",
     category: "jewellery",
     Images1: "img.product/new.photo/cac26df3ae1d464f4c42479e2da13e46.webp",
@@ -608,43 +610,43 @@ const goods = [
 
   {
     dataId: 21,
-    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
-    name: "mesh flared longsleeves",
+    img: "img.product/new.photo/7c4a6200907e2b357e5cb65af87318c3.webp",
+    name: "baseball cap",
     price: "31.66",
-    category: "women",
-    Images1: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
-    about: " Straight trousers, for a height of 158 - 165 cm",
-    info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
+    category: "accessories",
+    Images1: "img.product/new.photo/48fade1da4c73ade4a0bcdea7d86a1be.jpg",
+    Images2: "img.product/new.photo/41b698ed3dcae75e90b8e790d01f1c47.webp",
+    Images3: "img.product/new.photo/81d9b5e1a32a24a95055c1fc9ebffcf4.jpg",
+    about: "",
+    info: "",
     info2: "",
-    info3: "The trousers go well with tops and long sleeves.",
-    info4: "Composition: 22% viscose, 73% polyester, 5% elastane.    ",
-    info5: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
-    info6: "Model dimensions: 83/64/93 cm.    ",
-    info7: "Model's height: 170 cm (model wearing Long)    ",
-    info8: "Length at side seam: 102 cm.    ",
-    info9: "Size on the model: XS.",
+    info3: "",
+    info4: " ",
+    info5: " ",
+    info6: "",
+    info7: "",
+    info8: " ",
+    info9: "",
   },
   {
     dataId: 22,
-    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
-    name: "mesh flared longsleeves",
+    img: "img.product/new.photo/bac6da2972a045ccbc490134aa4e4821.webp",
+    name: "black warm gloves ",
     price: "31.66",
     category: "women",
-    Images1: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
-    Images2: "img.product/shoes/5947576d9d499afcac8e2f57e8e3f554.webp",
-    Images3: "img.product/shoes/82b79545b00f4d35d149f9e8ddf8eae1.webp",
-    about: " Straight trousers, for a height of 158 - 165 cm",
-    info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
+    Images1: "img.product/new.photo/f6f56872e5b53e655138a24af5a64758.jpg",
+    Images2: "img.product/new.photo/9e224c7000c258f78119244986b9a4ad.jpg",
+    Images3: "img.product/new.photo/e5b740a930f98bec7a6888777be8d327.jpg",
+    about: "",
+    info: "",
     info2: "",
-    info3: "The trousers go well with tops and long sleeves.",
-    info4: "Composition: 22% viscose, 73% polyester, 5% elastane.    ",
-    info5: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
-    info6: "Model dimensions: 83/64/93 cm.    ",
-    info7: "Model's height: 170 cm (model wearing Long)    ",
-    info8: "Length at side seam: 102 cm.    ",
-    info9: "Size on the model: XS.",
+    info3: "",
+    info4: " ",
+    info5: " ",
+    info6: "",
+    info7: "",
+    info8: " ",
+    info9: "",
   },
   {
     dataId: 23,
@@ -669,24 +671,24 @@ const goods = [
     info9: "Size on the model: XXS - XS.",
   },
   {
-    dataId: 24,
-    img: "img.product/d2e3272fddfd38279106883ae541a5cd.webp",
-    name: "embroidered shirt",
-    price: "22.10",
-    category: "women",
-    Images1: "img.product/9c1ede212a4dcb2494771a4626ebc8c7.webp",
-    Images2: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    Images3: "img.product/a5deb5682dfa66e96c249e51bbef2513.webp",
-    about: " Straight trousers, for a height of 158 - 165 cm",
-    info: "These trousers belong to the Kosivska Ceramics collection, with small embroideries on the back to remind you when to fall in love with Ukrainian things",
+    dataId: 30,
+    img: "img.product/new.photo/7c4a6200907e2b357e5cb65af87318c3.webp",
+    name: "baseball cap",
+    price: "31.66",
+    category: "accessories",
+    Images1: "img.product/new.photo/48fade1da4c73ade4a0bcdea7d86a1be.jpg",
+    Images2: "img.product/new.photo/41b698ed3dcae75e90b8e790d01f1c47.webp",
+    Images3: "img.product/new.photo/81d9b5e1a32a24a95055c1fc9ebffcf4.jpg",
+    about: "",
+    info: "",
     info2: "",
-    info3: "The trousers go well with tops and long sleeves.",
-    info4: "Composition: 22% viscose, 73% polyester, 5% elastane.    ",
-    info5: "Care: machine wash at t=30°C, delicate spin and tumble dry.    ",
-    info6: "Model dimensions: 83/64/93 cm.    ",
-    info7: "Model's height: 170 cm (model wearing Long)    ",
-    info8: "Length at side seam: 102 cm.    ",
-    info9: "Size on the model: XS.",
+    info3: "",
+    info4: " ",
+    info5: " ",
+    info6: "",
+    info7: "",
+    info8: " ",
+    info9: "",
   },
   {
     dataId: 25,
@@ -1048,14 +1050,9 @@ function renderAllProducts() {
   }
 }
 renderAllProducts();
-
-function updatePriceValue(value, elementId) {
-  document.getElementById(elementId).textContent = value;
-}
 function getProductData(productId) {
   return goods.find((item) => item.dataId.toString() === productId);
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   const productId = urlParams.get("productId");
@@ -1170,12 +1167,12 @@ function updateTotalPrice() {
     (total, product) => total + parseFloat(product.price),
     0
   );
-
   const totalArea = document.getElementById("total_");
   if (totalArea) {
     totalArea.innerHTML = totalPrice.toFixed(2);
   }
 }
+updateTotalPrice();
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", function (event) {
     let products = JSON.parse(localStorage.getItem("specificProduct")) || [];
@@ -1192,14 +1189,14 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("specificProduct", JSON.stringify(filteredProducts));
       productElement.remove();
     }
+    updateTotalPrice();
   });
-  updateTotalPrice();
   const contentBag = document.getElementById("product_area");
   const productBeg = document.querySelector(".product_beg");
   const savedProducts =
     JSON.parse(localStorage.getItem("specificProduct")) || [];
   if (savedProducts.length > 0 && contentBag) {
-    productBeg.classList.add("hasProducts");
+    // productBeg.classList.add("hasProducts");
     let productsHTML = "";
     savedProducts.forEach((product) => {
       productsHTML += ` <div data-id=${

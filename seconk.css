@@ -1576,12 +1576,26 @@ input {
 .burger_icon {
   display: none;
 }
+@media (max-width: 1440px) {
+  .header-buttom {
+    gap: 30px;
+    margin: 0.3em;
+    padding: 0;
+  }
+
+  .produci-trumblin picture {
+    display: table-row;
+  }
+}
 
 @media (max-width: 1230px) {
   .header-buttom {
     gap: 30px;
     margin: 0.3em;
     padding: 0;
+  }
+  .produci-trumblin picture {
+    display: contents;
   }
 }
 @media (max-width: 1024px) {
@@ -1683,7 +1697,7 @@ input {
   }
   .burgeu_area {
     z-index: 100;
-    top: 90px;
+    top: 60px;
     right: 0;
     display: none;
     width: 150vh;
@@ -1790,6 +1804,9 @@ input {
   #icon_ext {
     display: none;
   }
+  #icon_on {
+    display: block;
+  }
   .fa-solid {
     position: relative;
     top: 10px;
@@ -1805,16 +1822,22 @@ input {
     top: 10px;
     left: 10px;
   }
+  .description {
+    z-index: 0;
+  }
   .header_fixer {
     display: block;
-    width: 100%;
+    width: 90%;
   }
   #icon_ext {
     display: none;
   }
+  #icon_on {
+    display: block;
+  }
   .wrap_4 {
     display: flex;
-    max-width: 350px;
+    max-width: 450px;
   }
   #mySelect {
     width: 300px;
@@ -1841,6 +1864,7 @@ input {
     height: 200vh;
     top: 70px;
     width: 200vw;
+    z-index: 1000;
   }
 
   .blog-prodcts {
@@ -1918,7 +1942,17 @@ input {
   }
 }
 
-@media (max-width: 200px) {
+@media (max-width: 320px) {
+  .burgeu_area {
+    height: 200vh;
+    top: 70px;
+    width: 200vw;
+    z-index: 1000;
+  }
+  .wrap-4 {
+    display: flex;
+    flex-direction: column;
+  }
   .header-buttom {
     gap: 20px;
     margin: 0.3em;
@@ -1941,9 +1975,7 @@ input {
     justify-content: center;
     align-items: center;
   }
-  img {
-    width: 250px;
-  }
+
   .product_name {
     margin-top: 0;
     width: 100%;
@@ -1986,5 +2018,11 @@ input {
   }
   #currency {
     display: none;
+  }
+  #icon_ext {
+    display: none;
+  }
+  #icon_on {
+    display: block;
   }
 }
