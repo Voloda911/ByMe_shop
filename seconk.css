@@ -1787,10 +1787,23 @@ input {
     order: -1;
     width: 80%;
   }
+  #icon_ext {
+    display: none;
+  }
+  .fa-solid {
+    position: relative;
+    top: 10px;
+    left: 10px;
+  }
 }
 @media (max-width: 433px) {
   #header {
     width: 100%;
+  }
+  .fa-solid {
+    position: relative;
+    top: 10px;
+    left: 10px;
   }
   .header_fixer {
     display: block;
@@ -1898,6 +1911,10 @@ input {
   }
   .place_info p {
     font-size: 12px;
+  }
+  #related_products {
+    display: flex;
+    flex-direction: column;
   }
 }
 
